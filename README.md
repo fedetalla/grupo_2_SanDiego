@@ -1,6 +1,5 @@
-# grupo_2
-SAN DIEGO
-**
+# SAN DIEGO (grupo_2)
+
 - Acerca del proyecto: El sitio fue diseñado para la venta de patinetas de skate y sus derivados en el rubro.
 - Acerca del nombre del proyecto: San Diego es una de las ciudades originarias del deporte, dónde comenzó a practicarse el mismo gracias a la construcción de los primeros skateparks.
 - Público Objetivo: Apuntaremos a un público mayoritariamente joven y de ambos sexos, que sean tanto aficionados como practicantes del deporte, abarcando las edades desde los 16 hasta los 35 años.
@@ -11,7 +10,7 @@ Los integrantes del equipo son:
 
 •	Lucas Maquiavelo: Técnico en Administración de Empresas.
 
-• Franco Peljhan: Desarrollador web full stack (en curso).
+•   Franco Peljhan: Desarrollador web full stack (en curso).
 
 •	Martin Salomon: Analista de datos y maquetador web.
 
@@ -31,11 +30,13 @@ Paginas de Referencia:
 
 •	http://www.kalimaboards.com/t-shirts --> De este sitio web nos gustó la paleta de colores utilizada jugando con colores llamativos y sobrios como el negro. Además la manera en que están colocadas las redes sociales, junto al carro de compra nos parece adecuada, sumado a que también nos gustó su footer. En pocas palabras, sería nuestra web base y sumariamos los conceptos de las anteriores.
 
-Paleta de colores: Los colores que utilizaremos serán para la base del sitio Gris claro (#E0E0E0), Negro (#070707) y Blanco (#FFFFFF). Luego para los detalles y tipografías jugaremos con colores que llamen la atención como  Violeta (#7B1E7A), Aguamarina (#087E8B) y Verde flúo (#20FC8F)
+Paletas de colores:
+main: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/main_palette.png
+secundary: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/sec_palette.png 
 
-** Logo: 
+Logo: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/Logo.jpg
 
-** Fuente Logo: 
+Fuente Logo: Attack Graffiti
 
 Fuente Textos: Gotam
 
