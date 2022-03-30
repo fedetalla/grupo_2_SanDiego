@@ -31,8 +31,9 @@ Paginas de Referencia:
 •	http://www.kalimaboards.com/t-shirts --> De este sitio web nos gustó la paleta de colores utilizada jugando con colores llamativos y sobrios como el negro. Además la manera en que están colocadas las redes sociales, junto al carro de compra nos parece adecuada, sumado a que también nos gustó su footer. En pocas palabras, sería nuestra web base y sumariamos los conceptos de las anteriores.
 
 Paletas de colores:
-main: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/main_palette.png
-secundary: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/sec_palette.png 
+- main: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/main_palette.png
+
+- secundary: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/sec_palette.png 
 
 Logo: https://github.com/fedetalla/grupo_2_SanDiego/blob/ebf4eff978609803e85ea0f16497a273ba660071/Design/Logo.jpg
 
