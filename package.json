@@ -1,0 +1,25 @@
+{
+  "name": "grupo_2_sandiego",
+  "version": "1.0.0",
+  "description": "- Acerca del proyecto: El sitio fue diseñado para la venta de patinetas de skate y sus derivados en el rubro.\r - Acerca del nombre del proyecto: San Diego es una de las ciudades originarias del deporte, dónde comenzó a practicarse el mismo gracias a la construcción de los primeros skateparks.\r - Público Objetivo: Apuntaremos a un público mayoritariamente joven y de ambos sexos, que sean tanto aficionados como practicantes del deporte, abarcando las edades desde los 16 hasta los 35 años.",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedetalla/grupo_2_nombre.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedetalla/grupo_2_nombre/issues"
+  },
+  "homepage": "https://github.com/fedetalla/grupo_2_nombre#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
