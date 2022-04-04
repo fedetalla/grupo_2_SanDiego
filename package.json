@@ -4,7 +4,7 @@
   "description": "- Acerca del proyecto: El sitio fue diseñado para la venta de patinetas de skate y sus derivados en el rubro.\r - Acerca del nombre del proyecto: San Diego es una de las ciudades originarias del deporte, dónde comenzó a practicarse el mismo gracias a la construcción de los primeros skateparks.\r - Público Objetivo: Apuntaremos a un público mayoritariamente joven y de ambos sexos, que sean tanto aficionados como practicantes del deporte, abarcando las edades desde los 16 hasta los 35 años.",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "test": "nodemon app.js"
   },
   "repository": {
