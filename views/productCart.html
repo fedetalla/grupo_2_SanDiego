@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- link de icons -->
- <script src="https://kit.fontawesome.com/e5a1a74a95.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet"
+     />
+    <!-- link de icons -->
+    <script src="https://kit.fontawesome.com/e5a1a74a95.js" crossorigin="anonymous"></script>
+   
+    <title>Carrito</title>
 
-    <title>Document</title>
-</head>
-<body>
-        <h1>test carrito</h1>
-</body>
+  </head>
+  <body class="cart">
+    <h1 class="title-cart">Mi Carrito</h1>
+    <div class="titulos-cart">
+      <p class="title-cart-product">Productos</p>
+      <p class="title-cart-quantity">Cantidad</p>
+      <p class="title-cart-sub">Subtotal</p>
+    </div>
+    <ul class="description-cart">
+      <li>
+        <div class="product-data">
+          <img
+            src="./img/Productos/Skateboard-Decks1.jpg"
+            alt="Imagen tabla 1"
+          />
+          <p class="precio">$2.000</p>
+          <!-- <p class="catidad">1</p> -->
+          <label for="cantidad"></label>
+          <input type="number" id="cantidad" name="cantidad" min="1" max="10000">          
+          <p class="Subtotal">$2.000</p>
+        </div>
+      </li>
+      <li>
+        <div class="product-data">
+          <img
+            src="./img/Productos/Skateboard-Decks2.jpg"
+            alt="Imagen tabla 2"
+          />
+          <p class="precio">$1.500</p>
+          <label for="cantidad"></label>
+          <input type="number" id="cantidad" name="cantidad" min="1" max="10000">  
+          <p class="Subtotal">$4.500</p>
+        </div>
+      </li>
+      <li>
+        <div class="product-data">
+          <img
+            src="./img/Productos/Skateboard-Decks3.jpg"
+            alt="Imagen tabla 2"
+          />
+          <p class="precio">$1.500</p>
+          <label for="cantidad"></label>
+          <input type="number" id="cantidad" name="cantidad" min="1" max="10000">  
+          <p class="Subtotal">$3.000</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="cart-bottom">
+        <div class="subtotal-bottom">
+          <p class="subt-bot">Subtotal</p>
+          <p class="">$9.500</p>
+        </div>
+        <div class="Shipping-bottom">
+          <p class="ship-bot">Envio</p>
+          <p class="">$500</p>
+        </div>
+    </div>      
+    <div class="total-cart">
+        <p class="tot-cart">TOTAL</p>
+        <p class="">$10.000</p>
+    </div>
+
+    <div class="btn-cart">
+        <button class="btn-finalizar" type="button" onclick="alert('Finalizaste la compra con exito!')">Finalizar compra</button>
+    </div>
+
+
+  </body>
 </html>

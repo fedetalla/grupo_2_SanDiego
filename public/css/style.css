@@ -1,3 +1,115 @@
-*{
+* {
     box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+
+ul li{
+    list-style-type:none;
+    
+}
+ul{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
+
+:root{
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --gris: #E0E0E0;
+    --blanco: #ffffff;
+    --negro: #070707;
+    --verde: #20fc8f;
+    --azul: #087e8b;
+    --violeta: #7b1e7a; 
+}
+
+
+
+
+/****************************
+        CARRITO
+******************************/
+
+.cart{
+    margin-top: 20%;
+    background-color: var(--gris-claro);
+    
+}
+
+.title-cart{
+    font-size: 1.5rem;
+    margin-left: 5px;
+}
+
+.titulos-cart{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px;
+    max-width: 100%;
+    border-bottom: 1px solid #bebebe;
+    /* margin-left: 15%; */
+    font-size: 12px;
+}
+
+.product-data{
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
+}
+
+.product-data img{
+    width: 50px;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+
+.catidad{
+    margin-left: 15px;
+}
+
+.title-cart-quantity{
+margin-left: 30%;
+}
+
+.description-cart{
+    border-bottom: 1px solid #bebebe;
+}
+
+.cart-bottom{
+    width: 30%;
+    margin-left: 70%;
+    border-bottom: 1px solid #bebebe;
+} 
+
+.subtotal-bottom, .Shipping-bottom{
+    margin: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.subt-bot, .ship-bot, .tot-cart{
+    margin-right: 20px;
+}
+
+.total-cart{
+    margin: 10px 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#cantidad{
+    width: 35px;
+    margin: 0 10px;
+}
+.btn-finalizar{
+    background-color: var(--violeta);
+    color: var(--verde);
+}
+.btn-cart{
+    margin-top: 1.5rem;
+   text-align: center;
+}
+
