@@ -113,3 +113,34 @@ margin-left: 30%;
    text-align: center;
 }
 
+/****************************
+     DETALLE DE PRODUCTO
+******************************/
+
+.header-producto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: #666 solid 2px;
+}
+
+.logo-producto{
+    width: 25vw;
+    margin-left: 9%;
+}
+.icons-header-producto{
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.titulo-producto{
+    font-weight: 550;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.foto-producto{
+    width: 60%;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
