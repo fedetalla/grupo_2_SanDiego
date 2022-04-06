@@ -144,3 +144,25 @@ margin-left: 30%;
     width: 60%;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
+
+
+/****************************
+        HOME
+******************************/
+.header-logo{
+    width: 30%;
+}
+.top-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--gris-oscuro);
+}
+.burger-menu{
+    padding: 15px;
+    font-size: 30px;
+}
+.header-searcher{
+    padding: 15px;
+    font-size: 30px;
+}
