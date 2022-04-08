@@ -184,10 +184,102 @@ font-weight: 600;}
 }
 
 .foto-producto{
-    width: 60%;
+    margin: 10%;
+    width: 80%;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin-bottom: 5%;
+}
+
+.imagenes-de-opcion{
+    width: 38%;
+    margin: 5%;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
+.arrow{
+    margin: 10%;
+}
+
+.opciones{
+    display: flex;
+    align-items: center;
+}
+.info-product{
+    margin-left: 5%;
+}
+.breve-descripcion{
+    margin: 2%;
+    color: #666;
+}
+.precio{
+    margin: 2%;
+    font-size: 18px;
+    color: #666;
+    font-weight: 600;
+}
+.formulario{
+    display: flex;
+    margin: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 0;
+}
+.masmenos{
+    display: flex;
+    flex-direction: column;
+    margin-right: 3%;
+}
+.comprar{
+    height: 100%;
+    padding: 20%;
+    background-color: var(--violeta);
+    border: #20fc8f solid 1px;
+    font-weight: 700;
+    color: #20fc8f;
+}
+.descripcion{
+    margin: 2%;
+}
+.lis{
+    list-style-type: disc;
+    margin: 2%;
+    margin-left: 10%;
+}
+.bullet-product{
+    background-color: yellow;
+    border: black solid 1px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin:5px;
+}
+.bullet-product1{
+    background-color: var(--azul);
+    border: black solid 1px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin:5px;
+}
+.bullet-product2{
+    background-color: var(--violeta);
+    border: black solid 1px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin:5px;
+}
+.bullet-product3{
+    background-color: var(--verde);
+    border: black solid 1px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin:5px;
+}
+.bullets{
+    display: flex;
+}
 /****************************
         HOME
 ******************************/

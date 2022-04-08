@@ -1,28 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- config -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-    rel="stylesheet"
-     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
     <!-- link de icons -->
     <script src="https://kit.fontawesome.com/e5a1a74a95.js" crossorigin="anonymous"></script>
     <title>Detalle del Producto</title>
 </head>
+
 <body>
-    <header class="header-producto">
-        <div class="icons-header-producto"><i class="fas fa-bars"></i></div>
-        <div><img src="/img/logo-san-diego.png" alt="logo san diego" class="logo-producto"></div>
-        <div class="icons-header-producto"><i class="fas fa-search"></i></div>
+    <header>
+        <div class="top-header">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo">
+
+            <div class="header-searcher">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
     </header>
-    <article>
-        <h1 class="titulo-producto">Tabla Flip Amarilla</h1>
-        <div><img src="./img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="foto-producto"></div>
-    </article>
+    <main>
+        <article>
+            <h1 class="titulo-producto">Tabla Flip Amarilla</h1>
+            <div><img src="./img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="foto-producto"></div>
+        </article>
+        <section class="opciones">
+            <div class="arrow"><i class="fas fa-angle-left"></i></div>
+            <div>
+                <img src="./img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="imagenes-de-opcion">
+                <img src="./img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="imagenes-de-opcion">
+            </div>
+            <div class="arrow"><i class="fas fa-angle-right"></i></div>
+        </section>
+        <section class="info-product">
+            <div>
+                <div>
+                    <p class="breve-descripcion">Tabla Flip amarilla (78cm x 20cm)</p>
+                </div>
+                <div>
+                    <p class="precio">$ 111111</p>
+                </div>
+            </div>
+            <div class="bullets">
+                <p class="bullet-product"></p>
+                <p class="bullet-product1"></p>
+                <p class="bullet-product2"></p>
+                <p class="bullet-product3"></p>
+            </div>
+            <form action="/cantidad" method="POST" class="formulario">
+                <label for="cantidad"></label>
+                <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
+                <div class="masmenos">
+                    <button type="button">+</button>
+                    <button type="button">-</button>
+                </div>
+                <div><button type="submit" class="comprar">COMPRAR</button></div>
+            </form>
+            <p class="breve-descripcion">Descripción</p>
+            <div class="descripcion">
+                <ul>
+                    <li class="lis">Tabla Flip amarilla.</li>
+                    <li class="lis">Medidas: 78cm x 20cm.</li>
+                    <li class="lis">Lija inluida.</li>
+                    <li class="lis">(No incluye ruedas ni ejes, solo la tabla)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
 </body>
+
 </html>
