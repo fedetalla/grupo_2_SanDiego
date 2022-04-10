@@ -346,7 +346,9 @@ font-weight: 600;}
      padding: 15px;
      padding-bottom: 0;
  }
-
+.main-description ul li{
+    list-style-type: disc;
+}
  .main-products{
      display: flex;
      flex-wrap: wrap;
