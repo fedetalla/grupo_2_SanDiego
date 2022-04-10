@@ -283,6 +283,15 @@ font-weight: 600;}
 /****************************
         HOME
 ******************************/
+
+.home-body{
+    background-color: burlywood;
+}
+.home-main{
+    width: 90%;
+    margin: auto;
+}
+
 .header-logo{
     width: 30%;
 }
@@ -299,6 +308,167 @@ font-weight: 600;}
 .header-searcher{
     padding: 15px;
     font-size: 30px;
+}
+
+.imagen-fondo{
+    background-image: url('https://i.pinimg.com/originals/89/f5/ee/89f5ee2c48c63c6e4fb127b7ecd9cd60.gif');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-top: 10px;
+}
+.imagen-fondo p{
+    font-size: 18px;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 400 ;
+    color: white;
+    padding:50px
+}
+
+ main section .titulares{
+     color: black;
+     font-size: 12px;
+     text-align: center;
+     padding: 15px;
+ }
+ section .main-product{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: solid black 1px;
+    width: 40%;
+}
+ .main-description{
+     font-size: 12px;
+     width: 100%;
+     padding: 15px;
+     padding-bottom: 0;
+ }
+
+ .main-products{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     margin-bottom: 20px;
+ }
+ 
+.home-arrow{
+    align-self: center;
+}
+
+.brand-section{
+    border: solid black 2px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.img-brands{
+    width: 50%; 
+}
+.main-brands{
+    flex-direction: column;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.see-more{
+    color: brown;
+    background-color: #ffffff;
+    font-size: 14px;
+    border: solid black 1px;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 100px;
+}
+
+.imagen-fondo2{
+    background-image: url('https://i.gifer.com/9kTs.gif');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-top: 10px;
+    margin-top: 80px;
+}
+.imagen-fondo2 p{
+    font-size: 18px;
+    font-family: 'Calligraffitti', cursive;
+    font-weight: 800 ;
+    color: black;
+    padding:50px
+}
+
+footer .footer-form{
+    border: solid 3px black;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+footer .element-form{
+    padding: 5px;
+}
+
+.element-form input{
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    font-size: 12px;
+}
+
+.button-footer{
+    padding: 0px 10px;
+    background-color: orangered;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer .list-politics{
+    font-size:12px ;
+}
+footer .list-politics li{
+    padding: 5px 0px;
+}
+
+bottom-footer{
+    margin-top: 10px;
+    padding: 15px;
+}
+.contact{
+     display: flex;
+     font-size: 14px;
+     justify-content: center;
+     padding: 5px;
+ }
+
+.footer-logos{
+    font-size: 19px;
+    padding: 2px;
+}
+
+.copyright{
+    font-weight: 600;
+    font-size: 12px;
+    border: solid black 1px;
+    margin-top: 18px;
+    font-style: italic;
 }
 
 
