@@ -159,7 +159,9 @@ font-weight: 600;}
 /****************************
      DETALLE DE PRODUCTO
 ******************************/
-
+.main{
+    border-bottom: #666 solid 1px;
+}
 .header-producto{
     display: flex;
     flex-wrap: wrap;
