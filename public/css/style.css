@@ -475,4 +475,49 @@ bottom-footer{
     font-style: italic;
 }
 
+/****************************
+    REGISTER
+******************************/
 
+.contacto-div {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+  .contacto-div .formatForm {
+    border: black solid;
+    background-image: url(production\ ID_4759051.mp4);
+    padding: 40px;
+    text-align: left;
+    font-size: 18px;
+    height: 75%;
+    width: 35%;
+    box-shadow: 7px 7px 30px black;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .contacto-div .formatForm .inputClass {
+    border-radius: 4px;
+    background: #333A40;
+    color: orange;
+  }
+  .contacto-div .formatForm .inputClasscoment {
+    background: #333A40;
+  }
+  .contacto-div .botonsForm {
+    font-size: 15px;
+    background: white;
+    color: rgb(14, 12, 10);
+    border-radius: 4px;
+    font-family: "Oswald", sans-serif;
+  }
+  .contacto-div .botonsForm :hover {
+    border: 5px solid orange;
+  }
+
+  body {
+    background: url(production\ ID_4759051.mp4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
