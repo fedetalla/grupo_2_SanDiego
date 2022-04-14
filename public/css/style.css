@@ -478,15 +478,18 @@ bottom-footer{
 /****************************
     REGISTER
 ******************************/
+.register-body{
+    background-image: url(../img/Videos/fondo.mp4);
+}
 
 .contacto-div {
     display: flex;
     justify-content: center;
     margin: 5px;
+    border: solid black 1px;
   }
   .contacto-div .formatForm {
     border: black solid;
-    background-image: url(/public/img/Videos/fondo.mp4);
     padding: 40px;
     text-align: left;
     font-size: 18px;
@@ -515,9 +518,13 @@ bottom-footer{
     border: 5px solid orange;
   }
 
-  body {
-    background: url(/public/img/Videos/fondo.mp4);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+  .privacity{
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 18px;
+    font-style: italic;
   }
+
+  /****************************
+   LOGIN
+******************************/

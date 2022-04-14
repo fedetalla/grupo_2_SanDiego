@@ -11,9 +11,22 @@
     <script src="https://kit.fontawesome.com/e5a1a74a95.js" crossorigin="anonymous"></script>
     <title>Registrate</title>
 </head>
-<body>
-</form>
-</main>
+<body class="register-body">
+<header>
+        <div class="top-header">
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        
+        <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo">
+
+        <div class ="header-searcher">
+            <i class="fas fa-search"></i>
+        </div>
+    </div>
+</header>
+
+<main>
 <div class="contacto-div">
     <form action="/register" method="POST"> 
         <label for="name">Nombre </label> <input class="inputClass" type="text" name="Nombre" required placeholder= "Escribe tu nombre"><br>
@@ -69,10 +82,56 @@
             <br>
         <input class="botonsForm" type="submit" value="REGISTRARSE">
         <input class="botonsForm" type="reset" value="BORRAR">
-        <p>Al crear una cuenta, acepta nuestros Términos y privacidad .</p>
+        <div class="privacity">
+            <p>Al crear una cuenta, acepta nuestros Términos y privacidad .</p>
+        </div>
     </form>
 </div>
+</main>
+<footer>
+    <div class="footer-form">
+    <form action="/" method="post">
+      <label><h4>Recibí las mejores ofertas y novedades</h4></label>
+      <div class="element-form">
+      <input type="text" name="name-user" placeholder="name_user"></div>
+      <div class="element-form">
+      <input type="email" name="user-email" placeholder="user@email.com"></div>
+      <button class="button-footer" type="submit">Enviar</button>
+    </form>
+   </div>
 
+   <div class="bottom-footer">
+     <ul>
+       <li><h5>CONTACTANOS</h5>
+         <div class="contact">
+         <i class="fas fa-mobile"></i>
+         <p>+54 011 1111111</p></div>
+         <div class="contact">
+         <i class="far fa-envelope"></i>
+         <p>(marca)@gmail.com</p>
+         </div>
+         </li>
+         <li class="footer-logos">
+         <i class="fab fa-instagram" ></i>
+         <i class="fab fa-facebook" ></i>
+         <i class="fab fa-twitter" ></i>
+         </li>
+     </ul>
+     <ul class="list-politics">
+       <li>Formas de pago</li>
+       <li>Metodos de envíos</li>
+       <li>Políticas de Privacidad</li>
+       <li>Políticas de cambios y devoluciones</li>
+     </ul>
+   </div>
+   <form action="#" method="post">
+     <button class="button-footer" type="submit">Cancelar compra</button>
+   </div>
+   <div class="copyright">
+     <p>Copyright © 2022 --Marca--</p>
+     <p>Todos los derechos reservados.</p>
+   </div>
+  </footer>
 
 </body>
 </html>
