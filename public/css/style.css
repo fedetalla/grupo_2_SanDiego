@@ -490,11 +490,11 @@ bottom-footer{
   }
   .contacto-div .formatForm {
     border: black solid;
-    padding: 40px;
+    padding: 10px;
     text-align: left;
     font-size: 18px;
     height: 75%;
-    width: 35%;
+    min-width: 35%;
     box-shadow: 7px 7px 30px black;
     border-radius: 4px;
     text-align: center;
