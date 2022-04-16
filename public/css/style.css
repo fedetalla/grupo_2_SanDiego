@@ -32,7 +32,7 @@ ul{
 ******************************/
 
 .cart{
-    margin-top: 20%;
+    
     background-color: var(--gris-claro);
     
 }
@@ -295,7 +295,7 @@ font-weight: 600;}
 }
 
 .header-logo{
-    width: 30%;
+    width: 20%;
 }
 .top-header{
     display: flex;
