@@ -568,7 +568,6 @@ bottom-footer{
     mask-image: var(--m-i), var(--m-i);
     -webkit-mask-origin: var(--m-o);
     mask-origin: var(--m-o);
-    -webkit-mask-clip: var(--m-o);
     mask-composite: exclude;
     -webkit-mask-composite: destination-out;
     filter: hue-rotate(0);
