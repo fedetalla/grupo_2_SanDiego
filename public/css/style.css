@@ -478,46 +478,33 @@ bottom-footer{
 /****************************
     REGISTER
 ******************************/
-.register-body{
-    background-image: url(../img/Videos/fondo.mp4);
-}
 
 .contacto-div {
     display: flex;
     justify-content: center;
-    margin: 5px;
-    border: solid black 1px;
+    background-color: burlywood;
   }
   .contacto-div .formatForm {
-    border: black solid;
+    border: rgb(227, 209, 245) solid;
     padding: 10px;
     text-align: left;
     font-size: 18px;
     height: 75%;
     min-width: 35%;
-    box-shadow: 7px 7px 30px black;
+    box-shadow: 7px 7px 30px rgb(217, 176, 255);
     border-radius: 4px;
     text-align: center;
   }
   .contacto-div .formatForm .inputClass {
     border-radius: 4px;
-    background: #333A40;
-    color: orange;
+    background: rgb(100, 61, 136);
+    color: white;
   }
   .contacto-div .formatForm .inputClasscoment {
-    background: #333A40;
+    background: rgb(100, 61, 136);
+    color: white;
   }
-  .contacto-div .botonsForm {
-    font-size: 15px;
-    background: white;
-    color: rgb(14, 12, 10);
-    border-radius: 4px;
-    font-family: "Oswald", sans-serif;
-  }
-  .contacto-div .botonsForm :hover {
-    border: 5px solid orange;
-  }
-
+  
   .privacity{
     font-weight: 600;
     font-size: 12px;
@@ -525,74 +512,58 @@ bottom-footer{
     font-style: italic;
   }
 
-  /****************************
+ /****************************
     REGISTER BUTTON
 ******************************/
-
     .button-register {
-    --border-radius: 15px;
-    --border-width: 4px;
-    appearance: none;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
     position: relative;
-    padding: 1em 2em;
-    border: 0;
-    background-color: #212121;
-    font-family: "Roboto", Arial, "Segoe UI", sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff;
-    z-index: 2;
+    transition: all 0.3s;
    }
    
    .button-register::after {
-    --m-i: linear-gradient(#000, #000);
-    --m-o: content-box, padding-box;
+    pointer-events: none;
     content: "";
     position: absolute;
+    top: 120%;
     left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
-    padding: var(--border-width);
-    border-radius: var(--border-radius);
-    background-image: conic-gradient(
-           #488cfb,
-           #29dbbc,
-           #ddf505,
-           #ff9f0e,
-           #e440bb,
-           #655adc,
-           #488cfb
-       );
-    -webkit-mask-image: var(--m-i), var(--m-i);
-    mask-image: var(--m-i), var(--m-i);
-    -webkit-mask-origin: var(--m-o);
-    mask-origin: var(--m-o);
-    mask-composite: exclude;
-    -webkit-mask-composite: destination-out;
-    filter: hue-rotate(0);
-    animation: rotate-hue linear 500ms infinite;
-    animation-play-state: paused;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
    }
    
-   .button-register:hover::after {
-    animation-play-state: running;
-   }
-   
-   @keyframes rotate-hue {
-    to {
-     filter: hue-rotate(1turn);
-    }
-   }
-   
-   .button-register,
-   .button-register::after {
-    box-sizing: border-box;
+   .button-register:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
    }
    
    .button-register:active {
-    --border-width: 5px;
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
    }
+
   /****************************
    LOGIN
 ******************************/
