@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/img/skatepng.png">
     <title>Ingresá a San Diego</title>
 </head>
-<body>
+<body class="register-body">
     <header>
         <div class="top-header">
             <div class="burger-menu">
@@ -29,70 +29,70 @@
             </div>
         </div>
     </header>
-    <main>
-        
-        <div class="form-login">
-            <h1 id="title-register">Bienvenidos a San Diego</h1>
-        </div>
+    <main class="login-main">
 
-        <div id="Contenedor">
-            
-            <div class="ContentForm">
-                <form action="/login" method="POST">
-                  
-                   <button class="btn btn-lg btn-primary btn-block btn-signin" id="IngresoLog" type="submit">Entrar</button>
-                   <div class="opcioncontra"><a href="">Olvidaste tu contraseña?</a></div>
+        <div class="contenedor">
+            <video class="video-login" autoplay loop muted>
+                <source src="./img/Videos/fondo.mp4" type="video/mp4"> 
+            </video>
+            <div class="login-box">
+                <img src="/img/logo-san-diego.png" class="avatar" alt="Logo San Diego">
+                <h1>Registrate</h1>
+                <form class="form-login" action="/login" method="POST">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" placeholder="Nombre de Usuario">
+                    <label for="password">Contraseña</label>
+                    <input type="password" type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
+                    <input type="submit" value="Registrarse">
+                    <a href="#">¿Olvidaste tu contraseña?</a><br>
+                    <a href="#">Crear una cuenta</a>
                 </form>
-            </div>	
         </div>
-        <video class="video-login" autoplay loop muted>
-            <source src="./img/Videos/fondo.mp4" type="video/mp4"> 
-        </video>
-        
+            
     </main>
     <footer>
         <div class="footer-form">
-            <form action="/" method="post">
-              <label><h4>Recibí las mejores ofertas y novedades</h4></label>
-              <div class="element-form">
-              <input type="text" name="name-user" placeholder="name_user"></div>
-              <div class="element-form">
-              <input type="email" name="user-email" placeholder="user@email.com"></div>
-              <button class="button-footer" type="submit">Enviar</button>
-            </form>
-           </div>
-        
-           <div class="bottom-footer">
-             <ul>
-               <li><h5>CONTACTANOS</h5>
-                 <div class="contact">
-                 <i class="fas fa-mobile"></i>
-                 <p>+54 011 1111111</p></div>
-                 <div class="contact">
-                 <i class="far fa-envelope"></i>
-                 <p>(marca)@gmail.com</p>
-                 </div>
-                 </li>
-                 <li class="footer-logos">
-                 <i class="fab fa-instagram" ></i>
-                 <i class="fab fa-facebook" ></i>
-                 <i class="fab fa-twitter" ></i>
-                 </li>
-             </ul>
-             <ul class="list-politics">
-               <li>Formas de pago</li>
-               <li>Metodos de envíos</li>
-               <li>Políticas de Privacidad</li>
-               <li>Políticas de cambios y devoluciones</li>
-             </ul>
-           </div>
-           <form action="#" method="post">
-             <button class="button-footer" type="submit">Cancelar compra</button>
-           </div>
-           <div class="copyright">
-             <p>Copyright © 2022 --Marca--</p>
-             <p>Todos los derechos reservados.</p>
-           </div>
-    </footer>
+        <form action="/" method="post">
+          <label><h4>Recibí las mejores ofertas y novedades</h4></label>
+          <div class="element-form">
+          <input type="text" name="name-user" placeholder="name_user"></div>
+          <div class="element-form">
+          <input type="email" name="user-email" placeholder="user@email.com"></div>
+          <button class="button-footer" type="submit">Enviar</button>
+        </form>
+       </div>
+    
+       <div class="bottom-footer">
+         <ul>
+           <li><h5>CONTACTANOS</h5>
+             <div class="contact">
+             <i class="fas fa-mobile"></i>
+             <p>+54 011 1111111</p></div>
+             <div class="contact">
+             <i class="far fa-envelope"></i>
+             <p>(marca)@gmail.com</p>
+             </div>
+             </li>
+             <li class="footer-logos">
+             <i class="fab fa-instagram" ></i>
+             <i class="fab fa-facebook" ></i>
+             <i class="fab fa-twitter" ></i>
+             </li>
+         </ul>
+         <ul class="list-politics">
+           <li>Formas de pago</li>
+           <li>Metodos de envíos</li>
+           <li>Políticas de Privacidad</li>
+           <li>Políticas de cambios y devoluciones</li>
+         </ul>
+       </div>
+       <form action="#" method="post">
+         <button class="button-footer" type="submit">Cancelar compra</button>
+       </div>
+       <div class="copyright">
+         <p>Copyright © 2022 --Marca--</p>
+         <p>Todos los derechos reservados.</p>
+       </div>
+      </footer>
 </body>
 </html>
