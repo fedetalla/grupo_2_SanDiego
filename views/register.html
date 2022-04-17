@@ -13,19 +13,40 @@
     <title>Registrate</title>
 </head>
 <body class="register-body">
-<header>
-        <div class="top-header">
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-        
-        <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo">
+  <header>
+    <p class="header-envio">Envío gratis a partir de $4500 <i class="fas fa-truck"></i> - 6 cuotas sin interés <i class="fas fa-credit-card"></i></p>
+    <div class="top-header">
+      <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
 
-        <div class ="header-searcher">
-            <i class="fas fa-search"></i>
-        </div>
+      <img
+        src="/img/logo-san-diego.png"
+        alt="Logo San Diego" class="header-logo"/>
+
+
+        <form class="header-searcher" action="/searcher" method="post">
+          <input type="text" class="input">
+          <button class="submit"><i class="fas fa-search"></i></button>
+        </form>
+      
+      <ul class="header-list">
+      <li>Marcas</li>
+      <li>Skates</li>
+      <li>Accesorios</li>
+      <li>Torneos</li>
+      <li>Skateparks</li>
+      <li>Sale</li>
+      </ul>
+  
+    <div class="logo-user">
+    <i class="far fa-user"></i>
     </div>
-</header>
+    <div class="logo-carrito">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </div>
+  </header>
 
 <main>
 <div class="contacto-div">
@@ -92,49 +113,50 @@
 </div>
 </main>
 <footer>
-    <div class="footer-form">
-    <form action="/" method="post">
-      <label><h4>Recibí las mejores ofertas y novedades</h4></label>
-      <div class="element-form">
-      <input type="text" name="name-user" placeholder="name_user"></div>
-      <div class="element-form">
-      <input type="email" name="user-email" placeholder="user@email.com"></div>
-      <button class="button-footer" type="submit">Enviar</button>
-    </form>
-   </div>
+  <div class="footer-form">
+  <form action="/" method="post">
+    <label><h4>Recibí las mejores ofertas y novedades</h4></label>
+    <div class="element-form">
+    <input type="text" name="name-user" placeholder="name_user"></div>
+    <div class="element-form">
+    <input type="email" name="user-email" placeholder="user@email.com"></div>
+    <button class="button-footer" type="submit">Enviar</button>
+  </form>
+ </div>
 
-   <div class="bottom-footer">
-     <ul>
-       <li><h5>CONTACTANOS</h5>
-         <div class="contact">
-         <i class="fas fa-mobile"></i>
-         <p>+54 011 1111111</p></div>
-         <div class="contact">
-         <i class="far fa-envelope"></i>
-         <p>(marca)@gmail.com</p>
-         </div>
-         </li>
-         <li class="footer-logos">
-         <i class="fab fa-instagram" ></i>
-         <i class="fab fa-facebook" ></i>
-         <i class="fab fa-twitter" ></i>
-         </li>
-     </ul>
-     <ul class="list-politics">
-       <li>Formas de pago</li>
-       <li>Metodos de envíos</li>
-       <li>Políticas de Privacidad</li>
-       <li>Políticas de cambios y devoluciones</li>
-     </ul>
-   </div>
+ <div class="bottom-footer">
+   <ul>
+     <li><h5>CONTACTANOS</h5>
+       <div class="contact">
+       <i class="fas fa-mobile"></i>
+       <p>+54 011 1111111</p></div>
+       <div class="contact">
+       <i class="far fa-envelope"></i>
+       <p>(marca)@gmail.com</p>
+       </div>
+       </li>
+       <li class="footer-logos">
+       <i class="fab fa-instagram" ></i>
+       <i class="fab fa-facebook" ></i>
+       <i class="fab fa-twitter" ></i>
+       </li>
+   </ul>
+   <ul class="list-politics">
+     <li>Formas de pago</li>
+     <li>Metodos de envíos</li>
+     <li>Políticas de Privacidad</li>
+     <li>Políticas de cambios y devoluciones</li>
+   </ul>
+   <div>
    <form action="#" method="post">
-     <button class="button-footer" type="submit">Cancelar compra</button>
-   </div>
-   <div class="copyright">
-     <p>Copyright © 2022 --Marca--</p>
-     <p>Todos los derechos reservados.</p>
-   </div>
-  </footer>
+   <button class="button-cancel-buy" type="submit">Cancelar compra</button>
+    </div>
+  </div>
+ <div class="copyright">
+   <p>Copyright © 2022 --Marca--</p>
+   <p>Todos los derechos reservados.</p>
+ </div>
+ </footer>
 
 </body>
 </html>
