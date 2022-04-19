@@ -34,10 +34,6 @@ ul{
     --naranja-nuevo: #FF4500;
 }
 
-.logo-header{
-    width: 10%;
-}
-
 
 /****************************
         CARRITO
@@ -301,7 +297,9 @@ font-weight: 400;}
 /****************************
         HOME
 ******************************/
-
+.logo-header{
+    width: 30%;
+}
 .home-body{
     background-color: var(--blanco-nuevo);
 }
@@ -835,6 +833,10 @@ footer .list-politics li{
     .burger-menu{
         display: none;
     }
+    .logo-header{
+        width: 10%;
+    }
+    
     .header-logo{
         
         align-self: flex-start;
