@@ -527,7 +527,7 @@ footer .element-form{
 
 footer{
     text-align: center;
-    padding-bottom: 10px ;
+    /* padding-bottom: 10px ; */
     background-color: burlywood;
 }
 
@@ -556,7 +556,7 @@ footer .list-politics li{
     font-size: 12px;
     border: solid black 1px;
     margin-top: 18px;
-    margin-bottom: 0px;
+    
     font-style: italic;
 }
 
@@ -771,7 +771,7 @@ footer .list-politics li{
       position: absolute;
   }
 
-  @media (min-width: 400px){
+  @media (min-width: 450px){
     .login-box {
         height: 75%;
         min-width: 50%;
@@ -794,6 +794,9 @@ footer .list-politics li{
 
 @media(min-width: 768px){
     /***************** HEADER *****************/
+    .header-searcher .input {
+    display: block;
+    }
     .header-envio{
         display: block
     }
@@ -814,21 +817,21 @@ footer .list-politics li{
     }
     .submit{
         font-size: 14px;
-        background-color: #808080;
+        background-color: #ffffff;
         color: black;
-    }
+    border-radius: 0 15px 15px 0;padding: 0 13px;}
     .header-searcher{
         border-radius: 6px;
-        background-color: #808080;
+        
         order: 1;
         width: 10%;
         padding: 5px;
-    }
+    min-width: 100px;}
     .header-searcher .input{
         border: none;
-        width: 100%;
+        height: 25px;width: 100%;
         color: #666;
-    }
+    border-radius: 15px 0 0 15px;}
     .logo-user{
         display: block;
         color: #808080;
