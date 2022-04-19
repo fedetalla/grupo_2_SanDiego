@@ -9,10 +9,17 @@
     rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Raleway:ital@1&family=Roboto:wght@300&display=swap"
     rel="stylesheet">
+    <!-- owl-carousel -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
      <!-- link de icons -->
     <script src="https://kit.fontawesome.com/e5a1a74a95.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/img/skatepng.png">
     <link rel="stylesheet" href="./css/style.css">
+
     <title>San Diego</title>
 </head>
 <body class="home-body">
@@ -22,9 +29,11 @@
           <i class="fas fa-bars"></i>
         </div>
 
-        <img
-          src="/img/logo-san-diego.png"
-          alt="Logo San Diego" class="header-logo"/>
+        <div class="logo-header">
+          <a href="/">
+            <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo"/>
+          </a>  
+        </div>
 
 
           <form class="header-searcher" action="/searcher" method="post">
@@ -42,51 +51,87 @@
         </ul>
     
       <div class="logo-user">
-      <i class="far fa-user"></i>
+      <a href="/login"><i class="far fa-user"></i></a>
       </div>
       <div class="logo-carrito">
-        <i class="fas fa-shopping-cart">
-          <a href="/productCart"></a>
-        </i>
+       <a href="/productCart"><i class="fas fa-shopping-cart"></i></a> 
       </div>
     </div>
     <p class="header-envio">Envío gratis a partir de $4500 <i class="fas fa-truck"></i> - 6 cuotas sin interés <i class="fas fa-credit-card"></i></p>
     </header>
     <div class="imagen-fondo"> 
-      <p>Libera tu estilo</p>
+      <p></p>
      </div>
       <main class="home-main">
-        <section>
-          <div class="titulares"><h2>Nuevos</h2></div>
-          <div class="main-products">
-            <div class="home-arrow"><i class="fas fa-angle-left"></i></div>
-            
-            <article class="main-product">
-            <img class="images-main" src="\img\Productos\Skateboard-Decks5.jpg" alt="product1">
-            <div class="main-description">
-              <ul>
-                <li>Lorem ipsum dolor sit amet consectetur.</li>
-                <li>$1.111</li>
-              </ul>
-              <p>Skate SP</p>
-            </div> 
-           </article>
-            <article class="main-product">
-            <img class="images-main" src="\img\Productos\Skateboard-Decks2.jpg" alt="product2">
-            <div class="main-description">
-              <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit..</li>
-                <li>$2.222</li>
-              </ul>
-              <p>Skate ST</p>
-            </div>
-          </article>
-         <div class="home-arrow"><i class="fas fa-angle-right"></i></div>
-         </div>
-         </section>
-         <section>
+
+      <section>
            
-         </section>
+          <!--carrusel-->
+          <h2 class="carousel-title">Mas vendidos</h2>
+          <div class="wrapper">
+            <div class="carousel owl-carousel">
+              <div class="card card-1">
+                <p class="title-product product-carrousel">Tabla O´NEIL</p>
+                <img src="./img/Productos/Skateboard-Decks3.jpg" alt="image" />
+                <div class="product-carrousel">
+                  <p class="precio">$1.500</p>
+                  <!-- <p class="descuentos">40% off</p> -->
+                  <p class="descripciones"></p>
+                </div>
+              </div>
+              <div class="card card-2">
+                <p class="title-product product-carrousel">Tabla SANTA CRUZ</p>
+                <img src="./img/Productos/Skateboard-Decks4.jpg" alt="image" />
+                <div class="product-carrousel">
+                  <p class="precio">$2.000</p>
+                  <!-- <p class="descuentos">40% off</p> -->
+                  <p class="descripciones"></p>
+                </div>
+              </div>
+              <div class="card card-3">
+                <p class="title-product product-carrousel">Tabla ZERO</p>
+                <img src="./img/Productos/Skateboard-Decks5.jpg" alt="image" />
+                <div class="product-carrousel">
+                  <p class="precio">$2.000</p>
+                  <!-- <p class="descuentos">40% off</p> -->
+                  <p class="descripciones"></p>
+                </div>
+              </div>
+              <div class="card card-4">
+                <p class="title-product product-carrousel">Tabla FLIP</p>
+                <img src="./img/Productos/Skateboard-Decks6.jpg" alt="image" />
+                <div class="product-carrousel">
+                  <p class="precio">$2.000</p>
+                  <!-- <p class="descuentos">40% off</p> -->
+                  <p class="descripciones"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            $(".carousel").owlCarousel({
+              Margin: 10,
+              loop: true,
+              autoplay: true,
+              autoplayTimeout: 2000, //2000 ms = 2sec
+              autoplayHoverPause: true,
+              responsive: {
+                0: {
+                  items: 1,
+                  nav: false,
+                },
+                600: {
+                  items: 2,
+                  nav: false,
+                },
+                1000: {
+                  items: 3,
+                  nav: false,
+                },
+              },
+            });
+          </script>
+        </section>
           <section class="brand-section">
           <img class="img-brands" src="https://sites.google.com/site/sk8trucos/_/rsrc/1468756681820/home/marcas-reconocidas/105.jpg" alt="Imagen de marcas">
           <div class="main-brands"><p><strong>Marcas</strong></p>
@@ -95,7 +140,7 @@
         </section>
       </main>
         <div class="imagen-fondo2"> 
-          <p>SAN DIEGO</p>
+          <p></p>
          </div>
          <footer>
           <div class="footer-form">

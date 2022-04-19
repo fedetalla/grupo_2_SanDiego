@@ -14,6 +14,7 @@ ul{
     padding-inline-start: 0px;
 }
 
+
 :root{
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
@@ -26,19 +27,25 @@ ul{
 }
 
 :root {
-    --gris-nuevo: #808080;
+    --gris-nuevo: #9f9898;
     --negro-nuevo: #110F0F;
     --blanco-nuevo: #F4F3F7;
     --azul-nuevo: #5794EF;
     --naranja-nuevo: #FF4500;
 }
 
+.logo-header{
+    width: 10%;
+}
 
 
 /****************************
         CARRITO
 ******************************/
-
+.logo-cart{
+    text-align: center;
+background: var(--gris-nuevo);
+}
 .cart{
     
     background-color: var(--gris-claro);
@@ -48,6 +55,7 @@ ul{
 .title-cart{
     font-size: 1.5rem;
     margin-left: 5px;
+    padding-top: 35px;
 }
 
 .titulos-cart{
@@ -137,20 +145,20 @@ margin-left: 30%;
 	cursor: pointer;
 	outline: none;
 	margin: 0 5px;
-	border: 2px solid var(--violeta) !important;
+	border: 2px solid var(--azul) !important;
 	transition: all 0.3s ease;
 }
 
 .owl-dot:hover,
 .owl-dot:active{
-	background: var(--verde)!important;
+	background: var(--azul)!important;
 }
 
 .product-carrousel{
     display: flex;
     flex-direction: column;
     align-items: center;
-font-weight: 600;}
+font-weight: 400;}
 .title-product{
     font-size: 16;
 }
@@ -224,7 +232,7 @@ font-weight: 600;}
 .precio{
     margin: 2%;
     font-size: 18px;
-    color: #666;
+    color: var(--negro-nuevo);
     font-weight: 600;
 }
 .formulario{
@@ -349,7 +357,7 @@ font-weight: 600;}
     margin: 5px;
     font-size: 12px;
     width: 100%;
-    background-color: var(--gris-oscuro);
+    background-color: var(--gris-nuevo);
 }
 .logo-user{
     display: none;
@@ -358,6 +366,9 @@ font-weight: 600;}
 .logo-carrito{
     display: none;
     order: 3;
+}
+.logo-user, .logo-carrito{
+  color:#fff;
 }
 
 
@@ -385,6 +396,11 @@ font-weight: 600;}
 /* -----------/SECTION IMAGEN----------- */
 
 /* -----------MAIN----------- */
+.carousel-title {
+    margin-top: 1.5rem;
+    text-align: center;
+font-weight: 590;}
+
  main section .titulares{
      color: black;
      font-size: 12px;
@@ -401,12 +417,12 @@ font-weight: 600;}
 }
 
 .header-logo{
-    width: 30%;
+    width: 100%;
 }
 
-.main-product:hover p{
-    opacity: 1;
-    background-color:rgba(87, 148, 239, 0.6)
+.owl-item:hover {
+    opacity:0.7;
+    background-color:rgba(87, 148, 239, 1)
 }
 
 .main-product p{
@@ -485,11 +501,11 @@ font-weight: 600;}
 }
 .imagen-fondo2 p{
     font-size: 18px;
-    font-family: 'Calligraffitti', cursive;
+    
     font-weight: 800 ;
     color: black;
     padding:50px
-}
+;}
 
 /* -----------/MAIN----------- */
 
@@ -745,7 +761,7 @@ footer .list-politics li{
   .login-box input[type="text"], .login-box input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
-    background: transparent;
+    background: #00000014;
     outline: none;
     height: 40px;
     color: #fff;
@@ -764,8 +780,8 @@ footer .list-politics li{
   
   .login-box input[type="submit"]:hover {
     cursor: pointer;
-    background: burlywood;
-    color: #000;
+    
+    background: #c73601;color: #d9d9d9;
   }
   
   .login-box a {
@@ -786,7 +802,7 @@ footer .list-politics li{
     .login-box {
         height: 75%;
         min-width: 50%;
-        background: rgb(100, 61, 136);
+        background: rgba(100, 61, 136, 0.8);
         border: rgb(227, 209, 245) solid;
         box-shadow: 7px 7px 30px rgb(217, 176, 255);
         color: #fff;
@@ -820,7 +836,7 @@ footer .list-politics li{
         display: none;
     }
     .header-logo{
-        width: 10%;
+        
         align-self: flex-start;
     }
     .header-list{
@@ -828,9 +844,9 @@ footer .list-politics li{
     }
     .submit{
         font-size: 14px;
-        background-color: var(--gris-nuevo);
+        background-color: #ffffff;
         color: black;
-    border-radius: 0 15px 15px 0;padding: 0 13px;}
+    border-radius: 0 5px 5px 0;padding: 0 13px;}
     .header-searcher{
         border-radius: 6px;
         
@@ -843,8 +859,8 @@ footer .list-politics li{
     .header-searcher .input{
         border: none;
         height: 25px;width: 100%;
-        border-radius: 15px 0 0 15px;
-        background-color: var(--gris-nuevo);  
+        border-radius: 5px 0 0 5px;
+        background-color: #fff;/* background-color: var(--gris-nuevo); */  
 }
     .logo-user{
         display: block;
