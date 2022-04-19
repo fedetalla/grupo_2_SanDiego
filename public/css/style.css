@@ -538,6 +538,10 @@ footer{
     background-color: var(--negro-nuevo);
 }
 
+.bottom-footer{
+    color: #5794EF;
+}
+
 footer .list-politics{
     font-size:12px ;
 }
@@ -876,7 +880,6 @@ footer .list-politics li{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: #5794EF;
     }
     .list-politics li {
         padding: 5px 0px;
