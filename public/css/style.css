@@ -25,6 +25,14 @@ ul{
     --violeta: #7b1e7a; 
 }
 
+:root {
+    --gris-nuevo: #808080;
+    --negro-nuevo: #110F0F;
+    --blanco-nuevo: #F4F3F7;
+    --azul-nuevo: #5794EF;
+    --naranja-nuevo: #FF4500;
+}
+
 
 
 /****************************
@@ -287,7 +295,7 @@ font-weight: 600;}
 ******************************/
 
 .home-body{
-    background-color: burlywood;
+    background-color: var(--blanco-nuevo);
 }
 .home-main{
     width: 90%;
@@ -302,13 +310,13 @@ font-weight: 600;}
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:black;
+    background-color:var(--negro-nuevo);
 
 }
 .burger-menu{
     padding: 15px;
     font-size: 30px;
-    color: #808080;
+    color: var(--gris-nuevo);
 }
 
 .header-searcher{
@@ -323,7 +331,7 @@ font-weight: 600;}
 .submit{
     border: none;
     background-color: black ;
-    color: #808080;
+    color: var(--gris-nuevo);
     font-size: 30px;
 }
 
@@ -341,7 +349,7 @@ font-weight: 600;}
     margin: 5px;
     font-size: 12px;
     width: 100%;
-    background-color: burlywood;
+    background-color: var(--gris-oscuro);
 }
 .logo-user{
     display: none;
@@ -398,7 +406,7 @@ font-weight: 600;}
 
 .main-product:hover p{
     opacity: 1;
-    background-color:rgba(199, 113, 0, 0.7)
+    background-color:rgba(87, 148, 239, 0.6)
 }
 
 .main-product p{
@@ -487,11 +495,10 @@ font-weight: 600;}
 
 /* -----------FOOTER----------- */
 footer .footer-form{
-    border: solid 3px black;
     font-size: 14px;
     text-align: center;
     padding: 15px;
-    background-color: gray;
+    background-color: var(--blanco-nuevo);
     margin-bottom: 10px;
 }
 
@@ -502,12 +509,12 @@ footer .element-form{
 .element-form input{
     border-radius: 5px;
     padding: 5px;
-    border: none;
+    border: solid 1px var(--gris-nuevo);
 }
 
 .button-footer{
     padding: 0px 10px;
-    background-color: orangered;
+    background-color: var(--naranja-nuevo);
     color: #ffffff;
     border-radius: 8px;
     border: none;
@@ -517,7 +524,7 @@ footer .element-form{
 
 .button-cancel-buy{
     padding: 5px 10px;
-    background-color: orangered;
+    background-color: var(--azul-nuevo);
     color: #ffffff;
     border-radius: 8px;
     border: none;
@@ -528,7 +535,7 @@ footer .element-form{
 footer{
     text-align: center;
     /* padding-bottom: 10px ; */
-    background-color: burlywood;
+    background-color: var(--negro-nuevo);
 }
 
 footer .list-politics{
@@ -556,7 +563,7 @@ footer .list-politics li{
     font-size: 12px;
     border: solid black 1px;
     margin-top: 18px;
-    
+    color: var(--azul-nuevo);
     font-style: italic;
 }
 
@@ -817,7 +824,7 @@ footer .list-politics li{
     }
     .submit{
         font-size: 14px;
-        background-color: #ffffff;
+        background-color: var(--gris-nuevo);
         color: black;
     border-radius: 0 15px 15px 0;padding: 0 13px;}
     .header-searcher{
@@ -826,12 +833,15 @@ footer .list-politics li{
         order: 1;
         width: 10%;
         padding: 5px;
-    min-width: 100px;}
+    min-width: 100px;
+}
+
     .header-searcher .input{
         border: none;
         height: 25px;width: 100%;
-        color: #666;
-    border-radius: 15px 0 0 15px;}
+        border-radius: 15px 0 0 15px;
+        background-color: var(--gris-nuevo);  
+}
     .logo-user{
         display: block;
         color: #808080;
@@ -866,6 +876,7 @@ footer .list-politics li{
         display: flex;
         justify-content: space-around;
         align-items: center;
+        color: #5794EF;
     }
     .list-politics li {
         padding: 5px 0px;
