@@ -246,10 +246,12 @@ font-weight: 400;}
 .comprar{
     height: 100%;
     padding: 20%;
-    background-color: var(--violeta);
-    border: #20fc8f solid 1px;
+    background-color: var(--naranja-nuevo);
+    
     font-weight: 700;
-    color: #20fc8f;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
 }
 .descripcion{
     margin: 2%;
