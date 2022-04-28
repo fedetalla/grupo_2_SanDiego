@@ -1,31 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/skatepng.png" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <!-- owl-carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <!-- link de icons -->
-    <script
-      src="https://kit.fontawesome.com/e5a1a74a95.js"
-      crossorigin="anonymous"
-    ></script>
+  <%- include('./partials/head') %> 
 
-    <title>Carrito</title>
-  </head>
+
   <body>
     <div class="logo-cart">
       <a href="/">
@@ -43,7 +21,7 @@
         <li>
           <div class="product-data">
             <img
-              src="./img/Productos/Skateboard-Decks1.jpg"
+              src="/img/Productos/Skateboard-Decks1.jpg"
               alt="Imagen tabla 1"
             />
             <p class="precio">$2.000</p>
@@ -63,7 +41,7 @@
         <li>
           <div class="product-data">
             <img
-              src="./img/Productos/Skateboard-Decks2.jpg"
+              src="/img/Productos/Skateboard-Decks2.jpg"
               alt="Imagen tabla 2"
             />
             <p class="precio">$1.500</p>
@@ -82,7 +60,7 @@
         <li>
           <div class="product-data">
             <img
-              src="./img/Productos/Skateboard-Decks3.jpg"
+              src="/img/Productos/Skateboard-Decks3.jpg"
               alt="Imagen tabla 2"
             />
             <p class="precio">$1.500</p>
@@ -129,7 +107,7 @@
         <div class="carousel owl-carousel">
           <div class="card card-1">
             <p class="title-product product-carrousel">Tabla O´NEIL</p>
-            <img src="./img/Productos/Skateboard-Decks3.jpg" alt="image" />
+            <img src="/img/Productos/Skateboard-Decks3.jpg" alt="image" />
             <div class="product-carrousel">
               <p class="precio">$1.500</p>
               <!-- <p class="descuentos">40% off</p> -->
@@ -138,7 +116,7 @@
           </div>
           <div class="card card-2">
             <p class="title-product product-carrousel">Tabla SANTA CRUZ</p>
-            <img src="./img/Productos/Skateboard-Decks4.jpg" alt="image" />
+            <img src="/img/Productos/Skateboard-Decks4.jpg" alt="image" />
             <div class="product-carrousel">
               <p class="precio">$2.000</p>
               <!-- <p class="descuentos">40% off</p> -->
@@ -147,7 +125,7 @@
           </div>
           <div class="card card-3">
             <p class="title-product product-carrousel">Tabla ZERO</p>
-            <img src="./img/Productos/Skateboard-Decks5.jpg" alt="image" />
+            <img src="/img/Productos/Skateboard-Decks5.jpg" alt="image" />
             <div class="product-carrousel">
               <p class="precio">$2.000</p>
               <!-- <p class="descuentos">40% off</p> -->
@@ -156,7 +134,7 @@
           </div>
           <div class="card card-4">
             <p class="title-product product-carrousel">Tabla FLIP</p>
-            <img src="./img/Productos/Skateboard-Decks6.jpg" alt="image" />
+            <img src="/img/Productos/Skateboard-Decks6.jpg" alt="image" />
             <div class="product-carrousel">
               <p class="precio">$2.000</p>
               <!-- <p class="descuentos">40% off</p> -->
@@ -189,48 +167,9 @@
         });
       </script>
     </main>
-    <footer>
-      <div class="footer-form">
-      <form action="/" method="post">
-        <label><h4>Recibí las mejores ofertas y novedades</h4></label>
-        <div class="element-form">
-        <input type="text" name="name-user" placeholder="name_user"></div>
-        <div class="element-form">
-        <input type="email" name="user-email" placeholder="user@email.com"></div>
-        <button class="button-footer" type="submit">Enviar</button>
-      </form>
-     </div>
 
-     <div class="bottom-footer">
-       <ul>
-         <li><h5>CONTACTANOS</h5>
-           <div class="contact">
-           <i class="fas fa-mobile"></i>
-           <p>+54 011 1111111</p></div>
-           <div class="contact">
-           <i class="far fa-envelope"></i>
-           <p>(marca)@gmail.com</p>
-           </div>
-           </li>
-           <li class="footer-logos">
-           <i class="fab fa-instagram" ></i>
-           <i class="fab fa-facebook" ></i>
-           <i class="fab fa-twitter" ></i>
-           </li>
-       </ul>
-       <ul class="list-politics">
-         <li>Formas de pago</li>
-         <li>Metodos de envíos</li>
-         <li>Políticas de Privacidad</li>
-         <li>Políticas de cambios y devoluciones</li>
-       </ul>
-     </div>
-     <form action="#" method="post">
-       <button class="button-footer" type="submit">Cancelar compra</button>
-     </div>
-     <div class="copyright">
-      <p>Copyright © 2022 SanDiego® Todos los derechos reservados.</p>         
-     </div>
-    </footer>
+   <%- include('./partials/footer') %> 
+    
+
   </body>
 </html>

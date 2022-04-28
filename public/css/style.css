@@ -4,18 +4,19 @@
     font-family: 'Roboto', sans-serif;
 }
 
-ul li{
-    list-style-type:none;
-    
+ul li {
+    list-style-type: none;
+
 }
-ul{
+
+ul {
     margin-block-start: 0px;
     margin-block-end: 0px;
     padding-inline-start: 0px;
 }
 
 
-:root{
+:root {
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
     --gris: #E0E0E0;
@@ -23,7 +24,7 @@ ul{
     --negro: #070707;
     --verde: #20fc8f;
     --azul: #087e8b;
-    --violeta: #7b1e7a; 
+    --violeta: #7b1e7a;
 }
 
 :root {
@@ -34,31 +35,28 @@ ul{
     --naranja-nuevo: #FF4500;
 }
 
-.logo-header{
-    width: 10%;
-}
-
 
 /****************************
         CARRITO
 ******************************/
-.logo-cart{
+.logo-cart {
     text-align: center;
-background: var(--gris-nuevo);
-}
-.cart{
-    
-    background-color: var(--gris-claro);
-    
+    background: var(--gris-nuevo);
 }
 
-.title-cart{
+.cart {
+
+    background-color: var(--gris-claro);
+
+}
+
+.title-cart {
     font-size: 1.5rem;
     margin-left: 5px;
     padding-top: 35px;
 }
 
-.titulos-cart{
+.titulos-cart {
     display: flex;
     justify-content: space-between;
     margin: 10px 10px;
@@ -68,7 +66,7 @@ background: var(--gris-nuevo);
     font-size: 12px;
 }
 
-.product-data{
+.product-data {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
@@ -76,94 +74,103 @@ background: var(--gris-nuevo);
     margin: 10px 10px;
 }
 
-.product-data img{
+.product-data img {
     width: 76px;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
-.catidad{
+.catidad {
     margin-left: 15px;
 }
 
-.title-cart-quantity{
-margin-left: 30%;
+.title-cart-quantity {
+    margin-left: 30%;
 }
 
-.description-cart{
+.description-cart {
     border-bottom: 1px solid #bebebe;
 }
 
-.cart-bottom{
+.cart-bottom {
     width: 30%;
     margin-left: 70%;
     border-bottom: 1px solid #bebebe;
-} 
+}
 
-.subtotal-bottom, .Shipping-bottom{
+.subtotal-bottom,
+.Shipping-bottom {
     margin: 10px 10px;
     display: flex;
     justify-content: flex-end;
 }
 
-.subt-bot, .ship-bot, .tot-cart{
+.subt-bot,
+.ship-bot,
+.tot-cart {
     margin-right: 20px;
 }
 
-.total-cart{
+.total-cart {
     margin: 10px 10px;
     display: flex;
     justify-content: flex-end;
 }
 
-#cantidad{
+#cantidad {
     width: 35px;
     margin: 0 10px;
 }
-.btn-finalizar{
+
+.btn-finalizar {
     background-color: var(--violeta);
     color: var(--verde);
 }
-.btn-cart{
+
+.btn-cart {
     margin-top: 1.5rem;
-   text-align: center;
+    text-align: center;
 }
 
-.qty-cart{
+.qty-cart {
     max-width: 40px;
 }
 
 /*carrusel*/
-.owl-dots{
-	text-align: center;
-	margin-top: 0px;
+.owl-dots {
+    text-align: center;
+    margin-top: 0px;
 }
 
-.owl-dot{
-	height: 15px;
-	width: 25px;
-	border-radius: 25px;
-	cursor: pointer;
-	outline: none;
-	margin: 0 5px;
-	border: 2px solid var(--azul) !important;
-	transition: all 0.3s ease;
+.owl-dot {
+    height: 15px;
+    width: 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    margin: 0 5px;
+    border: 2px solid var(--azul) !important;
+    transition: all 0.3s ease;
 }
 
 .owl-dot:hover,
-.owl-dot:active{
-	background: var(--azul)!important;
+.owl-dot:active {
+    background: var(--azul) !important;
 }
 
-.product-carrousel{
+.product-carrousel {
     display: flex;
     flex-direction: column;
     align-items: center;
-font-weight: 400;}
-.title-product{
+    font-weight: 400;
+}
+
+.title-product {
     font-size: 16;
 }
-.wrapper{
-    padding-bottom: 30px;margin-top: 46px;
+
+.wrapper {
+    padding-bottom: 30px;
+    margin-top: 46px;
 }
 
 
@@ -172,183 +179,210 @@ font-weight: 400;}
     width: 100%;
     padding: 30px;
 }
+
 /****************************
      DETALLE DE PRODUCTO
 ******************************/
-.main{
+.main {
     border-bottom: #666 solid 1px;
 }
-.header-producto{
+
+.header-producto {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     border-bottom: #666 solid 2px;
 }
 
-.logo-producto{
+.logo-producto {
     width: 25vw;
     margin-left: 9%;
 }
-.icons-header-producto{
+
+.icons-header-producto {
     font-size: 25px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.titulo-producto{
+.titulo-producto {
     font-weight: 550;
     text-align: center;
     margin-top: 7%;
 }
 
-.foto-producto{
+.foto-producto {
     margin: 10%;
     width: 80%;
     box-shadow: 0px 0px 10px rgb(100 100 100);
     margin-bottom: 5%;
 }
 
-.imagenes-de-opcion{
+.imagenes-de-opcion {
     width: 38%;
     margin: 5%;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
-.arrow{
+.arrow {
     margin: 10%;
 }
 
-.opciones{
+.opciones {
     display: flex;
     align-items: center;
 }
-.info-product{
+
+.info-product {
     margin-left: 5%;
 }
-.breve-descripcion{
+
+.breve-descripcion {
     margin: 2%;
     color: #666;
 }
-.precio{
+
+.precio {
     margin: 2%;
     font-size: 18px;
     color: var(--negro-nuevo);
     font-weight: 600;
 }
-.formulario{
+
+.formulario {
     display: flex;
     margin: 2%;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 0;
 }
-.masmenos{
+
+.masmenos {
     display: flex;
     flex-direction: column;
     margin-right: 3%;
 }
-.comprar{
+
+.comprar {
     height: 100%;
     padding: 20%;
-    background-color: var(--violeta);
-    border: #20fc8f solid 1px;
+    background-color: var(--naranja-nuevo);
+
     font-weight: 700;
-    color: #20fc8f;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
 }
-.descripcion{
+
+.descripcion {
     margin: 2%;
 }
-.lis{
+
+.lis {
     list-style-type: disc;
     margin: 2%;
     margin-left: 10%;
 }
-.bullet-product{
+
+.bullet-product {
     background-color: yellow;
     border: black solid 1px;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    margin:5px;
+    margin: 5px;
 }
-.bullet-product1{
+
+.bullet-product1 {
     background-color: var(--azul);
     border: black solid 1px;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    margin:5px;
+    margin: 5px;
 }
-.bullet-product2{
+
+.bullet-product2 {
     background-color: var(--violeta);
     border: black solid 1px;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    margin:5px;
+    margin: 5px;
 }
-.bullet-product3{
+
+.bullet-product3 {
     background-color: var(--verde);
     border: black solid 1px;
     border-radius: 50%;
     height: 30px;
     width: 30px;
-    margin:5px;
+    margin: 5px;
 }
-.bullets{
+
+.bullets {
     display: flex;
 }
+
 /****************************
         HOME
 ******************************/
+.logo-header {
+    width: 30%;
+}
 
-.home-body{
+.home-body {
     background-color: var(--blanco-nuevo);
 }
-.home-main{
+
+.home-main {
     width: 90%;
     margin: auto;
 }
 
-.header-envio{
+.header-envio {
     text-align: center;
     display: none;
 }
-.top-header{
+
+.top-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:var(--negro-nuevo);
+    background-color: var(--negro-nuevo);
 
 }
-.burger-menu{
+
+.burger-menu {
     padding: 15px;
     font-size: 30px;
     color: var(--gris-nuevo);
 }
 
-.header-searcher{
+.header-searcher {
     border-radius: 6px;
     border: none;
     display: flex;
     font-size: 30px;
 }
-.header-searcher .input{
+
+.header-searcher .input {
     display: none;
 }
-.submit{
+
+.submit {
     border: none;
-    background-color: black ;
+    background-color: black;
     color: var(--gris-nuevo);
     font-size: 30px;
 }
 
-.header-list{
+.header-list {
     display: none;
     padding: 5px;
 }
 
-.header-list li{
+.header-list li {
     padding: 10px;
     border: solid black 1px;
     border-radius: 30%;
@@ -359,16 +393,20 @@ font-weight: 400;}
     width: 100%;
     background-color: var(--gris-nuevo);
 }
-.logo-user{
+
+.logo-user {
     display: none;
     order: 2;
 }
-.logo-carrito{
+
+.logo-carrito {
     display: none;
     order: 3;
 }
-.logo-user, .logo-carrito{
-  color:#fff;
+
+.logo-user,
+.logo-carrito {
+    color: #fff;
 }
 
 
@@ -377,7 +415,7 @@ font-weight: 400;}
 
 
 /* -----------SECTION IMAGEN----------- */
-.imagen-fondo{
+.imagen-fondo {
     background-image: url('https://i.pinimg.com/originals/89/f5/ee/89f5ee2c48c63c6e4fb127b7ecd9cd60.gif');
     background-position: center;
     /* background-attachment: fixed; */
@@ -386,28 +424,32 @@ font-weight: 400;}
     text-align: center;
     border-top: 10px;
 }
-.imagen-fondo p{
+
+.imagen-fondo p {
     font-size: 18px;
     font-family: 'Calligraffitti', cursive;
-    font-weight: 400 ;
+    font-weight: 400;
     color: white;
-    padding:50px
+    padding: 50px
 }
+
 /* -----------/SECTION IMAGEN----------- */
 
 /* -----------MAIN----------- */
 .carousel-title {
     margin-top: 1.5rem;
     text-align: center;
-font-weight: 590;}
+    font-weight: 590;
+}
 
- main section .titulares{
-     color: black;
-     font-size: 12px;
-     text-align: center;
-     padding: 15px;
- }
-    .main-product{
+main section .titulares {
+    color: black;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+}
+
+.main-product {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -416,20 +458,20 @@ font-weight: 590;}
     position: relative;
 }
 
-.header-logo{
+.header-logo {
     width: 100%;
 }
 
 .owl-item:hover {
-    opacity:0.7;
-    background-color:rgba(87, 148, 239, 1)
+    opacity: 0.7;
+    background-color: rgba(87, 148, 239, 1)
 }
 
-.main-product p{
+.main-product p {
     position: absolute;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     padding: 5px;
     width: 100%;
@@ -441,25 +483,25 @@ font-weight: 590;}
     transition: all 450ms;
 }
 
- .main-description{
-     font-size: 12px;
-     width: 100%;
-     padding: 15px;
-     padding-bottom: 0;
- }
+.main-description {
+    font-size: 12px;
+    width: 100%;
+    padding: 15px;
+    padding-bottom: 0;
+}
 
- .main-products{
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     margin-bottom: 40px;
- }
+.main-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
 
-.home-arrow{
+.home-arrow {
     align-self: center;
 }
 
-.brand-section{
+.brand-section {
     border: solid black 2px;
     border-radius: 8px;
     display: flex;
@@ -468,18 +510,18 @@ font-weight: 590;}
     padding: 20px;
 }
 
-.img-brands{
+.img-brands {
     width: 50%;
 }
 
-.main-brands{
+.main-brands {
     flex-direction: column;
     padding: 15px;
     font-size: 14px;
     text-align: center;
 }
 
-.see-more{
+.see-more {
     color: brown;
     background-color: #ffffff;
     font-size: 14px;
@@ -489,7 +531,7 @@ font-weight: 590;}
     width: 100px;
 }
 
-.imagen-fondo2{
+.imagen-fondo2 {
     background-image: url('https://i.gifer.com/9kTs.gif');
     background-position: center;
     /* background-attachment: fixed; */
@@ -499,18 +541,19 @@ font-weight: 590;}
     border-top: 10px;
     margin-top: 80px;
 }
-.imagen-fondo2 p{
+
+.imagen-fondo2 p {
     font-size: 18px;
-    
-    font-weight: 800 ;
+
+    font-weight: 800;
     color: black;
-    padding:50px
-;}
+    padding: 50px;
+}
 
 /* -----------/MAIN----------- */
 
 /* -----------FOOTER----------- */
-footer .footer-form{
+footer .footer-form {
     font-size: 14px;
     text-align: center;
     padding: 15px;
@@ -518,17 +561,17 @@ footer .footer-form{
     margin-bottom: 10px;
 }
 
-footer .element-form{
+footer .element-form {
     padding: 5px;
 }
 
-.element-form input{
+.element-form input {
     border-radius: 5px;
     padding: 5px;
     border: solid 1px var(--gris-nuevo);
 }
 
-.button-footer{
+.button-footer {
     padding: 0px 10px;
     background-color: var(--naranja-nuevo);
     color: #ffffff;
@@ -538,7 +581,7 @@ footer .element-form{
     margin-top: 10px;
 }
 
-.button-cancel-buy{
+.button-cancel-buy {
     padding: 5px 10px;
     background-color: var(--azul-nuevo);
     color: #ffffff;
@@ -548,37 +591,37 @@ footer .element-form{
     margin-top: 10px;
 }
 
-footer{
+footer {
     text-align: center;
     /* padding-bottom: 10px ; */
     background-color: var(--negro-nuevo);
 }
 
-.bottom-footer{
+.bottom-footer {
     color: #5794EF;
 }
 
-footer .list-politics{
-    font-size:12px ;
+footer .list-politics {
+    font-size: 12px;
 }
 
-footer .list-politics li{
+footer .list-politics li {
     padding: 5px 0px;
 }
 
-.contact{
-     display: flex;
-     font-size: 14px;
-     justify-content: center;
-     padding: 5px;
- }
+.contact {
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    padding: 5px;
+}
 
-.footer-logos{
+.footer-logos {
     font-size: 19px;
     padding: 2px;
 }
 
-.copyright{
+.copyright {
     font-weight: 600;
     font-size: 12px;
     border: solid black 1px;
@@ -596,8 +639,9 @@ footer .list-politics li{
     display: flex;
     justify-content: center;
     background-color: burlywood;
-  }
-  .contacto-div .formatForm {
+}
+
+.contacto-div .formatForm {
     border: rgb(227, 209, 245) solid;
     padding: 10px;
     text-align: left;
@@ -607,28 +651,30 @@ footer .list-politics li{
     box-shadow: 7px 7px 30px rgb(217, 176, 255);
     border-radius: 4px;
     text-align: center;
-  }
-  .contacto-div .formatForm .inputClass {
+}
+
+.contacto-div .formatForm .inputClass {
     border-radius: 4px;
     background: rgb(100, 61, 136);
     color: white;
-  }
-  .contacto-div .formatForm .inputClasscoment {
+}
+
+.contacto-div .formatForm .inputClasscoment {
     background: rgb(100, 61, 136);
     color: white;
-  }
-  
-  .privacity{
+}
+
+.privacity {
     font-weight: 600;
     font-size: 12px;
     margin-top: 18px;
     font-style: italic;
-  }
+}
 
- /****************************
+/****************************
     REGISTER BUTTON
 ******************************/
-    .button-register {
+.button-register {
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
@@ -642,14 +688,14 @@ footer .list-politics li{
     border-radius: 1em;
     outline: none;
     box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
     text-shadow: 0 0 .5em var(--glow-color);
     position: relative;
     transition: all 0.3s;
-   }
-   
-   .button-register::after {
+}
+
+.button-register::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -661,31 +707,31 @@ footer .list-politics li{
     filter: blur(2em);
     opacity: .7;
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-   }
-   
-   .button-register:hover {
+}
+
+.button-register:hover {
     color: var(--btn-color);
     background-color: var(--glow-color);
     box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 4em 2em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
-   }
-   
-   .button-register:active {
-    box-shadow: 0 0 0.6em .25em var(--glow-color),
-           0 0 2.5em 2em var(--glow-spread-color),
-           inset 0 0 .5em .25em var(--glow-color);
-   }
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
 
-  /****************************
+.button-register:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
+
+/****************************
    LOGIN
 ******************************/
-#Contenedor{
-	width: 50%;
-	margin: 50px auto;
-	background-color: #F3EDED;
-	height: 400px;
-	padding: 0px 9px 0px 9px;
+#Contenedor {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #F3EDED;
+    height: 400px;
+    padding: 0px 9px 0px 9px;
     display: flex;
 }
 
@@ -693,72 +739,74 @@ footer .list-politics li{
  * Se aplica al contenedor donde muestra en el pie
  * la opción de olvidaste tu contraseña?
  */
-.opcioncontra{
-	text-align: center;
-	margin-top: 20px;
-	font-size: 14px;
+.opcioncontra {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
 }
 
 
-  /****************************
+/****************************
    LOGIN
 ******************************/
-.video-login{
-    width: 100%;
+.video-login {
+    width: 150%;
     margin: 0%;
     padding: 0%;
-}
+position: absolute;top: -50%;}
+
 .login-main {
     margin: 0;
     padding: 0;
     background-size: cover;
     font-family: sans-serif;
-  }
-  
-  .login-box {
-    height: 75%;
-    min-width: 86%;
-    background: rgb(100, 61, 136);
+}
+
+.login-box {
+
+    width: 250px;
+    background: rgba(100, 61, 136, 0.9);
     border: rgb(227, 209, 245) solid;
     box-shadow: 7px 7px 30px rgb(217, 176, 255);
     color: #fff;
-    top: 70%;
+    top: 47%;
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-  }
 
-  .login-box .avatar {
+    padding: 70px 30px;
+}
+
+.login-box .avatar {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
-  }
-  
-  .login-box h1 {
+}
+
+.login-box h1 {
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
     font-size: 22px;
-  }
-  
-  .login-box label {
+}
+
+.login-box label {
     margin: 0;
     padding: 0;
     font-weight: bold;
     display: block;
-  }
-  
-  .login-box input {
+}
+
+.login-box input {
     width: 100%;
     margin-bottom: 20px;
-  }
-  
-  .login-box input[type="text"], .login-box input[type="password"] {
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: #00000014;
@@ -766,9 +814,9 @@ footer .list-politics li{
     height: 40px;
     color: #fff;
     font-size: 16px;
-  }
-  
-  .login-box input[type="submit"] {
+}
+
+.login-box input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
@@ -776,147 +824,182 @@ footer .list-politics li{
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
-  }
-  
-  .login-box input[type="submit"]:hover {
+}
+
+.login-box input[type="submit"]:hover {
     cursor: pointer;
-    
-    background: #c73601;color: #d9d9d9;
-  }
-  
-  .login-box a {
+
+    background: #c73601;
+    color: #d9d9d9;
+}
+
+.login-box a {
     text-decoration: none;
     font-size: 12px;
     line-height: 20px;
     color: darkgrey;
-  }
-  
-  .login-box a:hover {
-    color: #fff;
-  }
-  .footer-login{
-      position: absolute;
-  }
+}
 
-  @media (min-width: 450px){
+.login-box a:hover {
+    color: #fff;
+}
+
+.footer-login {
+    position: absolute;
+}
+
+@media (min-width: 480px) {
     .login-box {
-        height: 75%;
-        min-width: 50%;
+        width: 400px;
+        
         background: rgba(100, 61, 136, 0.8);
         border: rgb(227, 209, 245) solid;
         box-shadow: 7px 7px 30px rgb(217, 176, 255);
         color: #fff;
-        top: 100%;
-        left: 50%;
+        top: 40%;
+
         position: absolute;
-        transform: translate(-50%, -50%);
-        box-sizing: border-box;
+
+
         padding: 70px 30px;
-      }
-    
-
-  }
+    }
 
 
+}
 
-@media(min-width: 768px){
+
+
+@media(min-width: 768px) {
+
     /***************** HEADER *****************/
     .header-searcher .input {
-    display: block;
+        display: block;
     }
-    .header-envio{
+
+    .header-envio {
         display: block
     }
-    
-    .top-header{
+
+    .top-header {
         justify-content: space-around;
     }
 
-    .burger-menu{
+    .burger-menu {
         display: none;
     }
-    .header-logo{
-        
+
+    .logo-header {
+        width: 10%;
+    }
+
+    .header-logo {
+
         align-self: flex-start;
     }
-    .header-list{
+
+    .header-list {
         display: flex;
     }
-    .submit{
+
+    .submit {
         font-size: 14px;
         background-color: #ffffff;
         color: black;
-    border-radius: 0 5px 5px 0;padding: 0 13px;}
-    .header-searcher{
+        border-radius: 0 5px 5px 0;
+        padding: 0 13px;
+    }
+
+    .header-searcher {
         border-radius: 6px;
-        
+
         order: 1;
         width: 10%;
         padding: 5px;
-    min-width: 100px;
-}
+        min-width: 100px;
+    }
 
-    .header-searcher .input{
+    .header-searcher .input {
         border: none;
-        height: 25px;width: 100%;
+        height: 25px;
+        width: 100%;
         border-radius: 5px 0 0 5px;
-        background-color: #fff;/* background-color: var(--gris-nuevo); */  
-}
-    .logo-user{
+        background-color: #fff;
+        /* background-color: var(--gris-nuevo); */
+    }
+
+    .logo-user {
         display: block;
         color: #808080;
     }
-    .logo-carrito{
+
+    .logo-carrito {
         display: block;
         color: #808080;
     }
+
     /***************** HOME *****************/
-    .main-product{
+    .main-product {
         width: 25%;
     }
-    .brand-section{
+
+    .brand-section {
         display: none;
     }
-       /***************** /HOME *****************/
+
+    /***************** /HOME *****************/
     /***************** FOOTER *****************/
-    footer .footer-form{
+    footer .footer-form {
         font-size: 17px;
     }
-    footer .element-form{
+
+    footer .element-form {
         display: inline-block;
         padding: 10px 15px;
     }
-    .button-footer{
+
+    .button-footer {
         width: 10%;
         padding: 10px;
         margin-left: 10px;
     }
 
-    .bottom-footer{
+    .bottom-footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
+
     .list-politics li {
         padding: 5px 0px;
         list-style: disc;
         text-align: initial;
     }
-       /***************** /FOOTER *****************/
+
+    /***************** LOGIN *****************/
+
+    .login-box{
+        
+    /* width: 420px; */}
 }
-@media(min-width:1024px){
-     /***************** HEADER *****************/
-    .header-list{
+
+@media(min-width:1024px) {
+
+    /***************** HEADER *****************/
+    .header-list {
         width: 50%;
     }
-    .header-searcher{
+
+    .header-searcher {
         width: 15%;
     }
-    .logo-user{
+
+    .logo-user {
         font-size: 19px;
     }
-    .logo-carrito{
+
+    .logo-carrito {
         font-size: 19px;
     }
-      /***************** /HEADER *****************/
+
+    /***************** /HEADER *****************/
 }
