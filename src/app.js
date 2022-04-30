@@ -6,7 +6,7 @@ const path = require("path");
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
-// app.set('views', path.resolve(__dirname,'./views'))
+
 
 const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
