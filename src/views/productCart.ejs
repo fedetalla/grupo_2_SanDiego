@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 
   <body>
     <div class="logo-cart">
       <a href="/">
-        <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo" style="width: 10%;"/>
-      </a>  
+        <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo" style="width: 10%;" />
+      </a>
     </div>
     <main class="cart">
       <h1 class="title-cart">Mi Carrito</h1>
@@ -20,60 +20,29 @@
       <ul class="description-cart">
         <li>
           <div class="product-data">
-            <img
-              src="/img/Productos/Skateboard-Decks1.jpg"
-              alt="Imagen tabla 1"
-            />
+            <img src="/img/Productos/Skateboard-Decks1.jpg" alt="Imagen tabla 1" />
             <p class="precio">$2.000</p>
             <!-- <p class="catidad">1</p> -->
             <label for="cantidad"></label>
-            <input
-              class="qty-cart"
-              type="number"
-              id="cantidad"
-              name="cantidad"
-              min="1"
-              max="10000"
-            />
+            <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
             <p class="Subtotal">$2.000</p>
           </div>
         </li>
         <li>
           <div class="product-data">
-            <img
-              src="/img/Productos/Skateboard-Decks2.jpg"
-              alt="Imagen tabla 2"
-            />
+            <img src="/img/Productos/Skateboard-Decks2.jpg" alt="Imagen tabla 2" />
             <p class="precio">$1.500</p>
             <label for="cantidad"></label>
-            <input
-              class="qty-cart"
-              type="number"
-              id="cantidad"
-              name="cantidad"
-              min="1"
-              max="10000"
-            />
+            <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
             <p class="Subtotal">$4.500</p>
           </div>
         </li>
         <li>
           <div class="product-data">
-            <img
-              src="/img/Productos/Skateboard-Decks3.jpg"
-              alt="Imagen tabla 2"
-            />
+            <img src="/img/Productos/Skateboard-Decks3.jpg" alt="Imagen tabla 2" />
             <p class="precio">$1.500</p>
             <label for="cantidad"></label>
-            <input
-              class="qty-cart"
-              type="number"
-              id="cantidad"
-              name="cantidad"
-              value="qty"
-              min="1"
-              max="10000"
-            />
+            <input class="qty-cart" type="number" id="cantidad" name="cantidad" value="qty" min="1" max="10000" />
             <p class="Subtotal">$3.000</p>
           </div>
         </li>
@@ -95,10 +64,7 @@
       </div>
 
       <div class="btn-cart">
-        <button
-          class="btn-finalizar"
-          type="button"
-          onclick="alert('Finalizaste la compra con exito!')">Finalizar compra
+        <button class="btn-finalizar" type="button" onclick="alert('Finalizaste la compra con exito!')">Finalizar compra
         </button>
       </div>
 
@@ -168,8 +134,9 @@
       </script>
     </main>
 
-   <%- include('./partials/footer') %> 
-    
+    <%- include('./partials/footer') %>
+
 
   </body>
+
 </html>

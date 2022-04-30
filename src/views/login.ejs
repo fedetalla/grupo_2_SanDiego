@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 
-<body class="register-body">
+    <body class="register-body">
 
-    <main class="login-main">
+        <main class="login-main">
 
-      <div class="contenedor">
-          <video class="video-login" autoplay loop muted>
-              <source src="/img/Videos/fondo.mp4" type="video/mp4"> 
-          </video>
-          <div class="login-box">
-              <a href="/"><img src="/img/logo-san-diego.png" class="avatar" alt="Logo San Diego"></a>
-              
-              <h1>Registrate</h1>
-              <form class="form-login" action="/login" method="POST">
-                  <label for="username">Usuario</label>
-                  <input type="text" name="username" placeholder="Nombre de Usuario">
-                  <label for="password">Contraseña</label>
-                  <input type="password" type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
-                  <input type="submit" value="Registrarse">
-                  <a href="#">¿Olvidaste tu contraseña?</a><br>
-                  <a href="#">Crear una cuenta</a>
-              </form>
-      </div>
-    </main>
-</body>
+            <div class="contenedor">
+                <video class="video-login" autoplay loop muted>
+                    <source src="/img/Videos/fondo.mp4" type="video/mp4">
+                </video>
+                <div class="login-box">
+                    <a href="/"><img src="/img/logo-san-diego.png" class="avatar" alt="Logo San Diego"></a>
+
+                    <h1>Registrate</h1>
+                    <form class="form-login" action="/login" method="POST">
+                        <label for="username">Usuario</label>
+                        <input type="text" name="username" placeholder="Nombre de Usuario">
+                        <label for="password">Contraseña</label>
+                        <input type="password" type="password" name="password" id="password"
+                            placeholder="Ingresá tu contraseña">
+                        <input type="submit" value="Registrarse">
+                        <a href="#">¿Olvidaste tu contraseña?</a><br>
+                        <a href="#">Crear una cuenta</a>
+                    </form>
+                </div>
+        </main>
+    </body>
+
 </html>

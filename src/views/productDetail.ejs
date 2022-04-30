@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
 
-<body>
+    <body>
 
-   <%- include('./partials/header') %> 
-    
+        <%- include('./partials/header') %>
 
-    <main class="main">
-        <article>
-            <h1 class="titulo-producto">Tabla Flip Amarilla</h1>
-            <div><img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="foto-producto"></div>
-        </article>
-        <section class="opciones">
-            <div class="arrow"><i class="fas fa-angle-left"></i></div>
-            <div>
-                <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="imagenes-de-opcion">
-                <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla" class="imagenes-de-opcion">
-            </div>
-            <div class="arrow"><i class="fas fa-angle-right"></i></div>
-        </section>
-        <section class="info-product">
-            <div>
-                <div>
-                    <p class="breve-descripcion">Tabla Flip amarilla (78cm x 20cm)</p>
-                </div>
-                <div>
-                    <p class="precio">$ 111111</p>
-                </div>
-            </div>
-            <div class="bullets">
-                <p class="bullet-product"></p>
-                <p class="bullet-product1"></p>
-                <p class="bullet-product2"></p>
-                <p class="bullet-product3"></p>
-            </div>
-            <form action="/cantidad" method="POST" class="formulario">
-                <label for="cantidad"></label>
-                <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
-                <div class="masmenos">
-                    <button type="button">+</button>
-                    <button type="button">-</button>
-                </div>
-                <div><button type="submit" class="comprar">COMPRAR</button></div>
-            </form>
-            <p class="breve-descripcion">Descripción</p>
-            <div class="descripcion">
-                <ul>
-                    <li class="lis">Tabla Flip amarilla.</li>
-                    <li class="lis">Medidas: 78cm x 20cm.</li>
-                    <li class="lis">Lija inluida.</li>
-                    <li class="lis">(No incluye ruedas ni ejes, solo la tabla)</li>
-                </ul>
-            </div>
-        </section>
-    </main>
- 
-   <%- include('./partials/footer') %> 
-    
 
-</body>
+            <main class="main">
+                <article>
+                    <h1 class="titulo-producto">Tabla Flip Amarilla</h1>
+                    <div><img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                            class="foto-producto"></div>
+                </article>
+                <section class="opciones">
+                    <div class="arrow"><i class="fas fa-angle-left"></i></div>
+                    <div>
+                        <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                            class="imagenes-de-opcion">
+                        <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                            class="imagenes-de-opcion">
+                    </div>
+                    <div class="arrow"><i class="fas fa-angle-right"></i></div>
+                </section>
+                <section class="info-product">
+                    <div>
+                        <div>
+                            <p class="breve-descripcion">Tabla Flip amarilla (78cm x 20cm)</p>
+                        </div>
+                        <div>
+                            <p class="precio">$ 111111</p>
+                        </div>
+                    </div>
+                    <div class="bullets">
+                        <p class="bullet-product"></p>
+                        <p class="bullet-product1"></p>
+                        <p class="bullet-product2"></p>
+                        <p class="bullet-product3"></p>
+                    </div>
+                    <form action="/cantidad" method="POST" class="formulario">
+                        <label for="cantidad"></label>
+                        <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
+                        <div class="masmenos">
+                            <button type="button">+</button>
+                            <button type="button">-</button>
+                        </div>
+                        <div><button type="submit" class="comprar">COMPRAR</button></div>
+                    </form>
+                    <p class="breve-descripcion">Descripción</p>
+                    <div class="descripcion">
+                        <ul>
+                            <li class="lis">Tabla Flip amarilla.</li>
+                            <li class="lis">Medidas: 78cm x 20cm.</li>
+                            <li class="lis">Lija inluida.</li>
+                            <li class="lis">(No incluye ruedas ni ejes, solo la tabla)</li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('./partials/footer') %>
+
+
+    </body>
 
 </html>
