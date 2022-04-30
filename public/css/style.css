@@ -267,11 +267,6 @@ ul {
     height: 100%;
     padding: 20%;
     background-color: var(--naranja-nuevo);
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 4337137c67d8f0911a3ae7ba8f871c2cc30d8093
     font-weight: 700;
     color: #ffffff;
     border-radius: 8px;
@@ -331,18 +326,10 @@ ul {
 /****************************
         HOME
 ******************************/
-<<<<<<< HEAD
-.logo-header {
-    width: 30%;
-}
-
-.home-body {
-=======
 .logo-header{
     width: 30%;
 }
 .home-body{
->>>>>>> 4337137c67d8f0911a3ae7ba8f871c2cc30d8093
     background-color: var(--blanco-nuevo);
 }
 
@@ -903,7 +890,6 @@ position: absolute;top: -50%;}
     }
     
     .header-logo{
-        
         align-self: flex-start;
     }
 
