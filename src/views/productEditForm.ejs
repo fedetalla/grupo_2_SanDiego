@@ -6,35 +6,41 @@
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-    <div class="edit-form">
+
     <form action="/:id/edit" method="POST">
-        <div class="element-edit-form">
+        <div class="edit-form">
+        <div>
             <label for="name" class="form-label">Nombre del producto</label>
             <input type="text" name="name" placeholder="Ej. Skate Indiana" class="form-input">
         </div>
-        <div class="element-edit-form">
+        <div>
             <label for="price" class="form-label">Precio</label>
             <input type="number" name="price" placeholder="Ej. 550.00" class="form-input">
         </div>
-        <div class="element-edit-form">
-            <label for="description" class="form-label">Descripción del producto</label>
-            <textarea type="text" name="description" placeholder="Ej. Skate Indiana" class="form-input"></textarea>
-        </div>
-        <div class="element-edit-form">
+        <div>
             <label for="name" class="form-label">Categoría</label>
             <select name="categories" class="form-input">
-                <option value="">Skate</option>
-                <option value="">Tablas</option>
-                <option value="">Ruedas</option>
-                <option value="">Accesorios</option>
+                <option value="skate">Skate</option>
+                <option value="tablas">Tablas</option>
+                <option value="ruedas">Ruedas</option>
+                <option value="ejes">Ejes</option>
+                <option value="accesorios">Accesorios</option>
             </select>
         </div>
-        <div class="element-edit-form">
-            <label for="description" class="form-label">Imagen del producto</label>
-            <input type="file" name="product-image" placeholder="Ej. Skate Indiana">
+        <div>
+            <label for="description" class="form-label">Descripción del producto</label>
+            <textarea type="text" name="description" placeholder="Ej. Skate con diseño exclusivo..." class="form-input-description"></textarea>
         </div>
-    </form>
-</div>
+        <div>
+            <label for="description" class="form-label">Imagen del producto</label>
+            <input type="file" name="product-image">
+        </div>
+        <div class="button-edit-form">
+            <button type="submit" class="button-save-product">Guardar producto</button>
+        </div>
+    </div>
+</form>
+
 
   <!-- footer EJS -->
   <%- include('parcial/footer.ejs') %>
