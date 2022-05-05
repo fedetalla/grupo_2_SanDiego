@@ -7,6 +7,9 @@ const productsController = {
     carrito: (req, res) => {
         return res.render("productCart")
     },
+    edit: (req,res) =>{
+        return res.render("productEditForm")
+    }
 
 }
 

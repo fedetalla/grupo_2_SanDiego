@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estás editando el producto:</title>
-</head>
+      <!-- head EJS -->
+      <%- include('parcial/head.ejs') %>
 <body>
-    <!-- aca hacemos includes del header -->
+    <!-- header EJS -->
+    <%- include('parcial/header.ejs') %>
+
     <div class="edit-form">
     <form action="/:id/edit" method="POST">
         <div class="element-edit-form">
@@ -16,11 +14,11 @@
         </div>
         <div class="element-edit-form">
             <label for="price" class="form-label">Precio</label>
-            <input type="text" name="price" placeholder="Ej. 550.00" class="form-input">
+            <input type="number" name="price" placeholder="Ej. 550.00" class="form-input">
         </div>
         <div class="element-edit-form">
             <label for="description" class="form-label">Descripción del producto</label>
-            <input type="text" name="description" placeholder="Ej. Skate Indiana" class="form-input">
+            <textarea type="text" name="description" placeholder="Ej. Skate Indiana" class="form-input"></textarea>
         </div>
         <div class="element-edit-form">
             <label for="name" class="form-label">Categoría</label>
@@ -33,9 +31,12 @@
         </div>
         <div class="element-edit-form">
             <label for="description" class="form-label">Imagen del producto</label>
-            <input type="file" name="product-image" placeholder="Ej. Skate Indiana" class="form-input">
+            <input type="file" name="product-image" placeholder="Ej. Skate Indiana">
         </div>
     </form>
 </div>
+
+  <!-- footer EJS -->
+  <%- include('parcial/footer.ejs') %>
 </body>
 </html>
