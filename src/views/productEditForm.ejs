@@ -7,8 +7,11 @@
     <%- include('parcial/header.ejs') %>
 
 
-    <form action="/:id/edit" method="POST">
+    <form action="/productos/edit" method="POST">
         <div class="edit-form">
+            <div>
+				<h2 class="edit-form-title">Estás editando:</h2>
+			</div>
         <div>
             <label for="name" class="form-label">Nombre del producto</label>
             <input type="text" name="name" placeholder="Ej. Skate Indiana" class="form-input">

@@ -867,8 +867,9 @@ position: absolute;top: -50%;}
   }
 .edit-form{
     padding: 10px 13px 10px 10px;;
-    background-color: #9f9898;
+    background-color: #EBEBEB;
     margin: auto;
+    margin-top: 30px;
 }  
 .form-input-description{
     display: block;
@@ -887,7 +888,8 @@ textarea.form-input-description{
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    background-color: #666;
+    background-color: forestgreen;
+    color: ghostwhite;
     border: solid black 1px;
     border-radius: 8px;
 }
@@ -895,6 +897,11 @@ textarea.form-input-description{
 .button-edit-form{
     text-align: center;
     margin: 10px;
+}
+.edit-form-title{
+    font-size: 1.6em;
+    font-weight: 400;
+    padding: 10px 0px;
 }
 
 /****************************
