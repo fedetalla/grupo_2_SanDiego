@@ -9,7 +9,10 @@ const productsController = {
     },
     edit: (req,res) =>{
         return res.render("productEditForm")
-    }
+    },
+    create: (req,res) => {
+        return res.render("productCreateForm")
+    },
 
 }
 

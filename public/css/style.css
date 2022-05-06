@@ -370,7 +370,7 @@ ul {
 
 .submit {
     border: none;
-    background-color: black;
+    background-color: var(--negro-nuevo);
     color: var(--gris-nuevo);
     font-size: 30px;
 }
@@ -402,9 +402,9 @@ ul {
     order: 3;
 }
 
-.logo-user,
-.logo-carrito {
-    color: #fff;
+.logo-user a,
+.logo-carrito a{
+    color: var(--gris-nuevo);
 }
 
 
@@ -865,7 +865,7 @@ position: absolute;top: -50%;}
     padding: 0 15px;
     background-color: ghostwhite;
   }
-.edit-form{
+.product-form{
     padding: 10px 13px 10px 10px;;
     background-color: #EBEBEB;
     margin: auto;
@@ -898,7 +898,7 @@ textarea.form-input-description{
     text-align: center;
     margin: 10px;
 }
-.edit-form-title{
+.product-form-title{
     font-size: 1.6em;
     font-weight: 400;
     padding: 10px 0px;
@@ -1039,8 +1039,8 @@ textarea.form-input-description{
         margin: 7% 15% 5%;
         width: 70%;
     }
-    /***************** FORMULARIO DE EDICIÓN *****************/
-    .edit-form{
+    /***************** FORMULARIOS DE EDICIÓN/CREACIÓN *****************/
+    .product-form{
         width: 70%;
         border-radius: 10px;
     }
