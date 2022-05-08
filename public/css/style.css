@@ -905,6 +905,15 @@ textarea.form-input-description{
 }
 
 /****************************
+   MAIN PRODUCTOS
+******************************/
+.mainProductos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/****************************
    MEDIA QUERY
 ******************************/
 @media (min-width: 480px) {
@@ -1046,14 +1055,7 @@ textarea.form-input-description{
     }
 }
 
-/****************************
-   MAIN PRODUCTOS
-******************************/
-.mainProductos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
 
 @media(min-width:1024px) {
 
