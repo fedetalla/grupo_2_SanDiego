@@ -638,7 +638,14 @@ footer .list-politics div {
 /****************************
     REGISTER
 ******************************/
-
+.title-register{
+    font-size: 16px;
+    text-align: center;
+    margin: 15px 0px;
+    background-color: var(--negro-nuevo);
+    color: var(--gris-nuevo);
+    padding: 10px 0px;
+}
 .register-form {
     display: flex;
     justify-content: center;
@@ -678,8 +685,8 @@ footer .list-politics div {
     color: var(--blanco-nuevo);
     border: solid 2px black;
     padding: 1em 3em;
-    font-size: 15px;
-    font-weight: bold;
+    /* font-size: 15px;
+    font-weight: bold; */
     background-color: var(--negro-nuevo);
     border-radius: 1em;
 }
