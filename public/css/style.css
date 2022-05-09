@@ -691,6 +691,13 @@ footer .list-politics div {
     border-radius: 1em;
 }
 
+.span-register {
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: 18px;
+    font-style: italic;
+}
+
 /* .button-register::after {
     pointer-events: none;
     content: "";
