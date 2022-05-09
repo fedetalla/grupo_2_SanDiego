@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const router = express.Router();
 
 const path = require("path");
 
@@ -25,3 +26,6 @@ app.listen(3080, ()=>{
     console.log("servidor corriendo en el puerto http://localhost:3080");
 });
 
+app.use((req,res,next)=>{
+    res.status(404).render("not-found");
+});
