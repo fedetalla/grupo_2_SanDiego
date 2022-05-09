@@ -637,63 +637,52 @@ footer .list-politics li {
     REGISTER
 ******************************/
 
-.contacto-div {
+.register-form {
     display: flex;
     justify-content: center;
-    background-color: var(--blanco-nuevo);
+    background-color: #ebebeb;
+    border-bottom: solid 2px var(--negro-nuevo);
 }
 
-.contacto-div .formatForm {
-    border: rgb(227, 209, 245) solid;
+.formatForm-register {
+    margin: 15px 0px;
     padding: 10px;
-    text-align: left;
     font-size: 18px;
-    height: 75%;
-    min-width: 35%;
-    box-shadow: 7px 7px 30px rgba(217, 176, 255, 0.363);
-    border-radius: 4px;
     text-align: center;
 }
 
-.contacto-div .formatForm .inputClass {
+.register-input {
     border-radius: 4px;
-    background: var(--violeta);
-    color: white;
+    background-color: var(--blanco-nuevo);
+    color: black;
+    display: block;
+    width: 70%;
+    margin: auto;
+    height: 25px;
+    border: none;
+    text-align: center;
+    margin-top: 5px;
 }
 
 
-.privacity {
+.register-privacity {
     font-weight: 600;
     font-size: 12px;
     margin-top: 18px;
     font-style: italic;
 }
 
-/****************************
-    REGISTER BUTTON
-******************************/
 .button-register {
-    --glow-color: rgb(217, 176, 255);
-    --glow-spread-color: rgba(191, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(231, 206, 255);
-    --btn-color: var(--violeta);
-    border: .25em solid var(--glow-color);
+    color: var(--blanco-nuevo);
+    border: solid 2px black;
     padding: 1em 3em;
-    color: var(--glow-color);
     font-size: 15px;
     font-weight: bold;
-    background-color: var(--btn-color);
+    background-color: var(--negro-nuevo);
     border-radius: 1em;
-    outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
-    position: relative;
-    transition: all 0.3s;
 }
 
-.button-register::after {
+/* .button-register::after {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -701,25 +690,26 @@ footer .list-politics li {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--glow-spread-color);
+    background-color: var(--negro-nuevo);
     filter: blur(2em);
     opacity: .7;
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-}
+} */
 
 .button-register:hover {
-    color: var(--btn-color);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1em .25em var(--glow-color),
-        0 0 4em 2em var(--glow-spread-color),
-        inset 0 0 .75em .25em var(--glow-color);
+    color: var(--negro-nuevo);
+    background-color: var(--azul-nuevo);
+    box-shadow: 0 0 1em .15em var(--azul-nuevo),
+        0 0 2em 1em var(--azul-nuevo),
+        inset 0 0 .35em .15em var(--azul-nuevo);
+        transition: 0.8s;
 }
 
-.button-register:active {
-    box-shadow: 0 0 0.6em .25em var(--glow-color),
-        0 0 2.5em 2em var(--glow-spread-color),
-        inset 0 0 .5em .25em var(--glow-color);
-}
+/* .button-register:active {
+    box-shadow: 0 0 0.6em .25em var(--naranja-nuevo),
+        0 0 2.5em 2em var(--naranja-nuevo),
+        inset 0 0 .5em .25em var(--naranja-nuevo);
+} */
 
 /****************************
    LOGIN
