@@ -166,6 +166,7 @@ ul {
 
 .title-product {
     font-size: 16;
+    padding-top: 15px;
 }
 
 .wrapper {
@@ -462,7 +463,8 @@ main section .titulares {
 
 .owl-item:hover {
     opacity: 0.7;
-    background-color: rgba(87, 148, 239, 1)
+    background-color: rgba(87, 148, 239, 1);
+    transition: 1s;
 }
 
 .main-product p {
@@ -607,7 +609,7 @@ footer .list-politics {
     font-size: 12px;
 }
 
-footer .list-politics li {
+footer .list-politics div {
     padding: 5px 0px;
 }
 
@@ -1039,8 +1041,7 @@ textarea.form-input-description{
         align-items: center;
     }
 
-    .list-politics li {
-        padding: 5px 0px;
+    .list-politics div{
         list-style: disc;
         text-align: initial;
     }
