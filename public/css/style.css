@@ -914,6 +914,20 @@ textarea.form-input-description{
 }
 
 /****************************
+   PRODUCT LIST
+******************************/
+.productImg{
+    width: 100%;
+}
+.product-list-box{
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+/****************************
    MEDIA QUERY
 ******************************/
 @media (min-width: 480px) {
@@ -1053,6 +1067,14 @@ textarea.form-input-description{
         width: 70%;
         border-radius: 10px;
     }
+    /****************************
+    PRODUCT LIST
+    ******************************/
+
+    .product-list-box{
+        width: 40%;
+    }
+
 }
 
 
@@ -1077,4 +1099,18 @@ textarea.form-input-description{
     }
 
     /***************** /HEADER *****************/
+
+    /****************************
+    PRODUCT LIST
+    ******************************/
+
+    .product-list-box{
+        width: 40%;
+        margin: 20px 0px;
+    }
+    .full-list-products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }

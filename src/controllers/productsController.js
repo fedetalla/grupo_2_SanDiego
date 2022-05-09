@@ -21,6 +21,9 @@ const productsController = {
     create: (req,res) => {
         return res.render("productCreateForm")
     },
+    list:(req,res) => {
+        return res.render("ProductList")
+    },
 
 
 }
