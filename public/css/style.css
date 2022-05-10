@@ -774,9 +774,9 @@ opacity: 0.8;}
 .login-box {
 
     width: 250px;
-    background: rgba(100, 61, 136, 0.9);
-    border: rgb(227, 209, 245) solid;
-    box-shadow: 7px 7px 30px rgb(217, 176, 255);
+    background: rgb(36 33 38 / 90%);
+    border: rgb(253 251 255) solid;
+    box-shadow: 7px 7px 30px rgb(91 89 92);
     color: #fff;
     top: 47%;
     left: 50%;
@@ -944,13 +944,13 @@ textarea.form-input-description{
 @media (min-width: 480px) {
     .login-box {
         width: 400px;
-        background: rgba(100, 61, 136, 0.9);
-        border: rgb(227, 209, 245) solid;
-        box-shadow: 7px 7px 30px rgb(217, 176, 255);
-        color: #fff;
+        
+        
+        
+        
         top: 55%;
-        position: absolute;
-        padding: 70px 30px;
+        
+        
     }
 }
 
