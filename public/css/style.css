@@ -753,11 +753,16 @@ footer .list-politics div {
 /****************************
    LOGIN
 ******************************/
+.img-login{
+    width: 100%;
+    display:block;
+opacity: 0.8;}
+
 .video-login {
-    width: 150%;
-    margin: 0%;
-    padding: 0%;
-position: absolute;top: -50%;}
+    width: 100%;
+    display:none;
+    
+}
 
 .login-main {
     margin: 0;
@@ -939,20 +944,14 @@ textarea.form-input-description{
 @media (min-width: 480px) {
     .login-box {
         width: 400px;
-        
-        background: rgba(100, 61, 136, 0.8);
+        background: rgba(100, 61, 136, 0.9);
         border: rgb(227, 209, 245) solid;
         box-shadow: 7px 7px 30px rgb(217, 176, 255);
         color: #fff;
         top: 40%;
-
         position: absolute;
-
-
         padding: 70px 30px;
     }
-
-
 }
 
 
@@ -1061,6 +1060,11 @@ textarea.form-input-description{
     }
 
     /***************** LOGIN *****************/
+    .login-box {
+        top: 50%;
+        left: 80%;
+        position: absolute;
+    }
 
     /***************** DETALLE DE PRODUCTO *****************/
     .foto-producto {
@@ -1117,9 +1121,19 @@ textarea.form-input-description{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-    }
-}
+    }       
+    /***************** LOGIN *****************/
 
+    .video-login {
+    width: 100vw;
+    display:block;
+    opacity: 0.8;
+    }
+    .img-login{
+    display:none;
+    }
+    
+}
     /****************************
     404 not-found
     ******************************/
