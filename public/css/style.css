@@ -948,7 +948,7 @@ textarea.form-input-description{
         border: rgb(227, 209, 245) solid;
         box-shadow: 7px 7px 30px rgb(217, 176, 255);
         color: #fff;
-        top: 40%;
+        top: 55%;
         position: absolute;
         padding: 70px 30px;
     }
@@ -1060,11 +1060,7 @@ textarea.form-input-description{
     }
 
     /***************** LOGIN *****************/
-    .login-box {
-        top: 50%;
-        left: 80%;
-        position: absolute;
-    }
+
 
     /***************** DETALLE DE PRODUCTO *****************/
     .foto-producto {
@@ -1127,10 +1123,17 @@ textarea.form-input-description{
     .video-login {
     width: 100vw;
     display:block;
-    opacity: 0.8;
+    
     }
+    
     .img-login{
     display:none;
+    }
+    
+    .login-box {
+        top: 50%;
+        left: 80%;
+        position: absolute;
     }
     
 }
