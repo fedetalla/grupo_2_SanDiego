@@ -19,4 +19,4 @@ Retro 3er sprint
 
 4- Hacer menos: Creemos que tenemos que trabajar de manera más grupal para poder practicar entre todos lo aprendido en clase.
 
-5- Dejar de hacer: Utilizar palabras en español.
+5- Dejar de hacer: Utilizar palabras en español y comenzar a unificar el dialogo con las clases y nombres en ingles.
