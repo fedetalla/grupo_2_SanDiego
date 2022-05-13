@@ -1,42 +1,50 @@
 [
     {
         "id": 1,
-        "name": "",
-        "email": "",
-        "password": "",
-        "category": "",
+        "name": "Fede Tallarico",
+        "email": "fedetallarico@sandiego.com",
+        "password": "123456",
+        "category": "administrador",
         "image": ""
     },
     {
         "id": 2,
-        "name": "",
-        "email": "",
-        "password": "",
-        "category": "",
+        "name": "Lucas Maquiavelo",
+        "email": "lucasmaquiavelo@sandiego.com",
+        "password": "123456",
+        "category": "administrador",
         "image": ""
     },
     {
         "id": 3,
-        "name": "",
-        "email": "",
-        "password": "",
-        "category": "",
+        "name": "Franco Peljhan",
+        "email": "francopeljhan@sandiego.com",
+        "password": "123456",
+        "category": "administrador",
         "image": ""
     },
     {
         "id": 4,
-        "name": "",
-        "email": "",
-        "password": "",
-        "category": "",
+        "name": "Martin Salomon",
+        "email": "martinsalomon@sandiego.com",
+        "password": "123456",
+        "category": "administrador",
         "image": ""
     },
     {
         "id": 5,
-        "name": "",
-        "email": "",
-        "password": "",
-        "category": "",
+        "name": "Carlos Lopez",
+        "email": "carloslopez@mail.com",
+        "password": "123456",
+        "category": "user",
+        "image": ""
+    },
+    {
+        "id": 5,
+        "name": "Maria Gonzales",
+        "email": "mariagonzales@mail.com",
+        "password": "123456",
+        "category": "user",
         "image": ""
     }
 ]
