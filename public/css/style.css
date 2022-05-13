@@ -6,15 +6,10 @@
 
 ul li {
     list-style-type: none;
-
 }
 
 ul {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    padding-inline-start: 0px;
-}
-
+    margin-block-start: 0px; margin-block-end: 0px; padding-inline-start: 0px; }
 
 :root {
     --gris-oscuro: #666;
@@ -35,7 +30,6 @@ ul {
     --naranja-nuevo: #FF4500;
 }
 
-
 /****************************
         CARRITO
 ******************************/
@@ -45,9 +39,7 @@ ul {
 }
 
 .cart {
-
     background-color: var(--gris-claro);
-
 }
 
 .title-cart {
@@ -97,16 +89,13 @@ ul {
     border-bottom: 1px solid #bebebe;
 }
 
-.subtotal-bottom,
-.Shipping-bottom {
+.subtotal-bottom, .Shipping-bottom {
     margin: 10px 10px;
     display: flex;
     justify-content: flex-end;
 }
 
-.subt-bot,
-.ship-bot,
-.tot-cart {
+.subt-bot, .ship-bot, .tot-cart {
     margin-right: 20px;
 }
 
@@ -122,9 +111,15 @@ ul {
 }
 
 .btn-finalizar {
-    background-color: var(--violeta);
-    color: var(--verde);
-}
+    
+    
+height: 10%;
+    padding: 10px;
+    background-color: var(--naranja-nuevo);
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;}
 
 .btn-cart {
     margin-top: 1.5rem;
@@ -152,8 +147,7 @@ ul {
     transition: all 0.3s ease;
 }
 
-.owl-dot:hover,
-.owl-dot:active {
+.owl-dot:hover, .owl-dot:active {
     background: var(--azul) !important;
 }
 
@@ -173,7 +167,6 @@ ul {
     padding-bottom: 30px;
     margin-top: 46px;
 }
-
 
 .owl-carousel .owl-item img {
     display: block;
@@ -327,10 +320,11 @@ ul {
 /****************************
         HOME
 ******************************/
-.logo-header{
+.logo-header {
     width: 30%;
 }
-.home-body{
+
+.home-body {
     background-color: var(--blanco-nuevo);
 }
 
@@ -349,7 +343,6 @@ ul {
     justify-content: space-around;
     align-items: center;
     background-color: var(--negro-nuevo);
-
 }
 
 .burger-menu {
@@ -403,16 +396,11 @@ ul {
     order: 3;
 }
 
-.logo-user a,
-.logo-carrito a{
+.logo-user a, .logo-carrito a {
     color: var(--gris-nuevo);
 }
 
-
 /* -----------/HEADER----------- */
-
-
-
 /* -----------SECTION IMAGEN----------- */
 .imagen-fondo {
     background-image: url('https://i.pinimg.com/originals/89/f5/ee/89f5ee2c48c63c6e4fb127b7ecd9cd60.gif');
@@ -433,7 +421,6 @@ ul {
 }
 
 /* -----------/SECTION IMAGEN----------- */
-
 /* -----------MAIN----------- */
 .carousel-title {
     margin-top: 1.5rem;
@@ -547,6 +534,7 @@ main section .titulares {
     font-weight: 800;
     padding: 50px;
 }
+
 .imagen-fondo2 a {
     text-decoration: none;
     color: black;
@@ -555,7 +543,6 @@ main section .titulares {
 }
 
 /* -----------/MAIN----------- */
-
 /* -----------FOOTER----------- */
 footer .footer-form {
     font-size: 14px;
@@ -634,11 +621,10 @@ footer .list-politics div {
     font-style: italic;
 }
 
-
 /****************************
     REGISTER
 ******************************/
-.title-register{
+.title-register {
     font-size: 16px;
     text-align: center;
     margin: 15px 0px;
@@ -646,6 +632,7 @@ footer .list-politics div {
     color: var(--gris-nuevo);
     padding: 10px 0px;
 }
+
 .register-form {
     display: flex;
     justify-content: center;
@@ -672,7 +659,6 @@ footer .list-politics div {
     text-align: center;
     margin-top: 5px;
 }
-
 
 .register-privacity {
     font-weight: 600;
@@ -711,14 +697,11 @@ footer .list-politics div {
     opacity: .7;
     transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
 } */
-
 .button-register:hover {
     color: var(--negro-nuevo);
     background-color: var(--azul-nuevo);
-    box-shadow: 0 0 1em .15em var(--azul-nuevo),
-        0 0 2em 1em var(--azul-nuevo),
-        inset 0 0 .35em .15em var(--azul-nuevo);
-        transition: 0.8s;
+    box-shadow: 0 0 1em .15em var(--azul-nuevo), 0 0 2em 1em var(--azul-nuevo), inset 0 0 .35em .15em var(--azul-nuevo);
+    transition: 0.8s;
 }
 
 /* .button-register:active {
@@ -726,7 +709,6 @@ footer .list-politics div {
         0 0 2.5em 2em var(--naranja-nuevo),
         inset 0 0 .5em .25em var(--naranja-nuevo);
 } */
-
 /****************************
    LOGIN
 ******************************/
@@ -749,19 +731,18 @@ footer .list-politics div {
     font-size: 14px;
 }
 
-
 /****************************
    LOGIN
 ******************************/
-.img-login{
+.img-login {
     width: 100%;
-    display:block;
-opacity: 0.8;}
+    display: block;
+    opacity: 0.8;
+}
 
 .video-login {
     width: 100%;
-    display:none;
-    
+    display: none;
 }
 
 .login-main {
@@ -772,7 +753,6 @@ opacity: 0.8;}
 }
 
 .login-box {
-
     width: 250px;
     background: rgb(36 33 38 / 90%);
     border: rgb(253 251 255) solid;
@@ -782,14 +762,12 @@ opacity: 0.8;}
     left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-
     padding: 70px 30px;
 }
 
 .login-box .avatar {
     width: 100px;
     height: 100px;
-
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
@@ -814,8 +792,7 @@ opacity: 0.8;}
     margin-bottom: 20px;
 }
 
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.login-box input[type="text"], .login-box input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: #00000014;
@@ -837,7 +814,6 @@ opacity: 0.8;}
 
 .login-box input[type="submit"]:hover {
     cursor: pointer;
-
     background: #c73601;
     color: #d9d9d9;
 }
@@ -864,7 +840,8 @@ opacity: 0.8;}
     display: inline-block;
     font-size: 1em;
     margin: 10px 0;
-  }
+}
+
 .form-input {
     display: block;
     width: 100%;
@@ -875,14 +852,16 @@ opacity: 0.8;}
     border: solid 1px var(--gray);
     padding: 0 15px;
     background-color: ghostwhite;
-  }
-.product-form{
-    padding: 10px 13px 10px 10px;;
-    background-color: #EBEBEB;
+}
+
+.product-form {
+    padding: 10px 13px 10px 10px;
+    ; background-color: #EBEBEB;
     margin: auto;
     margin-top: 30px;
-}  
-.form-input-description{
+}
+
+.form-input-description {
     display: block;
     width: 100%;
     margin-bottom: 15px;
@@ -890,12 +869,14 @@ opacity: 0.8;}
     border-radius: 8px;
     border: solid 1px var(--gray);
     background-color: ghostwhite;
-  }
-textarea.form-input-description{
+}
+
+textarea.form-input-description {
     padding: 15px;
     height: 100px;
 }
-.button-save-product{
+
+.button-save-product {
     text-align: center;
     padding: 10px;
     font-size: 14px;
@@ -905,11 +886,12 @@ textarea.form-input-description{
     border-radius: 8px;
 }
 
-.button-edit-form{
+.button-edit-form {
     text-align: center;
     margin: 10px;
 }
-.product-form-title{
+
+.product-form-title {
     font-size: 1.6em;
     font-weight: 400;
     padding: 10px 0px;
@@ -918,7 +900,7 @@ textarea.form-input-description{
 /****************************
    MAIN PRODUCTOS
 ******************************/
-.mainProductos{
+.mainProductos {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -927,10 +909,11 @@ textarea.form-input-description{
 /****************************
    PRODUCT LIST
 ******************************/
-.productImg{
+.productImg {
     width: 100%;
 }
-.product-list-box{
+
+.product-list-box {
     width: 90%;
     text-align: center;
     font-size: 12px;
@@ -944,22 +927,12 @@ textarea.form-input-description{
 @media (min-width: 480px) {
     .login-box {
         width: 400px;
-        
-        
-        
-        
         top: 55%;
-        
-        
     }
 }
 
-
-
 @media(min-width: 768px) {
-
-    /***************** HEADER *****************/
-    .header-searcher .input {
+    /***************** HEADER *****************/ .header-searcher .input {
         display: block;
     }
 
@@ -974,11 +947,12 @@ textarea.form-input-description{
     .burger-menu {
         display: none;
     }
-    .logo-header{
+
+    .logo-header {
         width: 10%;
     }
-    
-    .header-logo{
+
+    .header-logo {
         align-self: flex-start;
     }
 
@@ -996,7 +970,6 @@ textarea.form-input-description{
 
     .header-searcher {
         border-radius: 6px;
-
         order: 1;
         width: 10%;
         padding: 5px;
@@ -1054,40 +1027,34 @@ textarea.form-input-description{
         align-items: center;
     }
 
-    .list-politics div{
+    .list-politics div {
         list-style: disc;
         text-align: initial;
     }
 
     /***************** LOGIN *****************/
-
-
     /***************** DETALLE DE PRODUCTO *****************/
     .foto-producto {
         margin: 7% 15% 5%;
         width: 70%;
     }
+
     /***************** FORMULARIOS DE EDICIÓN/CREACIÓN *****************/
-    .product-form{
+    .product-form {
         width: 70%;
         border-radius: 10px;
     }
+
     /****************************
     PRODUCT LIST
     ******************************/
-
-    .product-list-box{
+    .product-list-box {
         width: 40%;
     }
-
 }
 
-
-
-@media(min-width:1024px) {
-
-    /***************** HEADER *****************/
-    .header-list {
+@media(min-width: 1024px) {
+    /***************** HEADER *****************/ .header-list {
         width: 50%;
     }
 
@@ -1104,63 +1071,67 @@ textarea.form-input-description{
     }
 
     /***************** /HEADER *****************/
-
     /****************************
     PRODUCT LIST
     ******************************/
-
-    .product-list-box{
+    .product-list-box {
         width: 40%;
-        margin: 20px 0px;
+        margin: 20px 20px;
+        padding: 20px;
     }
-    .full-list-products{
+
+    .full-list-products {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-    }       
-    /***************** LOGIN *****************/
+        justify-content: space-evenly;
+    }
 
+    /***************** LOGIN *****************/
     .video-login {
-    width: 100vw;
-    display:block;
-    
+        width: 100vw;
+        display: block;
     }
-    
-    .img-login{
-    display:none;
+
+    .img-login {
+        display: none;
     }
-    
+
     .login-box {
         top: 50%;
         left: 80%;
         position: absolute;
     }
-    
 }
-    /****************************
+
+/****************************
     404 not-found
     ******************************/
-.nf-all{
+.nf-all {
     margin: 20%
 }
-.nf-text-center{
+
+.nf-text-center {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-min-width: 300px;}
-.nf-tittle{
+    min-width: 300px;
+}
+
+.nf-tittle {
     text-align: center;
 }
-.nf-img{
-    
+
+.nf-img {
     margin: auto;
     margin-bottom: 50px;
 }
-.buttom-nf{
+
+.buttom-nf {
     margin: 10px;
     padding: 10px 20px;
     border: 1px solid #e2e8f0;
     background-color: var(--azul-nuevo);
     border-radius: 10px;
-    font-size: 1.2rem;color: var(--violeta);
+    font-size: 1.2rem;
+    color: var(--violeta);
 }
