@@ -1071,6 +1071,36 @@ textarea.form-input-description {
     }
 
     /***************** /HEADER *****************/
+    /***************** PRODCUT DETAIL *****************/
+
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: center;
+        align-content: center;
+    }
+    .productImageLG{
+        grid-column-start: 2;
+        grid-row: span 2;
+    }
+    .opciones {
+        display: flex;
+        align-items: center;
+        grid-column-start: 1;
+        grid-row-start: 1;
+        align-content: center;
+    }
+    .info-product {
+        margin-left: 5%;
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .arrow {
+        margin: 4%;
+    }
+    .opciones, .info-product{
+        margin-left: 30px;
+    }
     /****************************
     PRODUCT LIST
     ******************************/
