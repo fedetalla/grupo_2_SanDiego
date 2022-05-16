@@ -8,20 +8,20 @@
 
         <!-- header EJS -->
         <%- include('parcial/header.ejs') %>
-
+        <%=  %>
 
             <main class="main">
                 <article class="productImageLG">
-                    <h1 class="titulo-producto">Tabla Flip Amarilla</h1>
-                    <div><img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                    <h1 class="titulo-producto"><%= product.name %></h1>
+                    <div><img src="<%= product.image %>" alt="tabla flip Amarilla"
                             class="foto-producto"></div>
                 </article>
                 <section class="opciones">
                     <div class="arrow"><i class="fas fa-angle-left"></i></div>
                     <div>
-                        <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                        <img src="<%= product.image %>" alt="tabla flip Amarilla"
                             class="imagenes-de-opcion">
-                        <img src="/img/Productos/Skateboard-Decks6.jpg" alt="tabla flip Amarilla"
+                        <img src="<%= product.image %>" alt="tabla flip Amarilla"
                             class="imagenes-de-opcion">
                     </div>
                     <div class="arrow"><i class="fas fa-angle-right"></i></div>
@@ -29,10 +29,7 @@
                 <section class="info-product">
                     <div>
                         <div>
-                            <p class="breve-descripcion">Tabla Flip amarilla (78cm x 20cm)</p>
-                        </div>
-                        <div>
-                            <p class="precio">$ 111111</p>
+                            <p class="precio">$ <%= product.price %> </p>
                         </div>
                     </div>
                     <div class="bullets">
@@ -53,10 +50,7 @@
                     <p class="breve-descripcion">Descripción</p>
                     <div class="descripcion">
                         <ul>
-                            <li class="lis">Tabla Flip amarilla.</li>
-                            <li class="lis">Medidas: 78cm x 20cm.</li>
-                            <li class="lis">Lija inluida.</li>
-                            <li class="lis">(No incluye ruedas ni ejes, solo la tabla)</li>
+                            <%= product.description %>
                         </ul>
                     </div>
                 </section>
