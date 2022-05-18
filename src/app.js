@@ -16,8 +16,8 @@ const mainRouter = require("./routes/mainRouter.js");
 
 app.use(express.static("public"));
 
-app.use("/productos", productsRouter);
-app.use("/usuarios", usersRouter);
+app.use("/products", productsRouter);
+app.use("/users", usersRouter);
 app.use("/", mainRouter);
 
 

@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- head EJS -->
-  <%- include('parcial/head.ejs') %>
+<!-- head EJS -->
+<%- include('parcial/head.ejs') %>
 
   <body class="register-body">
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-    <div class="mainProductos">
-      <section>
-      <% products.forEach(producto =>{ %>
-        <h1><%= producto.name %></h1>
-          <div>
-            <img src="<%= producto.image %>" alt="imagen de producto">
-          </div>
+      <div class="mainProductos">
+       <% products.forEach(producto=>{ %>
+        <section>
+          <div class="product-list-box">
+            
+              <h2>
+                <%= producto.name %>
+              </h2>
+              <div>
+                <img class="productImg" src="<%= producto.image %>" alt="imagen de producto">
+              </div>
               <article>
-                <h2>$<%= producto.price %></h2>
-                <p><%= producto.description %></p>
+                <p class="precio">$<%= producto.price %>
+                </p>
+                <p class="descripciones">
+                  <%= producto.description %>
+                </p>
               </article>
-            </a>
-      </section>
-    
-      <% }) %>
-    
-    </div>
+              </a>
+          </div>
+        
+        </section>
+<% }) %>
+        
+
+      </div>
 
 
-    <!-- footer EJS-->
-    <%- include('parcial/footer.ejs') %>
-    </body>
+      
+      <!-- footer EJS-->
+      <%- include('parcial/footer.ejs') %>
+  </body>
+
 </html>
