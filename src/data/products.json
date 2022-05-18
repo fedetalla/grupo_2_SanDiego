@@ -5,7 +5,7 @@
   "price": 20000,
   "category": "Skate",
   "description": "Skate marca Woodo disponible en todas nuestras tiendas",
-  "image": "/img/Productos/Skate-woodo.jpg"
+  "image": "/Skate-woodo.jpg"
  },
  {
   "id": 2,
@@ -13,7 +13,7 @@
   "price": 15000,
   "category": "Skate",
   "description": "Skate marca Darkstar disponible en todas nuestras tiendas",
-  "image": "/img/Productos/skate-darkstar.jpg"
+  "image": "/skate-darkstar.jpg"
  },
  {
   "id": 3,
@@ -21,7 +21,7 @@
   "price": 25000,
   "category": "Skate",
   "description": "Skate marca Element disponible en todas nuestras tiendas",
-  "image": "/img/Productos/Skate-element.jpg"
+  "image": "/Skate-element.jpg"
  },
  {
   "id": 4,
@@ -29,7 +29,7 @@
   "price": 18000,
   "category": "Skate",
   "description": "Skate marca Magine disponible en todas nuestras tiendas",
-  "image": "/img/Productos/Skate-magine.jpg"
+  "image": "/Skate-magine.jpg"
  },
  {
   "id": 5,
@@ -37,7 +37,7 @@
   "price": 19000,
   "category": "Skate",
   "description": "Skate marca Vans disponible en todas nuestras tiendas",
-  "image": "/img/Productos/skate-vans.jpg"
+  "image": "/skate-vans.jpg"
  },
  {
   "id": 6,
@@ -45,7 +45,7 @@
   "price": 20000,
   "category": "Skate",
   "description": "Skate marca Baker disponible en todas nuestras tiendas",
-  "image": "/img/Productos/skate-baker.jpg"
+  "image": "/skate-baker.jpg"
  },
  {
   "id": 7,

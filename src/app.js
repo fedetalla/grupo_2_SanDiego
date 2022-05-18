@@ -29,3 +29,6 @@ app.listen(3080, ()=>{
 app.use((req,res,next)=>{
     res.status(404).render("not-found");
 });
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())

@@ -11,19 +11,20 @@ const multer = require('multer')
 // ************ multer config ************
 const storage=multer.diskStorage({
     destination: function (req,file,cb){
-        cb(null, 'public/img/productos')
+        cb(null, './public/img/productos')
     },
-    filename: function(req,filemcb){
-        cb(null, file.fieldname + Date.now() + 'image' + path.extname(file.originalname))
+    filename: function(req,file,cb){
+        cb(null, file.fieldname + Date.now() + path.extname(file.originalname))
     }
 });
-const upload = multer({sotrage: storage})
+const upload = multer({storage: storage})
 
 
 router.get("/", productsController.index);
 router.get("/detail/:id", productsController.detalleProducto);
 router.get("/cart", productsController.carrito);
-router.get('/edit', productsController.edit);
+
+router.get('/edit/:id', productsController.edit);
 
 //******* Create Product *********/
 router.get('/create', productsController.create)
