@@ -46,6 +46,7 @@
                             <button type="button">-</button>
                         </div>
                         <div><button type="submit" class="comprar">COMPRAR</button></div>
+                        <a  class="comprar" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a>
                     </form>
                     <p class="breve-descripcion">Descripción</p>
                     <div class="descripcion">
@@ -55,6 +56,9 @@
                     </div>
                 </section>
             </main>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button class="button-cancel-buy" type="submit">Eliminar producto</button>
+            </form>
 
        <!-- footer EJS-->
        <%- include('parcial/footer.ejs') %>

@@ -21,17 +21,20 @@ const upload = multer({storage: storage})
 
 
 router.get("/", productsController.index);
-<<<<<<< HEAD
-=======
-router.get("./:id", productsController.detalleProducto); /******ver con Nati *******/
->>>>>>> cfe79b6f0b1d097430d672583ed1ebd59a09297e
 router.get("/cart", productsController.carrito);
 router.get("/:id/detail", productsController.detalleProducto);
-router.get('/edit/:id', productsController.edit);
+//******* Edit Product *********/
+router.get("/edit/:id", productsController.edit);
+router.patch("/edit/:id", upload.single('product-image'), productsController.update)
 
 //******* Create Product *********/
-router.get('/create', productsController.create);
-router.post('/create',upload.single('product-image') ,productsController.store);
-router.get('/list', productsController.list);
+router.get("/create", productsController.create);
+router.post("/create",upload.single('product-image') ,productsController.store);
+
+
+//******* Delete Product *********/
+router.delete('/delete/:id', productsController.destroy);
+
+
 
 module.exports = router;

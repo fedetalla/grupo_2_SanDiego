@@ -7,23 +7,23 @@
     <%- include('parcial/header.ejs') %>
 
 
-    <form action="/products/edit" method="POST" enctype="multipart/form-data">
+    <form action="/products/edit/<%=productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="product-form">
             <div>
-				<h2 class="product-form-title">Estás editando:</h2>
+				<h2 class="product-form-title">Estás editando: <%= productToEdit.name %> </h2>
 			</div>
         <div>
             <label for="name" class="form-label">Nombre del producto</label>
-            <input type="text" name="name" placeholder="Ej. Skate Indiana" class="form-input">
+            <input type="text" name="name" class="form-input" value="<%= productToEdit.name %>">
         </div>
         <div>
             <label for="price" class="form-label">Precio</label>
-            <input type="number" name="price" placeholder="Ej. 550.00" class="form-input">
+            <input type="number" name="price" class="form-input" value="<%= productToEdit.price %>">
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
-            <select name="categories" class="form-input">
-                <option value="">Seleccionar</option>
+            <select name="category" class="form-input">
+                <option value=""></option>
                 <option value="skates">Skates</option>
                 <option value="tablas">Tablas</option>
                 <option value="accesorios">Accesorios</option>
@@ -31,11 +31,16 @@
         </div>
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
-            <textarea type="text" name="description" placeholder="Ej. Skate con diseño exclusivo..." class="form-input-description"></textarea>
+            <textarea type="text" name="description" class="form-input-description"><%= productToEdit.description %></textarea>
         </div>
         <div>
+            <div>
             <label for="description" class="form-label">Imagen del producto</label>
-            <input type="file" name="product-image">
+            </div>
+            <div class="nf-tittle">
+            <img src="/img/productos/<%=productToEdit.image %>" class="imagenes-de-opcion" alt="product-image">
+            </div>
+            <input type="file" name="product-image" value="<%= productToEdit.image %>">
         </div>
         <div class="button-edit-form">
             <button type="submit" class="button-save-product">Guardar producto</button>

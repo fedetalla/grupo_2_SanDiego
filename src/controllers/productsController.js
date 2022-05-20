@@ -18,8 +18,33 @@ const productsController = {
         return res.render("productCart")
     },
     edit: (req,res) =>{
-        return res.render("productEditForm")
+        let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+        return res.render("productEditForm", {productToEdit})
     },
+	update: (req, res) => {
+		const id = req.params.id;
+		let productToEdit = products.find(product => product.id == id);
+		
+		let productToSave = {
+			id: productToEdit.id,
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file ? req.file.filename : productToEdit.image
+		}
+
+		let indice = products.findIndex(product => {
+			return product.id == id
+		})
+		products[indice] = productToSave;
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+		res.redirect("/products")
+	},
+
+
     create: (req,res) => {
         return res.render("productCreateForm")
     },
@@ -36,13 +61,14 @@ const productsController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
 		res.redirect("/products");
-        
     },
-    list:(req,res) => {
-        return res.render("ProductList")
-    },
+    destroy : (req, res) => {
+		const id = req.params.id;
+		let finalProducts = products.filter(product => product.id != id);
 
-
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect("/products")
+	}
 }
 
 
