@@ -248,7 +248,7 @@ flex-wrap: nowrap;flex-direction: column;}
     color: #666;
 border-bottom: 1px solid #666;}
 
-.price {
+.precio {
     margin: 10px  0px;
     font-size: 1.5rem;
     color: var(--negro-nuevo);
@@ -425,12 +425,12 @@ margin: 20px 0px;max-width: 400px;}
 }
 
 .header-list li a{
-    padding: 10px;
+    color: #fff;padding: 10px;
     text-align: center;
     margin: 5px;
     font-size: 18px;
     width: 100%;
-    background-color: var(--gris-nuevo);
+    
 }
 
 .logo-user {
@@ -1189,6 +1189,12 @@ padding: 50px;background-color: #efefef;/* box-shadow: 7px 5px 5px #cfcfcfb5; */
     /***************** /HEADER *****************/
     /***************** PRODCUT DETAIL *****************/
 
+    .main{
+        
+        
+        
+        
+    }
 
     .opciones {
         display: flex;   
