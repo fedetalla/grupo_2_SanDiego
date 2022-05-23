@@ -45,8 +45,11 @@
                             <button type="button">+</button>
                             <button type="button">-</button>
                         </div>
-                        <div><button type="submit" class="comprar">COMPRAR</button></div>
-                        <div><a  class="edit-product" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a></div>
+                        <div class="d-flex">
+                            <button type="submit" class="comprar">COMPRAR</button> 
+                            <a  class="edit-product" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a>
+                        </div>
+                        
                     </form>
                     <p class="breve-descripcion">Descripción</p>
                     <div class="descripcion">
