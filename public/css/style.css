@@ -247,7 +247,7 @@ flex-wrap: nowrap;flex-direction: column;}
     color: #666;
 border-bottom: 1px solid #666;}
 
-.precio {
+.price {
     margin: 10px  0px;
     font-size: 1.5rem;
     color: var(--negro-nuevo);
