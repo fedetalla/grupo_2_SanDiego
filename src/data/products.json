@@ -8,14 +8,6 @@
   "image": "/Skate-woodo.png"
  },
  {
-  "id": 2,
-  "name": "Skate Darkstar",
-  "price": 15000,
-  "category": "Skate",
-  "description": "Skate marca Darkstar disponible en todas nuestras tiendas",
-  "image": "/skate-darkstar.png"
- },
- {
   "id": 4,
   "name": "Skate Magine",
   "price": 18000,
@@ -32,18 +24,25 @@
   "image": "/skate-baker.png"
  },
  {
-  "id": 7,
-  "name": "Skate de pablito",
-  "price": "",
-  "category": "skates",
-  "description": "Invaluable, es de pablito",
-  "image": "product-image1653087637752.png"
- },
- {
+    "id": 7,
+    "name": "Skate Vans",
+    "price": 15000,
+    "description": "Skate marca Vans disponible en todas nuestras tiendas",
+    "image": "skate-vans.png"
+},
+{
   "id": 8,
   "name": "Skate Santa Cruz",
   "price": 6450,
   "description": "Skate marca Santa Cruz disponible en todas nuestras tiendas",
   "image": "product-image1653341632421.png"
- }
+},
+{
+    "id": 9,
+    "name": "Skate de pablito",
+    "price": "",
+    "category": "skates",
+    "description": "Invaluable, es de pablito",
+    "image": "product-image1653087637752.png"
+}
 ]
