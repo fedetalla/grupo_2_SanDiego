@@ -969,7 +969,7 @@ textarea.form-input-description {
     font-size: 12px;
     margin: auto;
     margin-top: 15px;
-padding: 50px;background-color: #efefef;/* box-shadow: 7px 5px 5px #cfcfcfb5; */box-shadow: 0px 10px 10px -11px black;}
+margin-bottom: 15px;padding: 50px;background-color: #efefef;/* box-shadow: 7px 5px 5px #cfcfcfb5; */box-shadow: 0px 10px 10px -11px black;}
 
 /****************************
    MEDIA QUERY
