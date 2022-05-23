@@ -177,9 +177,7 @@ height: 10%;
 /****************************
      DETALLE DE PRODUCTO
 ******************************/
-.main {
-    border-bottom: #666 solid 1px;
-}
+
 
 .header-producto {
     display: flex;
@@ -250,7 +248,15 @@ height: 10%;
     margin-bottom: 5%;
     margin-left: 0;
 }
-
+.edit-product{
+    height: 100%;
+    padding: 20%;
+    background-color: var(--naranja-nuevo);
+    font-weight: 700;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+}
 .masmenos {
     display: flex;
     flex-direction: column;
@@ -579,7 +585,8 @@ footer .element-form {
     border-radius: 8px;
     border: none;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 footer {
@@ -1073,17 +1080,27 @@ textarea.form-input-description {
     /***************** /HEADER *****************/
     /***************** PRODCUT DETAIL *****************/
 
+    .foto-producto {
+        margin: 4% 15% 5%;
+        max-width: 450px;
+    }
+    .div-fp{
+        text-align: center;
+    }
     .main{
         display: grid;
         grid-template-columns: 1fr 2fr;
         justify-content: center;
         align-content: center;
+        width: 75%;
+        margin: auto;
     }
     .productImageLG{
         grid-column-start: 2;
         grid-row: span 2;
     }
     .opciones {
+        margin-top: 68px ;
         display: flex;
         align-items: center;
         grid-column-start: 1;

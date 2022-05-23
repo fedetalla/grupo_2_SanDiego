@@ -13,7 +13,7 @@
             <main class="main">
                 <article class="productImageLG">
                     <h1 class="titulo-producto"><%= product.name %></h1>
-                    <div><img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
+                    <div class="div-fp"><img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
                             class="foto-producto"></div>
                 </article>
                 <section class="opciones">
@@ -46,7 +46,7 @@
                             <button type="button">-</button>
                         </div>
                         <div><button type="submit" class="comprar">COMPRAR</button></div>
-                        <a  class="comprar" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a>
+                        <div><a  class="edit-product" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a></div>
                     </form>
                     <p class="breve-descripcion">Descripción</p>
                     <div class="descripcion">
