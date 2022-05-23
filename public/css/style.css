@@ -398,16 +398,13 @@ ul {
     padding: 5px;
 }
 
-.header-list li {
+.header-list li a{
     padding: 10px;
-    border: solid black 1px;
-    border-radius: 30%;
     text-align: center;
-    display: inline-block;
     margin: 5px;
-    font-size: 12px;
-    width: 100%;
-    background-color: var(--gris-nuevo);
+    font-size: 14px;
+    color: #F4F3F7;
+    text-decoration: none;
 }
 
 .logo-user {
@@ -973,6 +970,20 @@ textarea.form-input-description {
     .top-header {
         justify-content: space-around;
     }
+    .header-products {
+        font-size: 22px;
+        color: #F4F3F7;
+        text-align: center;
+        border-bottom: solid 2px gray;
+    }
+    .header-sublist {
+        margin-top: 10px;
+        text-align: center;
+        padding: 0px;
+    }
+    .header-sublist li {
+        padding: 5px 0px;
+    }
 
     .burger-menu {
         display: none;
@@ -988,6 +999,8 @@ textarea.form-input-description {
 
     .header-list {
         display: flex;
+        width: 20%;
+        justify-content: center;
     }
 
     .submit {
@@ -1016,14 +1029,36 @@ textarea.form-input-description {
     }
 
     .logo-user {
-        display: block;
+        display: flex;
         color: #808080;
+        align-items: center;
+    }
+    .logo-user a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logo-user p {
+        margin-left: 15px;
+        margin-right: 5px;
     }
 
     .logo-carrito {
         display: block;
         color: #808080;
+        align-items: center;
     }
+    .logo-carrito a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .logo-carrito p {
+        margin-right: 15px;
+    }
+
 
     /***************** HOME *****************/
     .main-product {
@@ -1087,7 +1122,7 @@ textarea.form-input-description {
 
     /***************** HEADER *****************/
     .header-list {
-        width: 50%;
+        width: 40%;
     }
 
     .header-searcher {
@@ -1101,7 +1136,25 @@ textarea.form-input-description {
     .logo-carrito {
         font-size: 19px;
     }
-
+    .header-sublist {
+        display: block;
+        display: flex;
+    }
+    .header-products {
+        font-size: 24px;
+    }
+    .header-sublist li:hover {
+        opacity: 0.4;
+        border-bottom: solid 2px red;
+        transition: all 0.5s;
+    }
+    
+    .header-list li {
+        margin: 0px 15px;
+    }
+    .header-list li a{
+        font-size: 16px;
+    }
     /***************** /HEADER *****************/
     /***************** PRODCUT DETAIL *****************/
 

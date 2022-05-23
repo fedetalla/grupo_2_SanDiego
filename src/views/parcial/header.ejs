@@ -16,21 +16,34 @@
           <button class="submit"><i class="fas fa-search"></i></button>
         </form>
       
-      <ul class="header-list">
-      <li>Marcas</li>
-      <li>Skates</li>
-      <li>Accesorios</li>
-      <li>Torneos</li>
-      <li><a href="/products/create">Vender</a></li>
-      <li>Sale</li>
-      </ul>
+        <div class="header-list">
+          <ul>
+              <p class="header-products">Productos</p>
+              <ul class="header-sublist">
+                  <li><a href="/products">Todos</a></li>
+                  <li><a href="#">Skates</a></li>
+                  <li><a href="#">Accesorios</a></li>
+                  <li><a href="#">Tablas</a></li>
+                  <li><a href="/products/create">Vender</a></li>
+              </ul>
+              </li>
+          </ul>
+      </div>
   
-    <div class="logo-user">
-    <a href="/usuarios/login"><i class="far fa-user"></i></a>
+      <div class="logo-user">
+        <div class="logo-user">
+            <a href="users/login"><i class="far fa-user"></i>
+                <p>Iniciar sesión</p>
+            </a>
+        </div>
+        <div class="logo-user"><a href="/users/register">| Registrarse</a></div>
     </div>
     <div class="logo-carrito">
-     <a href="/productos/carrito"><i class="fas fa-shopping-cart"></i></a> 
-    </div>
+      <a href="/products/cart">
+          <p>Carrito</p>
+          <i class="fas fa-shopping-cart"></i>
+      </a>
+  </div>
   </div>
   <p class="header-envio">Envío gratis a partir de $4500 <i class="fas fa-truck"></i> - 6 cuotas sin interés <i class="fas fa-credit-card"></i></p>
   </header>
