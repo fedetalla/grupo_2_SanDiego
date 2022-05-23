@@ -303,7 +303,7 @@ font-weight: 500;font-size: 1rem;}
     border: none;
     font-size: 14px;
     margin-top: 10px;
-}
+text-decoration: none;}
 .productImageLG{
     display: flex;
 flex-wrap: wrap;justify-content: space-evenly;}
