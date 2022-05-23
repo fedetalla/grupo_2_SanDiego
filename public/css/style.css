@@ -28,6 +28,7 @@ ul {
     --blanco-nuevo: #F4F3F7;
     --azul-nuevo: #5794EF;
     --naranja-nuevo: #FF4500;
+    --rojo-nuevo:#ed0a28;
 }
 
 /****************************
@@ -106,9 +107,9 @@ ul {
 }
 
 #cantidad {
-    width: 35px;
-    margin: 0 10px;
-}
+    width: 50px;
+    height: 44px;
+margin-right: 5px;}
 
 .btn-finalizar {
     
@@ -200,76 +201,100 @@ height: 10%;
 }
 
 .titulo-producto {
-    font-weight: 550;
-    text-align: center;
-    margin-top: 7%;
-}
+    font-weight: 800;
+    /* text-align: center; */
+    margin-top: 20px;
+font-size: 1.5rem;}
 
 .foto-producto {
-    margin: 10%;
-    width: 80%;
+    margin: 30px;
+    width: 60%;
     box-shadow: 0px 0px 10px rgb(100 100 100);
     margin-bottom: 5%;
 }
 
 .imagenes-de-opcion {
-    width: 38%;
-    margin: 5%;
+    width: 20%;
+    
     box-shadow: 0px 0px 10px rgb(100 100 100);
-}
+margin: 0 10px;}
 
 .arrow {
-    margin: 10%;
+    margin: 10px;
 }
 
 .opciones {
     display: flex;
     align-items: center;
-}
+flex-wrap: nowrap;flex-direction: column;}
 
 .info-product {
-    margin-left: 5%;
+    margin: 15px;
 }
 
 .breve-descripcion {
-    margin: 2%;
+    margin: 10px 0px 5px 0px;
     color: #666;
-}
+border-bottom: 1px solid #666;}
 
 .precio {
-    margin: 2%;
-    font-size: 18px;
+    margin: 10px  0px;
+    font-size: 1.5rem;
     color: var(--negro-nuevo);
     font-weight: 600;
 }
 
+.product-description{
+    text-align: center;
+font-weight: 500;font-size: 1rem;}
+
+
 .formulario {
     display: flex;
-    margin: 2%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 0;
+    margin: 15px 0px;
+    
+    
+    
 }
 
 .masmenos {
     display: flex;
     flex-direction: column;
-    margin-right: 3%;
+    margin-right: 11px;
 }
 
-.comprar {
-    height: 100%;
-    padding: 20%;
+.product-buy {
+    padding: 10px;
     background-color: var(--naranja-nuevo);
     font-weight: 700;
     color: #ffffff;
     border-radius: 8px;
     border: none;
+width: 93px;height: 46px;}
+.product-edit-delete{
+    padding: 5px 10px;
+    background-color: var(--rojo-nuevo);
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.productImageLG{
+    display: flex;
+flex-wrap: wrap;justify-content: space-evenly;}
+
+.img-product-assets{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.descripcion {
-    margin: 2%;
-}
+.descripcion {    
+margin: 20px 0px;max-width: 400px;}
 
 .lis {
     list-style-type: disc;
@@ -377,11 +402,11 @@ height: 10%;
 .header-list li {
     padding: 10px;
     border: solid black 1px;
-    border-radius: 30%;
+    border-radius: 8px;
     text-align: center;
     display: inline-block;
     margin: 5px;
-    font-size: 12px;
+    font-size: 18px;
     width: 100%;
     background-color: var(--gris-nuevo);
 }
@@ -856,9 +881,8 @@ footer .list-politics div {
 
 .product-form {
     padding: 10px 13px 10px 10px;
-    ; background-color: #EBEBEB;
-    margin: auto;
-    margin-top: 30px;
+    background-color: #EBEBEB;
+    margin: 30px auto;
 }
 
 .form-input-description {
@@ -903,7 +927,7 @@ textarea.form-input-description {
 .mainProductos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 /****************************
@@ -919,7 +943,7 @@ textarea.form-input-description {
     font-size: 12px;
     margin: auto;
     margin-top: 15px;
-}
+padding: 50px;background-color: #efefef;/* box-shadow: 7px 5px 5px #cfcfcfb5; */box-shadow: 0px 10px 10px -11px black;}
 
 /****************************
    MEDIA QUERY
@@ -938,7 +962,7 @@ textarea.form-input-description {
 
     .header-envio {
         display: block
-    }
+    ;margin: 5px 0px;}
 
     .top-header {
         justify-content: space-around;
@@ -1035,10 +1059,12 @@ textarea.form-input-description {
     /***************** LOGIN *****************/
     /***************** DETALLE DE PRODUCTO *****************/
     .foto-producto {
-        margin: 7% 15% 5%;
-        width: 70%;
+        margin: 20px 0px;
+        
     }
-
+    .opciones, .info-froduct{ 
+    width: 45%;
+    }
     /***************** FORMULARIOS DE EDICIÓN/CREACIÓN *****************/
     .product-form {
         width: 70%;
@@ -1050,6 +1076,9 @@ textarea.form-input-description {
     ******************************/
     .product-list-box {
         width: 40%;
+    }
+    .img-product-assets{
+        max-width: 50%;
     }
 }
 
@@ -1074,21 +1103,15 @@ textarea.form-input-description {
     /***************** PRODCUT DETAIL *****************/
 
     .main{
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        justify-content: center;
-        align-content: center;
+        
+        
+        
+        
     }
-    .productImageLG{
-        grid-column-start: 2;
-        grid-row: span 2;
-    }
+
     .opciones {
-        display: flex;
-        align-items: center;
-        grid-column-start: 1;
-        grid-row-start: 1;
-        align-content: center;
+        display: flex;   
+        flex-wrap: wrap;
     }
     .info-product {
         margin-left: 5%;
@@ -1099,13 +1122,13 @@ textarea.form-input-description {
         margin: 4%;
     }
     .opciones, .info-product{
-        margin-left: 30px;
-    }
+        margin: 30px 20px;
+    width: 45%;}
     /****************************
     PRODUCT LIST
     ******************************/
     .product-list-box {
-        width: 40%;
+        width: 25%;
         margin: 20px 20px;
         padding: 20px;
     }

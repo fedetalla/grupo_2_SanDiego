@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <!-- head EJS -->
-  <%- include('parcial/head.ejs') %>
+<!-- head EJS -->
+<%- include('parcial/head.ejs') %>
 
     <body>
 
         <!-- header EJS -->
         <%- include('parcial/header.ejs') %>
-        <% %>
+            <% %>
 
-            <main class="main">
-                <article class="productImageLG">
-                    <h1 class="titulo-producto"><%= product.name %></h1>
-                    <div><img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
-                            class="foto-producto"></div>
-                </article>
-                <section class="opciones">
-                    <div class="arrow"><i class="fas fa-angle-left"></i></div>
-                    <div>
-                        <img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
-                            class="imagenes-de-opcion">
-                        <img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
-                            class="imagenes-de-opcion">
-                    </div>
-                    <div class="arrow"><i class="fas fa-angle-right"></i></div>
-                </section>
-                <section class="info-product">
-                    <div>
-                        <div>
-                            <p class="precio">$ <%= product.price %> </p>
-                        </div>
-                    </div>
-                    <div class="bullets">
-                        <p class="bullet-product"></p>
-                        <p class="bullet-product1"></p>
-                        <p class="bullet-product2"></p>
-                        <p class="bullet-product3"></p>
-                    </div>
-                    <form action="/cantidad" method="POST" class="formulario">
-                        <label for="cantidad"></label>
-                        <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
-                        <div class="masmenos">
-                            <button type="button">+</button>
-                            <button type="button">-</button>
-                        </div>
-                        <div><button type="submit" class="comprar">COMPRAR</button></div>
-                        <a  class="comprar" href="/products/edit/<%= product.id %>">EDITAR PRODUCTO</a>
-                    </form>
-                    <p class="breve-descripcion">Descripción</p>
-                    <div class="descripcion">
-                        <ul>
-                            <%= product.description %>
-                        </ul>
-                    </div>
-                </section>
-            </main>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-                <button class="button-cancel-buy" type="submit">Eliminar producto</button>
-            </form>
+                <main class="main">
+                    <article class="productImageLG">
+                        <section class="opciones">
 
-       <!-- footer EJS-->
-       <%- include('parcial/footer.ejs') %>
+                            <div class="nf-tittle"><img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
+                                    class="foto-producto">
+                            </div>
+                            <div class="img-product-assets">
+                                <span class="arrow"><i class="fas fa-angle-left"></i>
+                                </span>
+                                <img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
+                                    class="imagenes-de-opcion">
+                                <img src="/img/productos/<%= product.image %>" alt="tabla flip Amarilla"
+                                    class="imagenes-de-opcion">
+                                <span class="arrow"><i class="fas fa-angle-right"></i>
+                                </span>
+                            </div>
+                        </section>
+                        <section class="info-product">
+                            <h1 class="titulo-producto">
+                                <%= product.name %>
+                            </h1>
+                            <div>
+                                <div>
+                                    <p class="precio">$ <%= product.price %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bullets">
+                                <p class="bullet-product"></p>
+                                <p class="bullet-product1"></p>
+                                <p class="bullet-product2"></p>
+                                <p class="bullet-product3"></p>
+                            </div>
+                            <form action="/cantidad" method="POST" class="formulario">
+                                <label for="cantidad"></label>
+                                <input class="qty-cart" type="number" id="cantidad" name="cantidad" min="1" max="10000" />
+                                <div class="masmenos">
+                                    <button type="button">+</button>
+                                    <button type="button">-</button>
+                                </div>
+                                <div>
+                                    <button type="submit" class="product-buy">COMPRAR</button>
+                                </div>
+                            </form>
+                            <a class="product-edit-delete" href="/products/edit/<%= product.id %>">EDITAR</a>
+                            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST"
+                                style="display: inline-flex">
+                                <button class="product-edit-delete" type="submit">ELIMINAR</button>
+                            </form>
+                            <div class="descripcion">
+                                <p class="breve-descripcion">Descripción</p>
+                                <ul>
+                                    <%= product.description %>
+                                </ul>
+                            </div>
+                        </section>
+                    </article>
+                </main>
+
+                <!-- footer EJS-->
+                <%- include('parcial/footer.ejs') %>
 
 
     </body>

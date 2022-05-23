@@ -9,26 +9,26 @@
 
       <div class="mainProductos">
        <% products.forEach(producto=>{ %>
-        <section>
           <div class="product-list-box">
             
               <h2>
                 <%= producto.name %>
               </h2>
+              <a href="/products/<%= producto.id %>/detail">
               <div>
                 <img class="productImg" src="/img/productos/<%= producto.image %>" alt="imagen de producto">
               </div>
+            </a>
               <article>
                 <p class="precio">$<%= producto.price %>
                 </p>
-                <p class="descripciones">
+                <p class="product-description">
                   <%= producto.description %>
                 </p>
               </article>
               </a>
           </div>
         
-        </section>
 <% }) %>
         
 
