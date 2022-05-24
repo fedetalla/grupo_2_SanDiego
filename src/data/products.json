@@ -36,13 +36,5 @@
   "price": 6450,
   "description": "Skate marca Santa Cruz disponible en todas nuestras tiendas",
   "image": "product-image1653341632421.png"
-},
-{
-    "id": 9,
-    "name": "Skate de pablito",
-    "price": "",
-    "category": "skates",
-    "description": "Invaluable, es de pablito",
-    "image": "product-image1653087637752.png"
 }
 ]
