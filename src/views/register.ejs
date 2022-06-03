@@ -12,7 +12,7 @@
         <form class="formatForm-register" action="/register" method="POST">
           <div class="title-register"><p>Crea tu propia cuenta</p></div>
         <div>  
-          <label for="name">Nombre </label>
+          <label for="fullName">Nombre y Apellido</label>
           <input
             class="register-input"
             type="text"
@@ -22,25 +22,7 @@
             placeholder="Escribe tu nombre"
           /><br />
         </div>
-        <div>
-          <label for="surname">Apellido</label>
-          <input
-            class="register-input"
-            type="text"
-            name="surname"
-            id="surname"
-            required
-            placeholder="Escribe tu apellido"
-          /><br />
-        </div>
-          <!-- <label for="phone">Telefono </label>
-          <input
-            class="register-input"
-            type="text"
-            id="number"
-            required
-            placeholder="Ej: 11 6666 4444"
-          /><br /> -->
+
           <div>
           <label for="email">Mail</label>
           <input
@@ -52,16 +34,14 @@
           /><br />
         </div>
         <div>
-          <label for="user">Nombre de Usuario </label>
-          <input
-            class="register-input"
-            type="text"
-            name="user"
-            id="user"
-            required
-            placeholder="Ej. user_name"
-          /><br />
-        </div>
+        <label for="">Perfil de usuario</label>
+          <select class="register-input" name="category" id="categories">
+            <option value="" disabled selected>Selecciona tu tipo de perfil</option>
+            <option value="admin">Admin</option>
+            <option value="visitor">Visitante</option>
+          </div>
+          </select>
+        <br>
         <div>
             <label for="password">Crear Contraseña</label>
             <input
@@ -83,47 +63,6 @@
             />
           </div>
           <br />
-          <div>
-          <label for="Localidad"> Localidad</label>
-          <select class="register-input" name="categories" id="categories">
-            <option value="" disabled selected>Selecciona una Provincia</option>
-            <option value="Buenos Aires">Buenos Aires</option>
-            <option value="Ciudad Autonoma de Buenos Aires">
-              Ciudad Autónoma de Buenos Aires
-            </option>
-            <option value="Catamarca">Catamarca</option>
-            <option value="Chaco">Chaco</option>
-            <option value="Chubut">Chubut</option>
-            <option value="Cordoba">Cordoba</option>
-            <option value="Corrientes">Corrientes</option>
-            <option value="Entre Rios">Entre Rios</option>
-            <option value="Formosa">Formosa</option>
-            <option value="Jujuy">Jujuy</option>
-            <option value="La Pampa">La Pampa</option>
-            <option value="La Rioja">La Rioja</option>
-            <option value="Mendoza">Mendoza</option>
-            <option value="Misiones">Misiones</option>
-            <option value="Neuquén">Neuquén</option>
-            <option value="Río Negro">Río Negro</option>
-            <option value="Salta">Salta</option>
-            <option value="San Juan">San Juan</option>
-            <option value="San Luis">San Luis</option>
-            <option value="Santa Cruz">Santa Cruz</option>
-            <option value="Santa Fe">Santa Fe</option>
-            <option value="Santiago Del Estero">Santiago Del Estero</option>
-            <option value="Tierra del Fuego">Tierra del Fuego</option>
-            <option value="Tucuman">Tucuman</option></select
-          ><br />
-        </div>
-          <!-- <label for="">¿Cómo nos conociste?</label><br />
-          <input type="checkbox" name="Amigo" value="Un amigo/a" />
-          <label for="Un amigo/a">Un amigo/a</label><br />
-          <input type="checkbox" name="Publicidad" value="Publicidad" />
-          <label for="Publicidad">Publicidad</label><br />
-          <input type="checkbox" name="Redes Sociales" value="Redes Sociales" />
-          <label for="Redes sociales">Redes Sociales</label><br />
-          
-          <br /> -->
 
           <button class="button-register" type="submit" value="REGISTRARSE">Registrarse</button>
           <button class="button-register" type="reset" value="BORRAR">Borrar</button>

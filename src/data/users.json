@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Fede Tallarico",
+        "fullName": "Fede Tallarico",
         "email": "fedetallarico@sandiego.com",
         "password": "123456",
         "category": "administrador",
