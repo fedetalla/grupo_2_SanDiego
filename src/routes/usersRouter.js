@@ -43,7 +43,7 @@ router.get("/register", usersController.register);
 router.post("/register", uploadFile.single('image'), validations , usersController.processRegister);
 
 
-router.get("/profile", usersController.profile);
+router.get("/profile/:id", usersController.profile);
 
 
 module.exports = router ;
