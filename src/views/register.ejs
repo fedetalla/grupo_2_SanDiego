@@ -9,7 +9,7 @@
 
     <main>
       <div class="register-form">
-        <form class="formatForm-register" action="/register" method="POST">
+        <form class="formatForm-register" action="/users/register" method="POST">
           <div class="title-register"><p>Crea tu propia cuenta</p></div>
         <div>  
           <label for="fullName">Nombre y Apellido</label>
@@ -20,7 +20,11 @@
             id="name"
             required
             placeholder="Escribe tu nombre"
-          /><br />
+          />
+          <% if(locals.errors && errors.fullName) { %> 
+            <%= errors.fullName.msg %>
+        <% } %> 
+          <br />
         </div>
 
           <div>
@@ -28,10 +32,15 @@
           <input
             class="register-input"
             type="email"
+            name="email"
             id="email"
             required
             placeholder="Ej. usuario@mail.com"
-          /><br />
+          />
+          <% if(locals.errors && errors.email) { %> 
+            <%= errors.email.msg %>
+        <% } %> 
+          <br />
         </div>
         <div>
         <label for="">Perfil de usuario</label>
@@ -50,17 +59,9 @@
               name="password"
               id="password"
             />
-          </div>
-          <br />
-          <!--Agregar que la contraseña tiene que ser minimo 8 caracteres-->
-          <div>
-            <label for="password">Confirmar Contraseña</label>
-            <input
-              class="register-input"
-              type="password"
-              name="password"
-              id="password"
-            />
+            <% if(locals.errors && errors.password) { %> 
+              <%= errors.password.msg %>
+          <% } %> 
           </div>
           <br />
 
@@ -75,6 +76,13 @@
         </a>
         </form>
       </div>
+      <div>
+        <label for="perfil-img"><p>Selecciona una foto de perfil:</p></label>
+        <input type="file" name="image">
+        <% if(locals.image && errors.image) { %> 
+            <%= errors.image.msg %>
+        <% } %> 
+    </div>
     </main>
 
        <!-- footer EJS-->

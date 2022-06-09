@@ -19,7 +19,7 @@ const { body } = require('express-validator')
 
 const validations = [
     body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
-    body('category').notEmpty().withMessage('Tienes que escribir un apellido'),
+    body('category').notEmpty().withMessage('Tienes que seleccionar una categoría'),
     body('email').notEmpty().withMessage('Tienes que escribir un correo electrónico válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
     body('image').custom((value, {req}) => {
