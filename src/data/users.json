@@ -62,5 +62,13 @@
   "password": "$2b$10$xFksUi4mylqEq8pww.NRoO9PgAMrN7C2rKtPMwqjqH0dvxH.RBcWq",
   "category": "admin",
   "image": "default-image.png"
+ },
+ {
+  "id": 8,
+  "fullName": "Juan",
+  "email": "juan@gmail.com",
+  "password": "$2b$10$YhEHTkcQ/lfUmusrnPO3oOHzuKfV9C6Oz4esNGByB67xJKWYiJ/Fm",
+  "category": "visitor",
+  "image": "image1654839999574.png"
  }
 ]

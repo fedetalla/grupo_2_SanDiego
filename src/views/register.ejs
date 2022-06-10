@@ -62,6 +62,14 @@
               <%= errors.password.msg %>
           <% } %> 
           </div>
+          <br>
+          <div>
+            <label for="perfil-img"><p>Selecciona una foto de perfil:</p></label>
+            <input type="file" name="image">
+            <% if(locals.image && errors.image) { %> 
+                <%= errors.image.msg %>
+            <% } %> 
+        </div>
           <br />
 
           <button class="button-register" type="submit" value="REGISTRARSE">Registrarse</button>
@@ -75,13 +83,6 @@
         </a>
         </form>
       </div>
-      <div>
-        <label for="perfil-img"><p>Selecciona una foto de perfil:</p></label>
-        <input type="file" name="image">
-        <% if(locals.image && errors.image) { %> 
-            <%= errors.image.msg %>
-        <% } %> 
-    </div>
     </main>
 
        <!-- footer EJS-->
