@@ -43,13 +43,14 @@ const validations = [
 
 // LOGIN
 router.get("/login", usersController.login);
+router.post("/login", usersController.processLogin);
 
 //REGISTER
 router.get("/register", usersController.register);
 router.post("/register", uploadFile.single('image'), validations , usersController.processRegister);
 
 // PERFIL
-router.get("/profile/:id", usersController.profile);
+router.get("/profile", usersController.profile);
 
 
 module.exports = router ;

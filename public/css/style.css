@@ -841,6 +841,7 @@ footer .list-politics div {
 }
 
 .login-box input[type="text"],
+.login-box input[type="email"],
 .login-box input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;

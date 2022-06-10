@@ -3,7 +3,7 @@ const app = express();
 const router = express.Router();
 const methodOverride = require('method-override');
 const path = require("path");
-
+const session = require ('express-session')
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
@@ -17,6 +17,10 @@ const mainRouter = require("./routes/mainRouter.js");
 
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
+app.use(session({
+    secret:"Nuestro msj secreto",
+    resave: false,
+    saveUninitialized: false}))
 
 
 app.use("/products", productsRouter);

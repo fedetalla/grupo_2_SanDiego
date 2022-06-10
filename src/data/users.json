@@ -70,5 +70,13 @@
   "password": "$2b$10$YhEHTkcQ/lfUmusrnPO3oOHzuKfV9C6Oz4esNGByB67xJKWYiJ/Fm",
   "category": "visitor",
   "image": "image1654839999574.png"
+ },
+ {
+  "id": 9,
+  "fullName": "Pablito",
+  "email": "pab@gmail.com",
+  "password": "$2b$10$3bvs1U1Py.N9kw0i2..Q1uSvcKcjpAVmMOSliZ6QACWj2v5K1q.vi",
+  "category": "visitor",
+  "image": "image1654895337173.jpg"
  }
 ]
