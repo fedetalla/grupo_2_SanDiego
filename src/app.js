@@ -9,16 +9,16 @@ app.set('view engine', 'ejs')
 app.set('views', './src/views')
 
 
-
+const userLoggedMiddleware = require('../src/middlewares/userLoggedMiddleware')
 const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
 const mainRouter = require("./routes/mainRouter.js");
 
-
+// app.use(userLoggedMiddleware);
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(session({
-    secret:"Nuestro msj secreto",
+    secret: 'Nuestro msj secreto',
     resave: false,
     saveUninitialized: false}))
 

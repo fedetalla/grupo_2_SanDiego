@@ -852,7 +852,7 @@ footer .list-politics div {
     font-size: 16px;
 }
 
-.login-box input[type="submit"] {
+.login-box button[type="submit"] {
     border: none;
     outline: none;
     height: 40px;

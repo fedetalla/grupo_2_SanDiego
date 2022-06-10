@@ -9,28 +9,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
-
-    login: (req, res) => {
-        return res.render("login")
-    },
-    processLogin: (req, res) => {
-        let userToLog = User.findByField('email', req.body.email)
-        if(userToLog){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLog.password);
-            if(isOkThePassword){
-                delete userToLog.password
-                req.session.userLogged = userToLog;
-                res.redirect('/users/profile')
-            }
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Credenciales inválidas'
-                }
-            }
-    })
-    },
     register: (req, res) => {
         return res.render("register")
     },
@@ -66,6 +44,28 @@ const usersController = {
             User.create(userToCreate)
         return res.send('Tu formulario se procesó con éxito :)')
         
+    },
+    
+    login: (req, res) => {
+        return res.render("login")
+    },
+    processLogin: (req,res) => {
+        let userToLog = User.findByField('email', req.body.email)
+        if(userToLog){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLog.password);
+            if(isOkThePassword){
+                delete userToLog.password
+                req.session.userLogged = userToLog;
+                res.redirect('/users/profile')
+            }
+        }
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Credenciales inválidas'
+                }
+            }
+    })
     },
     profile: (req,res)=>{
         return res.render("userProfile", {users})
