@@ -9,16 +9,16 @@
 
     <main>
       <div class="register-form">
-        <form class="formatForm-register" action="/users/register" method="POST">
+        <form class="formatForm-register" action="/users/register" enctype="multipart/form-data" method="POST">
           <div class="title-register"><p>Crea tu propia cuenta</p></div>
         <div>  
           <label for="fullName">Nombre y Apellido</label>
           <input
             class="register-input"
             type="text"
-            name="name"
+            name="fullName"
             id="name"
-            required
+
             placeholder="Escribe tu nombre"
           />
           <% if(locals.errors && errors.fullName) { %> 
@@ -34,7 +34,6 @@
             type="email"
             name="email"
             id="email"
-            required
             placeholder="Ej. usuario@mail.com"
           />
           <% if(locals.errors && errors.email) { %> 

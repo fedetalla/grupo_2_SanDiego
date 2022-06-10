@@ -24,7 +24,7 @@ const usersController = {
             })
         }
     
-    let userInDB = User.findByField("email", req.body.email)
+    let userInDB = User.findByField('email', req.body.email)
 
         if(userInDB){
             return res.render('register', {
@@ -37,12 +37,16 @@ const usersController = {
             })
         }
         let userToCreate = {
-            ...req.body,
+            fullName: req.body.fullName,
+            email: req.body.email,
+            password: req.body.password,
+            category: req.body.category,
             password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file.filename
+            image: req.file ? req.file.filename : 'default-image.png'
         }
             User.create(userToCreate)
         return res.send('Tu formulario se procesó con éxito :)')
+        
     },
     profile: (req,res)=>{
         return res.render("userProfile", {users})

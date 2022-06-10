@@ -1,6 +1,7 @@
 const express = require("express");
 const multer = require('multer');
 const router = express.Router();
+const path = require('path');
 
 const usersController = require("../controllers/usersController.js")
 
@@ -40,7 +41,11 @@ const validations = [
 
 router.get("/login", usersController.login);
 router.get("/register", usersController.register);
-router.post("/register", uploadFile.single('image'), validations , usersController.processRegister);
+router.post("/register", uploadFile.single('image'), (req, res) =>{
+console.log(req.file)
+})
+
+// , validations , usersController.processRegister);
 
 
 router.get("/profile/:id", usersController.profile);

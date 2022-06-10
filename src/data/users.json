@@ -1,50 +1,66 @@
 [
-    {
-        "id": 1,
-        "fullName": "Fede Tallarico",
-        "email": "fedetallarico@sandiego.com",
-        "password": "123456",
-        "category": "administrador",
-        "image": ""
-    },
-    {
-        "id": 2,
-        "name": "Lucas Maquiavelo",
-        "email": "lucasmaquiavelo@sandiego.com",
-        "password": "123456",
-        "category": "administrador",
-        "image": ""
-    },
-    {
-        "id": 3,
-        "name": "Franco Peljhan",
-        "email": "francopeljhan@sandiego.com",
-        "password": "123456",
-        "category": "administrador",
-        "image": ""
-    },
-    {
-        "id": 4,
-        "name": "Martin Salomon",
-        "email": "martinsalomon@sandiego.com",
-        "password": "123456",
-        "category": "administrador",
-        "image": ""
-    },
-    {
-        "id": 5,
-        "name": "Carlos Lopez",
-        "email": "carloslopez@mail.com",
-        "password": "123456",
-        "category": "user",
-        "image": ""
-    },
-    {
-        "id": 5,
-        "name": "Maria Gonzales",
-        "email": "mariagonzales@mail.com",
-        "password": "123456",
-        "category": "user",
-        "image": ""
-    }
+ {
+  "id": 1,
+  "fullName": "Fede Tallarico",
+  "email": "fedetallarico@sandiego.com",
+  "password": "123456",
+  "category": "administrador",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "name": "Lucas Maquiavelo",
+  "email": "lucasmaquiavelo@sandiego.com",
+  "password": "123456",
+  "category": "administrador",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "name": "Franco Peljhan",
+  "email": "francopeljhan@sandiego.com",
+  "password": "123456",
+  "category": "administrador",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "name": "Martin Salomon",
+  "email": "martinsalomon@sandiego.com",
+  "password": "123456",
+  "category": "administrador",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "name": "Carlos Lopez",
+  "email": "carloslopez@mail.com",
+  "password": "123456",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 5,
+  "name": "Maria Gonzales",
+  "email": "mariagonzales@mail.com",
+  "password": "123456",
+  "category": "user",
+  "image": ""
+ },
+ {
+  "id": 6,
+  "fullName": "asdasdasda",
+  "email": "asdasdasd@gmail.com",
+  "password": "$2b$10$Dex0nMCeawj7U2Ud/FheWOLFoE.5QtxhdVPK5nl0zlRVMduT99BZq",
+  "category": "admin",
+  "image": "default-image.png"
+ },
+ {
+  "id": 7,
+  "fullName": "asdasdasd",
+  "email": "asdasdasdd@gmail.com",
+  "password": "$2b$10$xFksUi4mylqEq8pww.NRoO9PgAMrN7C2rKtPMwqjqH0dvxH.RBcWq",
+  "category": "admin",
+  "image": "default-image.png"
+ }
 ]
