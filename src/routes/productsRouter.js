@@ -19,20 +19,24 @@ const storage=multer.diskStorage({
 });
 const upload = multer({storage: storage})
 
-
+// inicio
 router.get("/", productsController.index);
+
+// carrito
 router.get("/cart", productsController.carrito);
+
+// detalle de producto
 router.get("/:id/detail", productsController.detalleProducto);
-//******* Edit Product *********/
+
+//******* edicion de producto *********/
 router.get("/edit/:id", productsController.edit);
 router.patch("/edit/:id", upload.single('product-image'), productsController.update)
 
-//******* Create Product *********/
+//******* creación de producto *********/
 router.get("/create", productsController.create);
 router.post("/create",upload.single('product-image') ,productsController.store);
 
-
-//******* Delete Product *********/
+//******* borrado de producto *********/
 router.delete('/delete/:id', productsController.destroy);
 
 

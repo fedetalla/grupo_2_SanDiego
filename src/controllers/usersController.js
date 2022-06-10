@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require("path");
+//importamos el modelo de usuarios para utilizar los métodos que definimos
 const User = require('../models/User');
 const bcryptjs = require('bcrypt');
 const {validationResult} = require ('express-validator');

@@ -5,6 +5,7 @@ const path = require('path');
 
 const usersController = require("../controllers/usersController.js")
 
+//realizamos la configuración de multer, indicando nombre y donde se van a guardar las imágenes
 const storage = multer.diskStorage({
     destination:(req,file,cb) => {
         cb(null, './public/img/users');
@@ -18,6 +19,7 @@ const uploadFile = multer({storage})
 
 const { body } = require('express-validator')
 
+// Definimos las validaciones correspondientes al register
 const validations = [
     body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('category').notEmpty().withMessage('Tienes que seleccionar una categoría'),
@@ -39,11 +41,14 @@ const validations = [
     })
 ]
 
+// LOGIN
 router.get("/login", usersController.login);
+
+//REGISTER
 router.get("/register", usersController.register);
 router.post("/register", uploadFile.single('image'), validations , usersController.processRegister);
 
-
+// PERFIL
 router.get("/profile/:id", usersController.profile);
 
 
