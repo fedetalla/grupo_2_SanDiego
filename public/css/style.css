@@ -1026,6 +1026,7 @@ textarea.form-input-description {
     margin-bottom: 0px;
     border-radius: 50%;
     border: 2px solid var(--gris-oscuro);
+    width: 100%;
 }
 .user-data{
     display: block;
