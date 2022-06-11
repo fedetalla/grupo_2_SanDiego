@@ -1,49 +1,64 @@
 <header>
-    <div class="top-header">
-      <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <div class="logo-header">
-        <a href="/">
-          <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo"/>
-        </a>  
-      </div>
-
-
-        <form class="header-searcher" action="/searcher" method="post">
-          <input type="text" class="input">
-          <button class="submit"><i class="fas fa-search"></i></button>
-        </form>
-      
-        <div class="header-list">
-          <ul>
-              <p class="header-products">Productos</p>
-              <ul class="header-sublist">
-                  <li><a href="/products">Todos</a></li>
-                  <li><a href="#">Skates</a></li>
-                  <li><a href="#">Accesorios</a></li>
-                  <li><a href="#">Tablas</a></li>
-                  <li><a href="/products/create">Vender</a></li>
-              </ul>
-              </li>
-          </ul>
-      </div>
-  
-      <div class="logo-user">
-        <div class="logo-user">
-            <a href="/users/login"><i class="far fa-user"></i>
-                <p>Iniciar sesión</p>
-            </a>
-        </div>
-        <div class="logo-user"><a href="/users/register">| Registrarse</a></div>
+  <div class="top-header">
+    <div class="burger-menu">
+      <i class="fas fa-bars"></i>
     </div>
-    <div class="logo-carrito">
-      <a href="/products/cart">
-          <p>Carrito</p>
-          <i class="fas fa-shopping-cart"></i>
+
+    <div class="logo-header">
+      <a href="/">
+        <img src="/img/logo-san-diego.png" alt="Logo San Diego" class="header-logo" />
       </a>
+    </div>
+
+
+    <form class="header-searcher" action="/searcher" method="post">
+      <input type="text" class="input">
+      <button class="submit"><i class="fas fa-search"></i></button>
+    </form>
+
+    <div class="header-list">
+      <ul>
+        <p class="header-products">Productos</p>
+        <ul class="header-sublist">
+          <li><a href="/products">Todos</a></li>
+          <li><a href="#">Skates</a></li>
+          <li><a href="#">Accesorios</a></li>
+          <li><a href="#">Tablas</a></li>
+          <li><a href="/products/create">Vender</a></li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+    <% if (locals.isLogged) { %>
+      <div class="userLogged-name">
+        <img src="/img/users/<%= locals.userLogged.image %>" width="40" style="border-radius: 100%;">
+        <p>Hi <%= locals.userLogged.fullName %>
+        </p>
+
+        <div>
+          <ul class="user-logout">
+            <li><a href="/profile">Mi perfil</a></li>
+            <li><a href="/logout">Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <% } else{ %>
+        <div class="logo-user">
+          <div class="logo-user">
+            <a href="/users/login"><i class="far fa-user"></i>
+              <p>Iniciar sesión</p>
+            </a>
+          </div>
+          <div class="logo-user"><a href="/users/register">| Registrarse</a></div>
+        </div>
+        <% } %>
+          <div class="logo-carrito">
+            <a href="/products/cart">
+              <p>Carrito</p>
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </div>
   </div>
-  </div>
-  <p class="header-envio">Envío gratis a partir de $4500 <i class="fas fa-truck"></i> - 6 cuotas sin interés <i class="fas fa-credit-card"></i></p>
-  </header>
+  <p class="header-envio">Envío gratis a partir de $4500 <i class="fas fa-truck"></i> - 6 cuotas sin interés <i
+      class="fas fa-credit-card"></i></p>
+</header>

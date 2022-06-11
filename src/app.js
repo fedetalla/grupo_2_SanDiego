@@ -14,15 +14,14 @@ const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
 const mainRouter = require("./routes/mainRouter.js");
 
-// app.use(userLoggedMiddleware);
+
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
 app.use(session({
     secret: 'Nuestro msj secreto',
     resave: false,
     saveUninitialized: false}))
-
-    
+app.use(userLoggedMiddleware);    
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
