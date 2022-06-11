@@ -1240,7 +1240,7 @@ textarea.form-input-description {
     .header-sublist {
         display: block;
         display: flex;
-    }
+    height: 35px;}
     .header-products {
         font-size: 24px;
     }
