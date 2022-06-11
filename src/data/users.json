@@ -29,7 +29,7 @@
   "email": "martinsalomon@sandiego.com",
   "password": "123456",
   "category": "administrador",
-  "image": ""
+  "image": "default-image.png"
  },
  {
   "id": 5,
@@ -73,7 +73,7 @@
  },
  {
   "id": 9,
-  "fullName": "Pablito",
+  "fullName": "Pablito Ré",
   "email": "pab@gmail.com",
   "password": "$2b$10$3bvs1U1Py.N9kw0i2..Q1uSvcKcjpAVmMOSliZ6QACWj2v5K1q.vi",
   "category": "visitor",

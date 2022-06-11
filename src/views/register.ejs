@@ -1,91 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- head EJS -->
-  <%- include('parcial/head.ejs') %>
+<!-- head EJS -->
+<%- include('parcial/head.ejs') %>
 
   <body class="register-body">
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-    <main>
-      <div class="register-form">
-        <form class="formatForm-register" action="/users/register" enctype="multipart/form-data" method="POST">
-          <div class="title-register"><p>Crea tu propia cuenta</p></div>
-        <div>  
-          <label for="fullName">Nombre y Apellido</label>
-          <input
-            class="register-input"
-            type="text"
-            name="fullName"
-            id="name"
+      <main>
+        <div class="register-form">
+          <form class="formatForm-register" action="/users/register" enctype="multipart/form-data" method="POST">
+            <div class="title-register">
+              <p>Crea tu propia cuenta</p>
+            </div>
+            <div>
+              <label for="fullName">Nombre y Apellido</label>
+              <input class="register-input" type="text" name="fullName" id="name" placeholder="Escribe tu nombre" />
+              <% if(locals.errors && errors.fullName) { %>
+                <%= errors.fullName.msg %>
+                  <% } %>
+                    <br />
+            </div>
 
-            placeholder="Escribe tu nombre"
-          />
-          <% if(locals.errors && errors.fullName) { %> 
-            <%= errors.fullName.msg %>
-        <% } %> 
-          <br />
-        </div>
-
-          <div>
-          <label for="email">Mail</label>
-          <input
-            class="register-input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Ej. usuario@mail.com"
-          />
-          <% if(locals.errors && errors.email) { %> 
-            <%= errors.email.msg %>
-        <% } %> 
-          <br />
-        </div>
-        <div>
-        <label for="">Perfil de usuario</label>
-          <select class="register-input" name="category" id="categories">
-            <option value="" disabled selected>Selecciona tu tipo de perfil</option>
-            <option value="admin">Admin</option>
-            <option value="visitor">Visitante</option>
-          </div>
-          </select>
-        <br>
-        <div>
-            <label for="password">Crear Contraseña</label>
-            <input
-              class="register-input"
-              type="password"
-              name="password"
-              id="password"
-            />
-            <% if(locals.errors && errors.password) { %> 
-              <%= errors.password.msg %>
-          <% } %> 
-          </div>
-          <br>
-          <div>
-            <label for="perfil-img"><p>Selecciona una foto de perfil:</p></label>
-            <input type="file" name="image">
-            <% if(locals.image && errors.image) { %> 
+            <div>
+              <label for="email">Mail</label>
+              <input class="register-input" type="email" name="email" id="email" placeholder="Ej. usuario@mail.com" />
+              <% if(locals.errors && errors.email) { %>
+                <%= errors.email.msg %>
+                  <% } %>
+                    <br />
+            </div>
+            <div>
+              <label for="">Perfil de usuario</label>
+              <select class="register-input" name="category" id="categories">
+                <option value="" disabled selected>Selecciona tu tipo de perfil</option>
+                <option value="admin">Admin</option>
+                <option value="visitor">Visitante</option>
+            </div>
+            </select>
+            <br>
+            <div>
+              <label for="password">Crear Contraseña</label>
+              <input class="register-input" type="password" name="password" id="password" />
+              <% if(locals.errors && errors.password) { %>
+                <%= errors.password.msg %>
+                  <% } %>
+            </div>
+            <br>
+            <div>
+              <label for="perfil-img">
+                <p>Selecciona una foto de perfil:</p>
+              </label>
+              <input type="file" name="image">
+              <% if(locals.image && errors.image) { %>
                 <%= errors.image.msg %>
-            <% } %> 
+                  <% } %>
+            </div>
+            <br />
+
+            <button class="button-register" type="submit" value="REGISTRARSE">Registrarse</button>
+            <button class="button-register" type="reset" value="BORRAR">Borrar</button>
+            <div class="register-privacity">
+              <p>Al crear una cuenta, acepta nuestros Términos y privacidad .</p>
+            </div>
+            <br>
+            <a href="/" class="" style="margin: auto;">
+              <span class="span-register">Volver a la página principal</span>
+            </a>
+          </form>
         </div>
-          <br />
+      </main>
 
-          <button class="button-register" type="submit" value="REGISTRARSE">Registrarse</button>
-          <button class="button-register" type="reset" value="BORRAR">Borrar</button>
-          <div class="register-privacity">
-            <p>Al crear una cuenta, acepta nuestros Términos y privacidad .</p>
-          </div>
-          <br>
-          <a href="/" class="" style="margin: auto;">
-            <span class="span-register">Volver a la página principal</span>
-        </a>
-        </form>
-      </div>
-    </main>
-
-       <!-- footer EJS-->
-       <%- include('parcial/footer.ejs') %>
+      <!-- footer EJS-->
+      <%- include('parcial/footer.ejs') %>
   </body>
+
 </html>

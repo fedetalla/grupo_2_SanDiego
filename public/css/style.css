@@ -980,6 +980,36 @@ textarea.form-input-description {
     transform: scale(1.01);
 
 }
+
+/****************************
+        User profile   
+ ******************************/
+ .user-info{
+    margin: auto;
+    width: fit-content;
+}
+ .userName-title{
+    font-size: 2rem;margin: 15px;
+    font-family: sans-serif;
+    min-width: fit-content;
+}
+.user_imgProfile{
+    margin-bottom: 0px;
+    border-radius: 50%;
+    border: 2px solid var(--gris-oscuro);
+}
+.user-data{
+    display: block;
+    min-width: fit-content;
+    margin: 20px 0;
+    padding: 9px;
+    border-radius: 5px;
+    background-color: #5794ef70;
+    color: var(--azul);
+    text-transform: uppercase;
+}
+
+
 /****************************
    MEDIA QUERY
 ******************************/
@@ -1155,6 +1185,9 @@ textarea.form-input-description {
     .img-product-assets{
         max-width: 50%;
     }
+    .user-info{
+    margin: 5% 10%;
+    }
 }
 
 @media(min-width: 1024px) {
@@ -1269,6 +1302,9 @@ textarea.form-input-description {
         top: 50%;
         left: 80%;
         position: absolute;
+    }
+    .user-info{
+    margin: 5% 10%;
     }
 }
 

@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<!-- head EJS -->
+<%- include('parcial/head.ejs') %>
+<body class="">
+    <!-- header EJS -->
+    <%- include('parcial/header.ejs') %>
+
 <body>
-    <p>Hola</p>
-    <section class="info-product">
-        <h1 class="titulo-producto">
-            <%= users. %>
+    <section class="user-info">
+        <h1 class="userName-title">
+            Hola <%= user.fullName %>
         </h1>
         <div>
-            <div>
-                <p class="price">$ <%= product.price %>
-                </p>
-            </div>
+            <img src="/img/users/<%= user.image %>" alt="foto del usuario" class="user_imgProfile">
+
+            <p class="user-data"><%= user.email %></p>
+
+            <p class="user-data"><%= user.category %></p>
         </div>
-        </section>
+    </section>
 </body>
+
 </html>

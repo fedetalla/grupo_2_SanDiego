@@ -29,6 +29,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.4",
     "nodemon": "^2.0.16",
-    "save": "^2.5.0"
+    "save": "^2.5.0",
+    "sequelize": "5.21"
   }
 }
