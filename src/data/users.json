@@ -86,5 +86,13 @@
   "password": "$2b$10$VVHczkUSxrKRYTSvX5cKQeFhDKNrh4Ui9IVuo7muHO/cbXK52Gx1C",
   "category": "admin",
   "image": "image1654983708738.png"
+ },
+ {
+  "id": 11,
+  "fullName": "franquito ",
+  "email": "luquita@gmail.com",
+  "password": "$2b$10$ImPEUc2JF7d.5JaJFLlVJeIxoBhOZzSSisOv8d2PblWngBmPwM4L6",
+  "category": "visitor",
+  "image": "image1654989878188.jpeg"
  }
 ]

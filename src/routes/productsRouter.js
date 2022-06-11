@@ -3,10 +3,11 @@ const express = require("express");
 const router = express.Router();
 
 const productsController = require("../controllers/productsController.js")
-
+const authMiddleware = require('../middlewares/authMiddleware')
 const path = require('path')
 
 const multer = require('multer')
+
 
 // ************ multer config ************
 const storage=multer.diskStorage({
@@ -23,13 +24,13 @@ const upload = multer({storage: storage})
 router.get("/", productsController.index);
 
 // carrito
-router.get("/cart", productsController.carrito);
+router.get("/cart", authMiddleware, productsController.carrito);
 
 // detalle de producto
 router.get("/:id/detail", productsController.detalleProducto);
 
 //******* edicion de producto *********/
-router.get("/edit/:id", productsController.edit);
+router.get("/edit/:id", authMiddleware, productsController.edit);
 router.patch("/edit/:id", upload.single('product-image'), productsController.update)
 
 //******* creación de producto *********/

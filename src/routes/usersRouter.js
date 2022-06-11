@@ -2,6 +2,9 @@ const express = require("express");
 const multer = require('multer');
 const router = express.Router();
 const path = require('path');
+const authMiddleware = require('../middlewares/authMiddleware')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+    
 
 const usersController = require("../controllers/usersController.js")
 
@@ -42,15 +45,16 @@ const validations = [
 ]
 
 // LOGIN
-router.get("/login", usersController.login);
+router.get("/login", guestMiddleware, usersController.login);
 router.post("/login", usersController.processLogin);
 
 //REGISTER
-router.get("/register", usersController.register);
+router.get("/register", guestMiddleware, usersController.register);
 router.post("/register", uploadFile.single('image'), validations , usersController.processRegister);
 
 // PERFIL
-router.get("/profile", usersController.profile);
+router.get("/profile", authMiddleware, usersController.profile);
+
 
 
 module.exports = router ;
