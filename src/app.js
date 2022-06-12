@@ -3,7 +3,9 @@ const app = express();
 const router = express.Router();
 const methodOverride = require('method-override');
 const path = require("path");
-const session = require ('express-session')
+const session = require ('express-session');
+const cookies = require('cookie-parser');
+
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
@@ -21,6 +23,7 @@ app.use(session({
     secret: 'Nuestro msj secreto',
     resave: false,
     saveUninitialized: false}))
+app.use(cookies());
 app.use(userLoggedMiddleware);    
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())

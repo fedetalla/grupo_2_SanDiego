@@ -55,6 +55,7 @@ router.post("/register", uploadFile.single('image'), validations , usersControll
 // PERFIL
 router.get("/profile", authMiddleware, usersController.profile);
 
-
+// LOGOUT
+router.get('/logout/', usersController.logout);
 
 module.exports = router ;

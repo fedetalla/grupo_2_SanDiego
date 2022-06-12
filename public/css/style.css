@@ -262,9 +262,17 @@ font-weight: 500;font-size: 1rem;}
 .formulario {
     display: flex;
     margin: 15px 0px;
-    
-    
-    
+}
+
+.form-check-input{
+    width: 20px !important;
+    margin: 5px;
+}
+
+.rmb-login{
+    display: flex;
+    align-content: center;
+    align-items: flex-start;  
 }
 
 .edit-product {
@@ -433,14 +441,13 @@ margin: 20px 0px;max-width: 400px;}
 }
 .userLogged-name{
     color: #fff;
-    padding: 10px;
-    text-align: center;
     margin: 5px;
-    font-size: 18px;
+    font-size: 1.1rem;
     display: flex; 
-    align-items: center;
     order: 2;
-    flex-direction: column;
+    flex-direction: row;
+    display: none;
+    align-items: center;
 }
 .userLogged-name p{
     margin-left: 10px;
@@ -490,7 +497,7 @@ margin: 20px 0px;max-width: 400px;}
 
 .imagen-fondo p {
     font-size: 18px;
-    font-family: 'Calligraffitti', cursive;
+    font-family: inherit;
     font-weight: 400;
     color: white;
     padding: 50px
@@ -862,7 +869,7 @@ footer .list-politics div {
     padding: 0;
     font-weight: bold;
     display: block;
-}
+width: fit-content;}
 
 .login-box input {
     width: 100%;
@@ -889,7 +896,7 @@ footer .list-politics div {
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
-}
+width: 100%;}
 
 .login-box input[type="submit"]:hover {
     cursor: pointer;
@@ -1085,6 +1092,9 @@ textarea.form-input-description {
 
     .logo-header {
         width: 10%;
+    }
+    .userLogged-name{
+        display: flex; 
     }
 
     .header-logo {

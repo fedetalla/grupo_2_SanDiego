@@ -34,7 +34,7 @@ router.get("/edit/:id", authMiddleware, productsController.edit);
 router.patch("/edit/:id", upload.single('product-image'), productsController.update)
 
 //******* creación de producto *********/
-router.get("/create", productsController.create);
+router.get("/create", authMiddleware,productsController.create);
 router.post("/create",upload.single('product-image') ,productsController.store);
 
 //******* borrado de producto *********/
