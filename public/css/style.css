@@ -458,16 +458,31 @@ margin: 20px 0px;max-width: 400px;}
 .user-logout a{
     color: #fff;padding: 10px;
     text-align: center;
-    margin: 5px;
-    font-size: 18px;
+    margin: 4px;
+    font-size: 1.1rem;
     width: 100%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--negro-nuevo);
+    border-radius: 5px;
+    border:1px solid var(--azul-nuevo);
 }
+
 .userLogged-name:hover .user-logout{
     display: block;
+    position:absolute;
+    top: 41px;
+    left:0px;
+    text-align: center;
 }
+
+
+.prof-link:hover,  .prof-cls-session:hover{
+ background-color: #302a2a; 
+}
+
 .logo-user {
     display: none;
     order: 2;
@@ -1095,7 +1110,7 @@ textarea.form-input-description {
     }
     .userLogged-name{
         display: flex; 
-    }
+    position: relative;}
 
     .header-logo {
         align-self: flex-start;
