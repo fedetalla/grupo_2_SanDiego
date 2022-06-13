@@ -33,3 +33,15 @@
 4- Hacer menos: Tenemos que trabajar en cuanto a la organización y la especificación ya que cuando hacemos algún punto en particular, vemos otra cosa que debemos corregír y vamos a solucionar eso dejando de lado el objetivo principal que teníamos. No establecemos prioridades
 
 5- Dejar de hacer: Al igual que en los anteriores sprints, coincidmos en que debemos dejar de utilizar palabras en español, punto que ya estamos por superar.
+
+**Retro 5to sprint**
+
+1- Comenzar a hacer: Modificar las clases ya realizadas en español. A su vez, pese a que lo empezamos a implementar, debemos realizar más comentarios para que luego sea más sencillo de ver y entender lo que vamos haciendo.
+
+2- Hacer más: Creemos que debemos ser más precisos en los detalles y en el css, corregir lo dicho anteriormente y eliminar código que quedó obsoleto.
+
+3- Continuar haciendo: Al igual que el otro sprint realizamos varios puntos del srpint de manera grupal, vía videollamada. Entre los cuatro integrantes logramos evacuar varias dudas que teniamos en general y llegamos a cumplir los objetivos solicitados.
+
+4- Hacer menos: No logramos corregir los errores de los anteriores sprints, como el de establecer prioridades y organizarnos. Así como le vemos cosas positivas al trabajo grupal, también sabemos que los detalles los pasamos por alto tal vez, para poder terminar las cosas de mayor trabajo, dejando de lado las pequeñas cosas a modificar y pasandolo para lo último.
+
+5- Dejar de hacer: Confiarnos con el tiempo de entrega y realizar todo para los últimos días del sprint.
