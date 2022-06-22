@@ -5,7 +5,7 @@
   "email": "fedetallarico@sandiego.com",
   "password": "123456",
   "category": "administrador",
-  "image": ""
+  "image": "default-image.png"
  },
  {
   "id": 2,
@@ -13,7 +13,7 @@
   "email": "lucasmaquiavelo@sandiego.com",
   "password": "123456",
   "category": "administrador",
-  "image": ""
+  "image": "default-image.png"
  },
  {
   "id": 3,
@@ -21,7 +21,7 @@
   "email": "francopeljhan@sandiego.com",
   "password": "123456",
   "category": "administrador",
-  "image": ""
+  "image": "default-image.png"
  },
  {
   "id": 4,
@@ -94,5 +94,13 @@
   "password": "$2b$10$ImPEUc2JF7d.5JaJFLlVJeIxoBhOZzSSisOv8d2PblWngBmPwM4L6",
   "category": "visitor",
   "image": "image1654989878188.jpeg"
+ },
+ {
+  "id": 12,
+  "fullName": "pedrito",
+  "email": "pedritocassani@gmail.com",
+  "password": "$2b$10$Xl7NYTowwlJ045ji9wf2u.ReW2COFVJ6X64EcK2RcQMHBcjOxE2IG",
+  "category": "visitor",
+  "image": "image1655907278880.jpg"
  }
 ]

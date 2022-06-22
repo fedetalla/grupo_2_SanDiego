@@ -473,7 +473,7 @@ margin: 20px 0px;max-width: 400px;}
 .userLogged-name:hover .user-logout{
     display: block;
     position:absolute;
-    top: 41px;
+    top: 39px;
     left:0px;
     text-align: center;
 }
@@ -1048,7 +1048,7 @@ textarea.form-input-description {
     margin-bottom: 0px;
     border-radius: 50%;
     border: 2px solid var(--gris-oscuro);
-    width: 100%;
+    width: 300px;
 }
 .user-data{
     display: block;

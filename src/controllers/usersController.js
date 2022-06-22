@@ -42,7 +42,7 @@ const usersController = {
             image: req.file ? req.file.filename : 'default-image.png'
         }
             User.create(userToCreate)
-        return res.send('Tu formulario se procesó con éxito :)')
+            return res.render('index')
         
     },
     
