@@ -3,15 +3,15 @@
   "id": 1,
   "name": "Skate Woodo",
   "price": 20000,
-  "category": "Skate",
   "description": "Skate marca Woodo disponible en todas nuestras tiendas",
+  "category": "1",
   "image": "Skate-woodo.png"
  },
  {
   "id": 4,
   "name": "Skate Magine",
   "price": 18000,
-  "category": "Skate",
+  "category": "1",
   "description": "Skate marca Magine disponible en todas nuestras tiendas",
   "image": "/Skate-magine.png"
  },
@@ -19,22 +19,30 @@
   "id": 6,
   "name": "Skate Baker",
   "price": 20000,
-  "category": "Skate",
+  "category": "1",
   "description": "Skate marca Baker disponible en todas nuestras tiendas",
   "image": "/skate-baker.png"
  },
  {
-    "id": 7,
-    "name": "Skate Vans",
-    "price": 15000,
-    "description": "Skate marca Vans disponible en todas nuestras tiendas",
-    "image": "skate-vans.png"
-},
-{
+  "id": 7,
+  "name": "Skate Vans",
+  "price": 15000,
+  "description": "Skate marca Vans disponible en todas nuestras tiendas",
+  "image": "skate-vans.png"
+ },
+ {
   "id": 8,
   "name": "Skate Santa Cruz",
   "price": 6450,
   "description": "Skate marca Santa Cruz disponible en todas nuestras tiendas",
   "image": "product-image1653341632421.png"
-}
+ },
+ {
+  "id": 9,
+  "name": "aaa",
+  "price": 1111,
+  "description": "adasdasdasdasd",
+  "category_id": "1",
+  "image": "default-image.png"
+ }
 ]

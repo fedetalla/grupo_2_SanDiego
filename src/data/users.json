@@ -1,106 +1,18 @@
 [
  {
   "id": 1,
-  "fullName": "Fede Tallarico",
-  "email": "fedetallarico@sandiego.com",
-  "password": "123456",
-  "category": "administrador",
+  "fullName": "federico tallarico",
+  "email": "federico@sandiego.com",
+  "password": "$2b$10$BlRlITKQ.e6nQveMQxZvMO5Py1VPxwgblIgcbM83zvhKxRboJi2C.",
+  "category": "admin",
   "image": "default-image.png"
  },
  {
   "id": 2,
-  "name": "Lucas Maquiavelo",
-  "email": "lucasmaquiavelo@sandiego.com",
-  "password": "123456",
-  "category": "administrador",
-  "image": "default-image.png"
- },
- {
-  "id": 3,
-  "name": "Franco Peljhan",
-  "email": "francopeljhan@sandiego.com",
-  "password": "123456",
-  "category": "administrador",
-  "image": "default-image.png"
- },
- {
-  "id": 4,
-  "name": "Martin Salomon",
-  "email": "martinsalomon@sandiego.com",
-  "password": "123456",
-  "category": "administrador",
-  "image": "default-image.png"
- },
- {
-  "id": 5,
-  "name": "Carlos Lopez",
-  "email": "carloslopez@mail.com",
-  "password": "123456",
-  "category": "user",
-  "image": ""
- },
- {
-  "id": 5,
-  "name": "Maria Gonzales",
-  "email": "mariagonzales@mail.com",
-  "password": "123456",
-  "category": "user",
-  "image": ""
- },
- {
-  "id": 6,
-  "fullName": "asdasdasda",
-  "email": "asdasdasd@gmail.com",
-  "password": "$2b$10$Dex0nMCeawj7U2Ud/FheWOLFoE.5QtxhdVPK5nl0zlRVMduT99BZq",
-  "category": "admin",
-  "image": "default-image.png"
- },
- {
-  "id": 7,
-  "fullName": "asdasdasd",
-  "email": "asdasdasdd@gmail.com",
-  "password": "$2b$10$xFksUi4mylqEq8pww.NRoO9PgAMrN7C2rKtPMwqjqH0dvxH.RBcWq",
-  "category": "admin",
-  "image": "default-image.png"
- },
- {
-  "id": 8,
-  "fullName": "Juan",
-  "email": "juan@gmail.com",
-  "password": "$2b$10$YhEHTkcQ/lfUmusrnPO3oOHzuKfV9C6Oz4esNGByB67xJKWYiJ/Fm",
+  "fullName": "Franco",
+  "email": "franco@sandiego.com",
+  "password": "$2b$10$4NTJDiDPX2TN3.Io4k3QReDf0p3mXiMj39TheBkk9AkAXavYW1wXC",
   "category": "visitor",
-  "image": "image1654839999574.png"
- },
- {
-  "id": 9,
-  "fullName": "Pablito Ré",
-  "email": "pab@gmail.com",
-  "password": "$2b$10$3bvs1U1Py.N9kw0i2..Q1uSvcKcjpAVmMOSliZ6QACWj2v5K1q.vi",
-  "category": "visitor",
-  "image": "image1654895337173.jpg"
- },
- {
-  "id": 10,
-  "fullName": "Francafe",
-  "email": "franco@gmail.com",
-  "password": "$2b$10$VVHczkUSxrKRYTSvX5cKQeFhDKNrh4Ui9IVuo7muHO/cbXK52Gx1C",
-  "category": "admin",
-  "image": "image1654983708738.png"
- },
- {
-  "id": 11,
-  "fullName": "franquito ",
-  "email": "luquita@gmail.com",
-  "password": "$2b$10$ImPEUc2JF7d.5JaJFLlVJeIxoBhOZzSSisOv8d2PblWngBmPwM4L6",
-  "category": "visitor",
-  "image": "image1654989878188.jpeg"
- },
- {
-  "id": 12,
-  "fullName": "pedrito",
-  "email": "pedritocassani@gmail.com",
-  "password": "$2b$10$Xl7NYTowwlJ045ji9wf2u.ReW2COFVJ6X64EcK2RcQMHBcjOxE2IG",
-  "category": "visitor",
-  "image": "image1655907278880.jpg"
+  "image": "default-image.png"
  }
 ]

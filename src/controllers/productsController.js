@@ -53,7 +53,7 @@ const productsController = {
 			id: products[products.length - 1].id + 1,
 			name: req.body.name,
 			price: parseInt(req.body.price),
-			category: req.body.category,
+			category_id: req.body.category_id,
 			description: req.body.description,
 			image: req.file ? req.file.filename : 'default-image.png'
 		}
