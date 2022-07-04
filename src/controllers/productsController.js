@@ -9,16 +9,24 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
     index: (req, res) => {
-		db.Product.findAll()
+		db.Product.findAll({
+			includes: [{association: "productsCategory"}]
+		})
 		.then(products=>{
 			res.render("productos", {products});
 		})
+		.catch (error => {
+            res.send (error)
+        })
     },
     detalleProducto: (req, res) => {
 		db.Product.findByPk(req.params.id)
 		.then(product=>{
 			return res.render('productDetail',{product})
 		})
+		.catch (error => {
+            res.send (error)
+        })
     },
     carrito: (req, res) => {
         return res.render("productCart")

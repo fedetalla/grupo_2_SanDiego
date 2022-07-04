@@ -38,13 +38,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config); 
 
-    // Product.associate = function (models){
+    Product.associate = function (models){
 
-    //     Product.belongsTo(models.Category, {
-    //         as: "productCategory",
-    //         foreingKey: "category_id"
-    //     })
-    // }  
+        Product.hasOne(models.Category, {
+            as: "productsCategory",
+            foreingKey: "category_id"
+        })
+    }  
 
  
     return Product;
