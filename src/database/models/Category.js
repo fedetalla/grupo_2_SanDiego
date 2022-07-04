@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Categories';
+    let alias = 'Category';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -7,23 +7,23 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             allowNull: false
         },
-        Name: {
-            type: dataTypes.VARCHAR(255),
+        name: {
+            type: dataTypes.STRING(100),
             allowNull: false
         }
     }
     let config = {
-        tableName: 'Categories',
+        tableName: 'categories',
         timestamps: false
     }
     const Category = sequelize.define(alias, cols, config);
 
-    Category.associate = function (models) {
-        Category.hasMany (models.Product, {
-            as: "CategoryProduct",
-            foreingKey: "categoryId"
-        })
-    } 
+    // Category.associate = function (models) {
+    //     Category.hasOne(models.Product, {
+    //         as: "categoryProduct",
+    //         foreingKey: "category_id"
+    //     })
+    // } 
 
     return Category;
 }

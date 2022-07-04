@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -7,20 +9,25 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productsController = {
 
     index: (req, res) => {
-        res.render("productos", {products});
+		db.Product.findAll()
+		.then(products=>{
+			res.render("productos", {products});
+		})
     },
     detalleProducto: (req, res) => {
-        let id = req.params.id;
-        let product = products.find(product=> product.id == id);
-        return res.render('productDetail',{product})
+		db.Product.findByPk(req.params.id)
+		.then(product=>{
+			return res.render('productDetail',{product})
+		})
     },
     carrito: (req, res) => {
         return res.render("productCart")
     },
     edit: (req,res) =>{
-        let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-        return res.render("productEditForm", {productToEdit})
+		db.Product.findByPk(req.params.id)
+		.then(product=>{
+			return res.render('productEditForm',{product})
+		})
     },
 	update: (req, res) => {
 		const id = req.params.id;

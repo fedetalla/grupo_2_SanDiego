@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Products';
+    let alias = 'Product';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         name: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         price:{
@@ -16,20 +16,21 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         description:{
-            type:dataTypes.VARCHAR(255)
+            type:dataTypes.STRING(100)
         },
         category_id:{
             type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false
         },
         image:{
-            type:dataTypes.VARCHAR(255),
-            allowNull: false
+            type:dataTypes.STRING(100),
+            allowNull: true
         }
         
     };
     let config = {
-        timestamps: true,
+        tableName: "products",
+        timestamps: false,
         createdAt: 'created_at',
         updatedAt: 'updated_at',
         deletedAt: false
@@ -37,13 +38,13 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config); 
 
-    Product.associate = function (models){
+    // Product.associate = function (models){
 
-        Product.belongsTo (models.Category, {
-            as: "category",
-            foreingKey: "categoryId"
-        })
-    }  
+    //     Product.belongsTo(models.Category, {
+    //         as: "productCategory",
+    //         foreingKey: "category_id"
+    //     })
+    // }  
 
  
     return Product;

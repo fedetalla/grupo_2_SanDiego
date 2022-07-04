@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -8,23 +8,23 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         fullName: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         password: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
-        category_Id: {
-            type: dataTypes.VARCHAR(255),
+        category_id: {
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         email: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         image: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(255),
             allowNull: false
         }
     }

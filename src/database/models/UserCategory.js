@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'UserCategories';
+    let alias = 'UserCategory';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         name: {
-            type: dataTypes.VARCHAR(255),
+            type: dataTypes.STRING(100),
             allowNull: false
         }
     }
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
     const UserCategory = sequelize.define(alias, cols, config);
 
     UserCategory.associate = function (models) {
-        UserCategory.belongsTo (models.User, {
+        UserCategory.hasMany(models.User, {
             as: "user",
             foreingKey: "id"
         })
