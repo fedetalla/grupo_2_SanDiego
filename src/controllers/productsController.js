@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { config } = require('process');
 const db = require('../database/models');
 
 
@@ -20,7 +21,9 @@ const productsController = {
         })
     },
     detalleProducto: (req, res) => {
-		db.Product.findByPk(req.params.id)
+		db.Product.findByPk(req.params.id, {
+            include: [{association: 'categories'}]
+        })
 		.then(product=>{
 			return res.render('productDetail',{product})
 		})
@@ -32,59 +35,67 @@ const productsController = {
         return res.render("productCart")
     },
     edit: (req,res) =>{
-		db.Product.findByPk(req.params.id)
-		.then(product=>{
-			return res.render('productEditForm',{product})
+		let productRequired = db.Product.findByPk(req.params.id, { include: ["categories"] });
+		let categoryRequired = db.Category.findAll()
+		Promise.all([productRequired, categoryRequired])
+		.then(([product, category])=>{
+			return res.render('productEditForm',{product: product, allCategories: category})
 		})
+		.catch (error => {
+            res.send (error)
+        })
     },
-	update: (req, res) => {
-		const id = req.params.id;
-		let productToEdit = products.find(product => product.id == id);
-		
-		let productToSave = {
-			id: productToEdit.id,
+    update: function (req,res) {
+        db.Product.update({
 			name: req.body.name,
 			price: req.body.price,
 			category: req.body.category,
 			description: req.body.description,
-			image: req.file ? req.file.filename : productToEdit.image
-		}
-
-		let indice = products.findIndex(product => {
-			return product.id == id
-		})
-		products[indice] = productToSave;
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/products")
+			// image: req.file ? req.file.filename : 'default-image.png'
+        }, {
+            where: {id: req.params.id}
+        })
+    .then (()=>{
+        return res.redirect('/products')
+    })
+	.catch (error => {
+		res.send (error)
+	})
 	},
-
-
     create: (req,res) => {
         return res.render("productCreateForm")
     },
-    store: (req,res) =>{
-        let newProduct = {
-			id: products[products.length - 1].id + 1,
-			name: req.body.name,
-			price: parseInt(req.body.price),
-			category_id: req.body.category_id,
-			description: req.body.description,
-			image: req.file ? req.file.filename : 'default-image.png'
-		}
-        products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+	store: function (req,res) {
+        db.Product.create({
+            name: req.body.name,
+			price: req.body.price,
+	 		category_id: req.body.category_id,
+	 		description: req.body.description,
+	 		image: req.file ? req.file.filename : 'default-image.png'
+        })
+	.then(()=>{
+    return res.redirect('/products')
+	})
+	.catch (error => {
+	res.send (error)
+	})
+	},
 
-		res.redirect("/products");
-    },
-    destroy : (req, res) => {
-		const id = req.params.id;
-		let finalProducts = products.filter(product => product.id != id);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-		res.redirect("/products")
-	}
+    destroy: function (req,res) {
+        let confirmDelete = confirm('¿Estás seguro de que quieres borrar este producto?')
+        if(confirmDelete == true){
+        db.Product.destroy({
+            where: {id: req.params.id}
+            .then(() =>{
+                return res.redirect('/products')
+            })
+        })
+        }else{
+            return res.redirect('/products')
+        }   
+    }
 }
+
 
 
 module.exports = productsController;

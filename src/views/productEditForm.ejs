@@ -22,13 +22,14 @@
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
-            <select name="category" class="form-input">
-                <option value=""></option>
-                <option value="skates">Skates</option>
-                <option value="tablas">Tablas</option>
-                <option value="accesorios">Accesorios</option>
+            <select name="form-label" id="" required  class="form-input">
+                <% allCategories.forEach(category => { %>
+                <option value="<%=category.id %>" <% if(product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
+                <% }); %>
             </select>
         </div>
+
+
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
             <textarea type="text" name="description" class="form-input-description"><%= product.description %></textarea>

@@ -38,7 +38,7 @@ router.get("/create", authMiddleware,productsController.create);
 router.post("/create",upload.single('product-image') ,productsController.store);
 
 //******* borrado de producto *********/
-router.delete('/delete/:id', productsController.destroy);
+router.post('/delete/:id', productsController.destroy);
 
 
 
