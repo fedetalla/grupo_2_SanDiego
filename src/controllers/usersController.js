@@ -4,45 +4,61 @@ const path = require("path");
 const User = require('../models/User');
 const bcryptjs = require('bcrypt');
 const {validationResult} = require ('express-validator');
+const db = require('../database/models');
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController = {
     register: (req, res) => {
         return res.render("register")
     },
+    store: function (req,res) {
+        db.Product.create({
+            name: req.body.name,
+			price: req.body.price,
+	 		category_id: req.body.category_id,
+	 		description: req.body.description,
+	 		image: req.file ? req.file.filename : 'default-image.png'
+        })
+	.then(()=>{
+    return res.redirect('/products')
+	})
+	.catch (error => {
+	res.send (error)
+	})
+    },
     processRegister:(req, res) => {
-        const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0){
-            res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            })
-        }
-    
-    let userInDB = User.findByField('email', req.body.email)
-
-        if(userInDB){
-            return res.render('register', {
-                errors: {
-                    email: {
-                        msg:'Este email ya está registrado' 
-                    }
-                },
-                oldData: req.body
-            })
-        }
-        let userToCreate = {
-            fullName: req.body.fullName,
-            email: req.body.email,
-            password: req.body.password,
-            category: req.body.category,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file ? req.file.filename : 'default-image.png'
-        }
-            User.create(userToCreate)
-            return res.render('index')
+        db.User.findOne({where: {email: req.body.email}})
+        .then((userInDB)=>{
+            console.log(userInDB)
+            if(userInDB === null){
+                const resultValidation = validationResult(req);
+            if(resultValidation.errors.length > 0){
+                res.render('register', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                })
+            }else{
+                db.User.create({
+                    fullName: req.body.fullName,
+                    email: req.body.email,
+                    category: req.body.category,
+                    password: bcryptjs.hashSync(req.body.password, 10),
+                    image: req.file ? req.file.filename : 'default-image.png'
+                })
+                .then(()=>{
+                     return res.redirect('/users/profile')})
+            }
+        }else{
+                return res.render('register', {
+                    errors: {
+                        email: {
+                            msg:'Este email ya está registrado' 
+                        }
+                    },
+                    oldData: req.body
+                })
+            }
+        })
         
     },
     

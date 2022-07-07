@@ -4,9 +4,6 @@ const { config } = require('process');
 const db = require('../database/models');
 
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const productsController = {
 
     index: (req, res) => {
@@ -46,18 +43,20 @@ const productsController = {
         })
     },
     update: function (req,res) {
+        db.Product.findByPk(req.params.id)
+        .then(product=>{
         db.Product.update({
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description,
-			// image: req.file ? req.file.filename : 'default-image.png'
+            name: req.body.name,
+            price: req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            image: req.file ? req.file.filename : product.image
         }, {
             where: {id: req.params.id}
         })
-    .then (()=>{
-        return res.redirect('/products')
-    })
+        .then (()=>{
+            return res.redirect('/products')})
+        })
 	.catch (error => {
 		res.send (error)
 	})
@@ -82,17 +81,11 @@ const productsController = {
 	},
 
     destroy: function (req,res) {
-        let confirmDelete = confirm('¿Estás seguro de que quieres borrar este producto?')
-        if(confirmDelete == true){
         db.Product.destroy({
-            where: {id: req.params.id}
+            where: {id: req.params.id}})
             .then(() =>{
                 return res.redirect('/products')
             })
-        })
-        }else{
-            return res.redirect('/products')
-        }   
     }
 }
 

@@ -54,7 +54,7 @@
                             <a class="product-edit-delete" href="/products/edit/<%= product.id %>">EDITAR</a>
                             <form action="/products/delete/<%= product.id %>" method="POST"
                                 style="display: inline-flex">
-                                <button class="product-edit-delete" type="submit">ELIMINAR</button>
+                                <button class="product-edit-delete button-delete" type="submit">ELIMINAR</button>
                             </form>
                             <div class="descripcion">
                                 <p class="breve-descripcion">Descripción</p>
@@ -69,7 +69,7 @@
                 <!-- footer EJS-->
                 <%- include('parcial/footer.ejs') %>
 
-
+                <script src="/js/product.js"></script>
     </body>
 
 </html>
