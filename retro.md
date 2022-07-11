@@ -45,3 +45,15 @@
 4- Hacer menos: No logramos corregir los errores de los anteriores sprints, como el de establecer prioridades y organizarnos. Así como le vemos cosas positivas al trabajo grupal, también sabemos que los detalles los pasamos por alto tal vez, para poder terminar las cosas de mayor trabajo, dejando de lado las pequeñas cosas a modificar y pasandolo para lo último.
 
 5- Dejar de hacer: Confiarnos con el tiempo de entrega y realizar todo para los últimos días del sprint.
+
+**Retro 6to sprint**
+
+1- Comenzar a hacer: Modificar las clases ya realizadas en español. 
+
+2- Hacer más: En este sprint no estuvimos tan organizados como en los anteriores y debimos superar varios obstáculos para llegar a la entrega final, por ende notamos que nos hizo falta más trabajo y entendimiento de lo que debíamos hacer.
+
+3- Continuar haciendo: Repetimos la metodología de los sprints anteriores de reunirnos e ir hilvanando cada punto de manera grupal para poder, entre todos, realizar un trabajo completo y sin errores. También empezamos a utilizar más los comentarios dentro del código para saber y poder entender lo que vamos realizando.
+
+4- Hacer menos: Creemos que, por el momento, todo lo realizado tiene sus frutos a la larga. Cada reunion de trabajo se utiliza para afrontar los diferentes puntos del sprint y hasta no lograrlo no finalizamos la misma.
+
+5- Dejar de hacer: Repetimos el error de dejar pasar la primera semana sin hacer nada y luego el tiempo no nos alcanzó.
