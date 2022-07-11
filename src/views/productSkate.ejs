@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- head EJS -->
+<%- include('parcial/head.ejs') %>
+
+  <body class="register-body">
+    <!-- header EJS -->
+    <%- include('parcial/header.ejs') %>
+
+      <div class="mainProductos">
+       <% products.forEach(product=>{ %>
+          <div class="product-list-box">
+            
+              <h2>
+                <%= product.name %>
+              </h2>
+              <a href="/products/<%= product.id %>/detail">
+              <div>
+                <img class="productImg" src="/img/productos/<%= product.image %>" alt="imagen de producto">
+              </div>
+            </a>
+              <article>
+                <p class="price">$<%= product.price %>
+                </p>
+                <p class="product-description">
+                  <%= product.description %>
+                </p>
+              </article>
+              </a>
+          </div>
+        
+<% }) %>
+        
+
+      </div>
+
+
+      
+      <!-- footer EJS-->
+      <%- include('parcial/footer.ejs') %>
+  </body>
+
+</html>

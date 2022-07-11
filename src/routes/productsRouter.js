@@ -22,6 +22,8 @@ const upload = multer({storage: storage})
 
 // inicio
 router.get("/", productsController.index);
+router.get("/skates", productsController.productSkates);
+router.get("/accessories", productsController.productAccessories);
 
 // carrito
 router.get("/cart", authMiddleware, productsController.carrito);

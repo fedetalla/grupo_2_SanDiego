@@ -16,6 +16,7 @@ const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
 const mainRouter = require("./routes/mainRouter.js");
 
+   
 
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
@@ -24,14 +25,13 @@ app.use(session({
     resave: false,
     saveUninitialized: false}))
 app.use(cookies());
-app.use(userLoggedMiddleware);    
+app.use(userLoggedMiddleware); 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json())
 
 app.use("/products", productsRouter);
 app.use("/users", usersRouter);
 app.use("/", mainRouter);
-
 
 app.listen(3080, ()=>{
     console.log("servidor corriendo en el puerto http://localhost:3080");

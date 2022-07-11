@@ -9,14 +9,18 @@
 <body>
     <section class="user-info">
         <h1 class="userName-title">
-            Hola <%= user.fullName %>
+            Hola
+             <%= locals.userLogged.fullName %>
         </h1>
         <div>
-            <img src="/img/users/<%= user.image %>" alt="foto del usuario" class="user_imgProfile">
+            <img src="/img/users/<%= locals.userLogged.image %>" alt="foto del usuario" class="user_imgProfile">
 
-            <p class="user-data"><%= user.email %></p>
+            <p class="user-data"><%= locals.userLogged.email %></p>
 
-            <p class="user-data"><%= user.category %></p>
+            <p class="user-data"><%= locals.userLogged.category_id%></p>
+        </div>
+        <div>
+            <a href="/users/profile/edit">Editar perfil</a>
         </div>
     </section>
 </body>

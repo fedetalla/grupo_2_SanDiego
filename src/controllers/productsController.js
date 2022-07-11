@@ -5,7 +5,6 @@ const db = require('../database/models');
 
 
 const productsController = {
-
     index: (req, res) => {
 		db.Product.findAll({
 			includes: [{association: "productsCategory"}]
@@ -13,6 +12,33 @@ const productsController = {
 		.then(products=>{
 			res.render("productos", {products});
 		})
+		.catch (error => {
+            res.send (error)
+        })
+    },
+
+    productSkates: (req, res) => {
+		db.Product.findAll({
+			includes: [{association: "productsCategory"}]
+		})
+		.then(products=>{
+            let finalProducts = products.filter(product => product.category_id == 1)
+                    res.render("productSkate", {products: finalProducts})
+                }
+		)
+		.catch (error => {
+            res.send (error)
+        })
+    },
+    productAccessories: (req,res) => {
+        db.Product.findAll({
+			includes: [{association: "productsCategory"}]
+		})
+		.then(products=>{
+            let finalProducts = products.filter(product => product.category_id == 2)
+                    res.render("productAccessories", {products: finalProducts})
+                }
+		)
 		.catch (error => {
             res.send (error)
         })

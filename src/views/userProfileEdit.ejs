@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+      <!-- head EJS -->
+      <%- include('parcial/head.ejs') %>
+<body>
+    <!-- header EJS -->
+    <%- include('parcial/header.ejs') %>
+
+
+    <form action="/users/profile/edit/" method="POST" enctype="multipart/form-data">
+        <div class="product-form">
+            <div>
+				<h2 class="product-form-title">Estás editando el perfil de: <%= locals.userLogged.fullName %> </h2>
+			</div>
+        <div>
+            <label for="name" class="form-label">Nombre de usuario</label>
+            <input type="text" name="fullName" class="form-input" value="<%= locals.userLogged.fullName %>">
+        </div>
+        <div>
+            <label for="mail" class="form-label">Mail</label>
+            <input type="mail" name="mail" class="form-input" value="<%= locals.userLogged.email %>">
+        </div>
+        <div>
+            <label for="user-category" class="form-label">Categoría de usuario</label>
+            <select name="user-category" id="" required  class="form-input">
+                <% categories.forEach(category => { %>
+                <option value="<%=category.dataValues.id %>" <% if(locals.userLogged.category == category.dataValues.name) { %><%= 'selected' %><% }; %>><%= category.dataValues.name %></option>
+                <% }); %>
+            </select>
+        </div>  
+
+        <div>
+            <label for="password" class="form-label">Contraseña actual</label>
+            <input type="text" name="password" class="form-input">
+        </div>
+        <div>
+            <label for="password" class="form-label">Nueva contraseña</label>
+            <input type="text" name="password" class="form-input">
+        </div>
+        <div>
+            <div>
+            <label for="user-image" class="form-label">Imagen de perfil</label>
+            </div>
+            <div class="nf-tittle">
+            <img src="/img/users/<%=locals.userLogged.image %>" class="imagenes-de-opcion" alt="user-image">
+            </div>
+            <input type="file" name="user-image" value="<%= locals.userLogged.image %>">
+        </div>
+        <div class="button-edit-form">
+            <button type="submit" class="button-save-product">Guardar cambios</button>
+        </div>
+        <div class="button-edit-form">
+            <a href="/users/profile">Cancelar</a>
+        </div>
+    </div>
+</form>
+
+
+  <!-- footer EJS -->
+  <%- include('parcial/footer.ejs') %>
+</body>
+</html>

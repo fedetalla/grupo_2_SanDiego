@@ -5,6 +5,7 @@ const User = require('../models/User');
 const bcryptjs = require('bcrypt');
 const {validationResult} = require ('express-validator');
 const db = require('../database/models');
+const { raw } = require('express');
 
 
 const usersController = {
@@ -30,7 +31,7 @@ const usersController = {
         db.User.findOne({where: {email: req.body.email}})
         .then((userInDB)=>{
             console.log(userInDB)
-            if(userInDB === null){
+            if(userInDB == null){
                 const resultValidation = validationResult(req);
             if(resultValidation.errors.length > 0){
                 res.render('register', {
@@ -66,30 +67,61 @@ const usersController = {
         return res.render("login")
     },
     processLogin: (req,res) => {
-        let userToLog = User.findByField('email', req.body.email)
-        if(userToLog){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLog.password);
-            if(isOkThePassword){
-                delete userToLog.password
-                req.session.userLogged = userToLog;
-                
-                if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-				}
-
-                return res.redirect('/users/profile')
-            }
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'Credenciales inválidas'
+        db.User.findOne({raw: true, 
+            where: {email: req.body.email}, 
+            include: ["userCategory"]})
+        .then(userToLog=>{
+            let user = JSON.stringify(userToLog)
+            let userFinal = JSON.parse(user)
+            if(userFinal != null){
+                let isOkThePassword = bcryptjs.compareSync(req.body.password, userFinal.password);
+                if(isOkThePassword){
+                    delete userFinal.password
+                    req.session.userLogged = userFinal;                    //sin la contraseña para guardarlo en la sesion
+                    if(req.body.remember_user) {
+                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                    }
+                    return res.redirect('/users/profile') 
                 }
-            }
-    })
+                
+            } return res.render('login', {
+                    errors: {
+                        email: {
+                            msg: 'Credenciales inválidas'
+                        }
+                    }
+            })
+
+        })
+        .catch (error => {
+            res.send (error)
+        })
+
     },
     profile: (req,res)=>{
-        return res.render("userProfile", {user : req.session.userLogged})
+        return res.render("userProfile")
+    },
+    editProfile: (req,res)=>{
+        db.UserCategory.findAll()
+        .then((categories)=>{
+             res.render ('userProfileEdit', {categories: categories})
+        })
+        .catch (error => {
+            res.send (error)
+        })
+    },
+    processEdit: (req,res)=>{
+        db.User.findByPk(locals.isLogged.id)
+        .then(user=>{
+        db.User.update({fullName: req.body.fullName,
+            email: req.body.email,
+            category: req.body.category,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: req.file ? req.file.filename : 'default-image.png'
+        }, {
+            where: {id: req.params.id}
+        })
+        })
     },
     
     logout: (req, res) => {
