@@ -38,8 +38,8 @@ INSERT INTO san_diego.products (id, name, price, description, category_id, image
 (3, "Skate Baker", 20000, "Skate marca Baker disponible en todas nuestras tiendas", 1, "Skate-Baker.png"),
 (4, "Skate Vans", 15000, "Skate marca Vans disponible en todas nuestras tiendas", 1, "Skate-Vans.png"),
 (5, "Santa Cruz", 6450, "Skate marca Santa Cruz disponible en todas nuestras tiendas", 1, "product-image1653341632421.png"),
-(6, "ruedas", 500, "Ruedas marca Pirulo disponible en todas nuestras tiendas", 2, "default-image.png"),
-(7, "track", 1500, "Track marca Element disponible en todas nuestras tiendas", 2, "default-image.png");
+(6, "ruedas", 500, "Ruedas marca Pirulo disponible en todas nuestras tiendas", 2, "product-image1657402353669.png"),
+(7, "track", 1500, "Track marca Element disponible en todas nuestras tiendas", 2, "product-image1657402088780.png");
 
 -- users --
 INSERT INTO san_diego.users (id, fullName, password, category_id, email, image) VALUES 
