@@ -67,7 +67,7 @@ const usersController = {
         return res.render("login")
     },
     processLogin: (req,res) => {
-        db.User.findOne({raw: true, 
+        db.User.findOne({
             where: {email: req.body.email}, 
             include: ["userCategory"]})
         .then(userToLog=>{
@@ -111,17 +111,18 @@ const usersController = {
         })
     },
     processEdit: (req,res)=>{
-        db.User.findByPk(locals.isLogged.id)
-        .then(user=>{
-        db.User.update({fullName: req.body.fullName,
-            email: req.body.email,
-            category: req.body.category,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            image: req.file ? req.file.filename : 'default-image.png'
-        }, {
-            where: {id: req.params.id}
-        })
-        })
+        // // db.User.findOne({where: {id: res.locals.isLogged.id}})
+        // .then(user=>{
+        // db.User.update({
+        //     fullName: req.body.fullName,
+        //     email: req.body.email,
+        //     category: req.body.category,
+        //     image: req.file ? req.file.filename : user.image
+        //     },  
+        //     {
+        //     where: {id: res.locals.isLogged.id}
+        //     })
+        // })
     },
     
     logout: (req, res) => {
