@@ -2,7 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { config } = require('process');
 const db = require('../database/models');
-
+const {validationResult} = require ('express-validator');
+const {raw} = require("express")
 
 const productsController = {
     index: (req, res) => {

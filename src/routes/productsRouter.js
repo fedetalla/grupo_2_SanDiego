@@ -20,6 +20,32 @@ const storage=multer.diskStorage({
 });
 const upload = multer({storage: storage})
 
+//validations
+const { body } = require('express-validator')
+
+// Definimos las validaciones correspondientes al register
+const productsValidations = [
+    body('name').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
+    body('category_id').notEmpty().withMessage('Tienes que seleccionar una categoría'),
+    body('price').notEmpty().isEmail().withMessage('Tienes que ponerle un precio al producto'),
+    body('description').notEmpty().withMessage('Tienes que escribir una descripción'),
+    body('product-image').custom((value, {req}) => {
+        let file = req.file;
+        let extensionsAccepted = [ '.png', '.jpeg','.jpg' , '.gif' ];
+        
+        if(!file){
+            throw new Error('Tienes que subir una imagen')
+        }else{
+        let fileExtension = path.extname(file.originalname)
+        if(!extensionsAccepted.includes(fileExtension)){
+            throw new Error('Las extensiones permitidas son: ".png", ".jpeg" , ".jpg" , ".gif" ');
+        }
+    }
+        return true
+    })
+]
+
+
 // inicio
 router.get("/", productsController.index);
 router.get("/skates", productsController.productSkates);
@@ -33,11 +59,11 @@ router.get("/:id/detail", productsController.detalleProducto);
 
 //******* edicion de producto *********/
 router.get("/edit/:id", authMiddleware, productsController.edit);
-router.patch("/edit/:id", upload.single('product-image'), productsController.update)
+router.patch("/edit/:id", upload.single('product-image'),productsValidations , productsController.update)
 
 //******* creación de producto *********/
 router.get("/create", authMiddleware,productsController.create);
-router.post("/create",upload.single('product-image') ,productsController.store);
+router.post("/create",upload.single('product-image'), productsValidations ,productsController.store);
 
 //******* borrado de producto *********/
 router.post('/delete/:id', productsController.destroy);

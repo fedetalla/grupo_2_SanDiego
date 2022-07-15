@@ -15,10 +15,18 @@
         <div>
             <label for="name" class="form-label">Nombre del producto</label>
             <input type="text" name="name" placeholder="Ej. Skate Indiana" class="form-input">
+            <% if(locals.errors && errors.name) { %>
+                <%= errors.name.msg %>
+                  <% } %>
+                    <br />
         </div>
         <div>
             <label for="price" class="form-label">Precio</label>
             <input type="number" name="price" placeholder="Ej. 550.00" class="form-input">
+            <% if(locals.errors && errors.price) { %>
+                <%= errors.price.msg %>
+                  <% } %>
+                    <br />
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
@@ -31,11 +39,19 @@
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
             <textarea type="text" name="description" placeholder="Ej. Skate con diseño exclusivo..." class="form-input-description"></textarea>
+            <% if(locals.errors && errors.description) { %>
+                <%= errors.description.msg %>
+                  <% } %>
         </div>
+        <br>
         <div>
             <label for="description" class="form-label">Imagen del producto</label>
             <input type="file" name="product-image">
+            <% if(locals.image && errors.product-image) { %>
+                <%= errors.product-image.msg %>
+                  <% } %>
         </div>
+        <br>
         <div class="button-edit-form">
             <button type="submit" class="button-save-product">Guardar producto</button>
         </div>
