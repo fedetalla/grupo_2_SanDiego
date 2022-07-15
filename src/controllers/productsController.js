@@ -92,7 +92,14 @@ const productsController = {
         return res.render("productCreateForm")
     },
 	store: function (req,res) {
-        db.Product.create({
+        let resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0){
+            res.render('productCreateForm', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }else{
+          db.Product.create({
             name: req.body.name,
 			price: req.body.price,
 	 		category_id: req.body.category_id,
@@ -105,6 +112,8 @@ const productsController = {
 	.catch (error => {
 	res.send (error)
 	})
+            }
+    
 	},
 
     destroy: function (req,res) {
