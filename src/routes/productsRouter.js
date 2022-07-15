@@ -25,11 +25,13 @@ const { body } = require('express-validator')
 
 // Definimos las validaciones correspondientes al register
 const productsValidations = [
-    body('name').notEmpty().withMessage('Tienes que escribir el nombre del producto'),
+    body('name').notEmpty().withMessage('Tienes que escribir el nombre del producto')
+    .isLength({min: 5}).withMessage('El nombre del producto debe tener al menos 5 caracteres'),
     body('category_id').notEmpty().withMessage('Tienes que seleccionar una categoría'),
-    body('price').notEmpty().isEmail().withMessage('Tienes que ponerle un precio al producto'),
-    body('description').notEmpty().withMessage('Tienes que escribir una descripción'),
-    body('product-image').custom((value, {req}) => {
+    body('price').notEmpty().withMessage('Tienes que ponerle un precio al producto'),
+    body('description').notEmpty().withMessage('Tienes que escribir una descripción')
+    .isLength({min: 20}).withMessage('La descripción debe tener al menos 20 caracteres'),
+    body('productImage').custom((value, {req}) => {
         let file = req.file;
         let extensionsAccepted = [ '.png', '.jpeg','.jpg' , '.gif' ];
         
@@ -59,11 +61,11 @@ router.get("/:id/detail", productsController.detalleProducto);
 
 //******* edicion de producto *********/
 router.get("/edit/:id", authMiddleware, productsController.edit);
-router.patch("/edit/:id", upload.single('product-image'),productsValidations , productsController.update)
+router.patch("/edit/:id", upload.single('productImage'),productsValidations , productsController.update)
 
 //******* creación de producto *********/
 router.get("/create", authMiddleware,productsController.create);
-router.post("/create",upload.single('product-image'), productsValidations ,productsController.store);
+router.post("/create",upload.single('productImage'), productsValidations ,productsController.store);
 
 //******* borrado de producto *********/
 router.post('/delete/:id', productsController.destroy);

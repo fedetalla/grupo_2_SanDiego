@@ -70,6 +70,14 @@ const productsController = {
         })
     },
     update: function (req,res) {
+       
+       /*  let resultValidation = validationResult(req);
+        if(resultValidation.errors.length > 0){
+            res.render('productEditForm', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }else{ */
         db.Product.findByPk(req.params.id)
         .then(product=>{
         db.Product.update({
@@ -86,7 +94,7 @@ const productsController = {
         })
 	.catch (error => {
 		res.send (error)
-	})
+	})/* } */
 	},
     create: (req,res) => {
         return res.render("productCreateForm")
