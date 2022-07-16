@@ -15,10 +15,20 @@
         <div>
             <label for="name" class="form-label">Nombre del producto</label>
             <input type="text" name="name" class="form-input" value="<%= product.name %>">
+            <% if(locals.errors && errors.name) { %>
+                <p style="color: red;text-align: center;">
+                <%= errors.name.msg %></p>
+                  <% } %>
+                    <br />
         </div>
         <div>
             <label for="price" class="form-label">Precio</label>
             <input type="number" name="price" class="form-input" value="<%= product.price %>">
+            <% if(locals.errors && errors.price) { %>
+                <p style="color: red;text-align: center;">
+                <%= errors.price.msg %></p>
+                  <% } %>
+                    <br />
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
@@ -27,21 +37,33 @@
                 <option value="<%=category.id %>" <% if(product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
                 <% }); %>
             </select>
+            <% if(locals.errors && errors.category_id) { %>
+                <p style="color: red;text-align: center;">   
+                <%= errors.category_id.msg %></p>
+                      <% } %>
         </div>
 
 
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
             <textarea type="text" name="description" class="form-input-description"><%= product.description %></textarea>
+            <% if(locals.errors && errors.description) { %>
+                <p style="color: red;text-align: center;">
+                <%= errors.description.msg %></p>
+                  <% } %>
         </div>
         <div>
             <div>
             <label for="description" class="form-label">Imagen del producto</label>
             </div>
             <div class="nf-tittle">
-            <img src="/img/productos/<%=product.image %>" class="imagenes-de-opcion" alt="product-image">
+            <img src="/img/productos/<%=product.image %>" class="imagenes-de-opcion" alt="productImage">
             </div>
-            <input type="file" name="product-image" value="<%= product.image %>">
+            <input type="file" name="productImage" value="<%= product.image %>">
+            <% if(locals.errors && errors.productImage) { %>
+                <p style="color: red;text-align: center;">
+                <%= errors.productImage.msg %></p>
+                  <% } %>
         </div>
         <div class="button-edit-form">
             <button type="submit" class="button-save-product">Guardar producto</button>

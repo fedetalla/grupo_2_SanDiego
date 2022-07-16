@@ -71,7 +71,7 @@ const productsController = {
     },
     update: function (req,res) {
        
-       /*  let resultValidation = validationResult(req);
+        /* let resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             res.render('productEditForm', {
                 errors: resultValidation.mapped(),
