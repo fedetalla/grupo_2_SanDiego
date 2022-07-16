@@ -6,7 +6,7 @@
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-
+    <%console.log(product)%>
     <form action="/products/edit/<%=product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="product-form">
             <div>

@@ -70,16 +70,15 @@ const productsController = {
         })
     },
     update: function (req,res) {
-       
+        db.Product.findByPk(req.params.id)
+        .then(()=>{
         /* let resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             res.render('productEditForm', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
-        }else{ */
-        db.Product.findByPk(req.params.id)
-        .then(product=>{
+            }else{ */
         db.Product.update({
             name: req.body.name,
             price: req.body.price,
@@ -91,10 +90,11 @@ const productsController = {
         })
         .then (()=>{
             return res.redirect('/products')})
-        })
-	.catch (error => {
+            }/* } */)
+
+	    .catch (error => {
 		res.send (error)
-	})/* } */
+	    })
 	},
     create: (req,res) => {
         return res.render("productCreateForm")
