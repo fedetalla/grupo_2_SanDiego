@@ -17,7 +17,9 @@
               <label for="fullName">Nombre y Apellido</label>
               <input class="register-input" type="text" name="fullName" id="name" placeholder="Escribe tu nombre" />
               <% if(locals.errors && errors.fullName) { %>
+                <p style="color: red;font-size: 16px ;text-align: center;"> 
                 <%= errors.fullName.msg %>
+                </p>
                   <% } %>
                     <br />
             </div>
@@ -26,7 +28,9 @@
               <label for="email">Mail</label>
               <input class="register-input" type="email" name="email" id="email" placeholder="Ej. usuario@mail.com" />
               <% if(locals.errors && errors.email) { %>
+                <p style="color: red;font-size: 16px ;text-align: center;"> 
                 <%= errors.email.msg %>
+                </p>
                   <% } %>
                     <br />
             </div>
@@ -36,14 +40,21 @@
                 <option value="" disabled selected>Selecciona tu tipo de perfil</option>
                 <option value="admin">Admin</option>
                 <option value="visitor">Visitante</option>
+              </select>
+              <% if(locals.errors && errors.category) { %>
+                <p style="color: red;font-size: 16px ;text-align: center;"> 
+                <%= errors.category.msg %>
+                </p>
+                  <% } %>
             </div>
-            </select>
             <br>
             <div>
               <label for="password">Crear Contraseña</label>
               <input class="register-input" type="password" name="password" id="password" />
               <% if(locals.errors && errors.password) { %>
+                <p style="color: red;font-size: 16px ;text-align: center;"> 
                 <%= errors.password.msg %>
+                </p>
                   <% } %>
             </div>
             <br>
@@ -53,7 +64,9 @@
               </label>
               <input type="file" name="image">
               <% if(locals.image && errors.image) { %>
+                <p style="color: red;font-size: 16px ;text-align: center;"> 
                 <%= errors.image.msg %>
+                </p>
                   <% } %>
             </div>
             <br />

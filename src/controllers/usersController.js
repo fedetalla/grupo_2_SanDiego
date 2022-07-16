@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require("path");
-//importamos el modelo de usuarios para utilizar los métodos que definimos
-const User = require('../models/User');
 const bcryptjs = require('bcrypt');
 const {validationResult} = require ('express-validator');
 const db = require('../database/models');
@@ -76,14 +74,14 @@ const usersController = {
             if(userFinal != null){
                 let isOkThePassword = bcryptjs.compareSync(req.body.password, userFinal.password);
                 if(isOkThePassword){
+                     //sin la contraseña para guardarlo en la sesion
                     delete userFinal.password
-                    req.session.userLogged = userFinal;                    //sin la contraseña para guardarlo en la sesion
+                    req.session.userLogged = userFinal;
                     if(req.body.remember_user) {
                         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                     }
                     return res.redirect('/users/profile') 
                 }
-                
             } return res.render('login', {
                     errors: {
                         email: {
@@ -91,7 +89,6 @@ const usersController = {
                         }
                     }
             })
-
         })
         .catch (error => {
             res.send (error)

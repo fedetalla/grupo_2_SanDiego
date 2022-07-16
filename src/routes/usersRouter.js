@@ -24,20 +24,23 @@ const { body } = require('express-validator')
 
 // Definimos las validaciones correspondientes al register
 const validations = [
-    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre')
+    .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
     body('category').notEmpty().withMessage('Tienes que seleccionar una categoría'),
-    body('email').notEmpty().isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('email') .notEmpty().withMessage('Por favor, escribe un correo electrónico')
+    .isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
+    .isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres'),
     body('image').custom((value, {req}) => {
         let file = req.file;
-        let extensionsAccepted = [ '.png', '.jpg' , '.gif' ];
+        let extensionsAccepted = [ '.png', '.jpg', '.jpeg', '.gif' ];
         
         if(!file){
             throw new Error('Tienes que subir una imagen')
         }else{
         let fileExtension = path.extname(file.originalname)
         if(!extensionsAccepted.includes(fileExtension)){
-            throw new Error('Las extensiones permitidas son: ".png", ".jpg" , ".gif" ');
+            throw new Error('Las extensiones permitidas son: ".png", ".jpg" , ".jpeg" , ".gif" ');
         }
     }
         return true
