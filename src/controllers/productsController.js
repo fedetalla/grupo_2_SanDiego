@@ -70,18 +70,14 @@ const productsController = {
         })
     },
     update: function (req,res) {
-        // Verifica que los campos se hayan llenado correctamente
-        let errors = validationResult(req);
-        // Si hay errores, renderizamos la vista nuevamente con los mensajes de error
+        let errors = validationResult(req);    
         if (!errors.isEmpty()) {
-            // Pedimos el producto a actualizar, los sizes y las categories de la DB
             let productRequired = db.Product.findByPk(req.params.id, { include: ["categories"] });
 		    let categoryRequired = db.Category.findAll()
             Promise.all([productRequired, categoryRequired])
             .then(function ([product, category]){
                 return res.render ("productEditForm", {product, allCategories: category, errors: errors.mapped(), oldData: req.body});
             })
-        // Si no hay errores, almacena las modificaciones
         } else {
             let product = db.Product.findByPk(req.params.id);
             db.Product.update ({
