@@ -6,15 +6,18 @@
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
+    <ul class="errores">
+    </ul>
+
     <%console.log(product)%>
-    <form action="/products/edit/<%=product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+    <form id="form" action="/products/edit/<%=product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="product-form">
             <div>
 				<h2 class="product-form-title">Estás editando: <%= product.name %> </h2>
 			</div>
         <div>
             <label for="name" class="form-label">Nombre del producto</label>
-            <input type="text" name="name" class="form-input" value="<%= product.name %>">
+            <input type="text" id="name" name="name" class="form-input" value="<%= product.name %>">
             <% if(locals.errors && errors.name) { %>
                 <p style="color: red;text-align: center;">
                 <%= errors.name.msg %></p>
@@ -23,7 +26,7 @@
         </div>
         <div>
             <label for="price" class="form-label">Precio</label>
-            <input type="number" name="price" class="form-input" value="<%= product.price %>">
+            <input type="number" id="price" name="price" class="form-input" value="<%= product.price %>">
             <% if(locals.errors && errors.price) { %>
                 <p style="color: red;text-align: center;">
                 <%= errors.price.msg %></p>
@@ -32,7 +35,7 @@
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
-            <select name="form-label" id="" required  class="form-input">
+            <select name="form-label" id="category" required  class="form-input">
                 <% allCategories.forEach(category => { %>
                 <option value="<%=category.id %>" <% if(product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
                 <% }); %>
@@ -46,7 +49,7 @@
 
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
-            <textarea type="text" name="description" class="form-input-description"><%= product.description %></textarea>
+            <textarea type="text" id="description" name="description" class="form-input-description"><%= product.description %></textarea>
             <% if(locals.errors && errors.description) { %>
                 <p style="color: red;text-align: center;">
                 <%= errors.description.msg %></p>
@@ -54,12 +57,12 @@
         </div>
         <div>
             <div>
-            <label for="description" class="form-label">Imagen del producto</label>
+            <label for="image" class="form-label">Imagen del producto</label>
             </div>
             <div class="nf-tittle">
             <img src="/img/productos/<%=product.image %>" class="imagenes-de-opcion" alt="productImage">
             </div>
-            <input type="file" name="productImage" value="<%= product.image %>">
+            <input type="file" id="image" name="productImage" value="<%= product.image %>">
             <% if(locals.errors && errors.productImage) { %>
                 <p style="color: red;text-align: center;">
                 <%= errors.productImage.msg %></p>
@@ -74,5 +77,8 @@
 
   <!-- footer EJS -->
   <%- include('parcial/footer.ejs') %>
+
+  <script src="/js/productFrontValidations.js"></script>
+
 </body>
 </html>

@@ -108,18 +108,18 @@ const usersController = {
         })
     },
     processEdit: (req,res)=>{
-        // // db.User.findOne({where: {id: res.locals.isLogged.id}})
-        // .then(user=>{
-        // db.User.update({
-        //     fullName: req.body.fullName,
-        //     email: req.body.email,
-        //     category: req.body.category,
-        //     image: req.file ? req.file.filename : user.image
-        //     },  
-        //     {
-        //     where: {id: res.locals.isLogged.id}
-        //     })
-        // })
+        db.User.findOne({where: {id: res.locals.isLogged.id}})
+        .then(user=>{
+        db.User.update({
+            fullName: req.body.fullName,
+            email: req.body.email,
+            category: req.body.category,
+            image: req.file ? req.file.filename : user.image
+            },  
+            {
+            where: {id: res.locals.isLogged.id}
+            })
+        })
     },
     
     logout: (req, res) => {

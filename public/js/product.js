@@ -10,6 +10,4 @@ window.addEventListener('load', function(){
     }
     })
 
-
-
 })
