@@ -63,39 +63,47 @@ const productsController = {
 		let categoryRequired = db.Category.findAll()
 		Promise.all([productRequired, categoryRequired])
 		.then(([product, category])=>{
-			return res.render('productEditForm',{product: product, allCategories: category})
+			return res.render('productEditForm',{ product, allCategories: category})
 		})
 		.catch (error => {
             res.send (error)
         })
     },
     update: function (req,res) {
-        db.Product.findByPk(req.params.id)
-        .then(()=>{
-        /* let resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0){
-            res.render('productEditForm', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
+        // Verifica que los campos se hayan llenado correctamente
+        let errors = validationResult(req);
+        // Si hay errores, renderizamos la vista nuevamente con los mensajes de error
+        if (!errors.isEmpty()) {
+            // Pedimos el producto a actualizar, los sizes y las categories de la DB
+            let productRequired = db.Product.findByPk(req.params.id, { include: ["categories"] });
+		    let categoryRequired = db.Category.findAll()
+            Promise.all([productRequired, categoryRequired])
+            .then(function ([product, category]){
+                return res.render ("productEditForm", {product, allCategories: category, errors: errors.mapped(), oldData: req.body});
             })
-            }else{ */
-        db.Product.update({
-            name: req.body.name,
-            price: req.body.price,
-            category: req.body.category,
-            description: req.body.description,
-            image: req.file ? req.file.filename : product.image
-        }, {
-            where: {id: req.params.id}
-        })
-        .then (()=>{
-            return res.redirect('/products')})
-            }/* } */)
+        // Si no hay errores, almacena las modificaciones
+        } else {
+            let product = db.Product.findByPk(req.params.id);
+            db.Product.update ({
+                name: req.body.name,
+                price: req.body.price,
+                category: req.body.category,
+                description: req.body.description,
+                image: req.file ? req.file.filename : product.image
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then( () => {
+                return res.redirect ("/");
+            })
+            .catch (error => {
+                res.send (error)
+            })
+        }
+    },
 
-	    .catch (error => {
-		res.send (error)
-	    })
-	},
     create: (req,res) => {
         return res.render("productCreateForm")
     },
