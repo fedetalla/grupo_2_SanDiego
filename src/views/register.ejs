@@ -6,10 +6,11 @@
   <body class="register-body">
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
-
+                  <ul class="errores"></ul>
       <main>
+        
         <div class="register-form">
-          <form class="formatForm-register" action="/users/register" enctype="multipart/form-data" method="POST">
+          <form id= "formRegister" class="formatForm-register" action="/users/register" enctype="multipart/form-data" method="POST">
             <div class="title-register">
               <p>Crea tu propia cuenta</p>
             </div>
@@ -62,7 +63,7 @@
               <label for="perfil-img">
                 <p>Selecciona una foto de perfil:</p>
               </label>
-              <input type="file" name="image">
+              <input id= "image" type="file" name="image">
               <% if(locals.image && errors.image) { %>
                 <p style="color: red;font-size: 16px ;text-align: center;"> 
                 <%= errors.image.msg %>
@@ -86,6 +87,8 @@
 
       <!-- footer EJS-->
       <%- include('parcial/footer.ejs') %>
+
+      <script src="/js/register.js"></script>
   </body>
 
 </html>
