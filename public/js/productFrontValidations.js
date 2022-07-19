@@ -70,6 +70,19 @@ window.addEventListener("load", () => {
             description.classList.remove("is-invalid");
             form.image.focus();
         };
+
+            // --------- IMAGE ------------
+
+        if (image.value.length == 0) {
+            errors.push ("El campo de imagen no puede estar vacío");
+            }
+    
+            let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png', 'JPEG', 'JPG', 'GIF', 'PNG'];
+            let parts = image.value.split('.');
+            let extension = parts[parts.length-1];
+            if (!acceptedExtensions.includes(extension)){
+            errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+            }
         
         // Controlamos si hay errores 
         /* console.log(errors) */
