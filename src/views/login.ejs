@@ -16,10 +16,11 @@
                     <source src="/img/Videos/fondo3.mp4" type="video/mp4">
                 </video>
                 <div class="login-box">
+                    <ul class="errores"></ul>
                     <a href="/"><img src="/img/logo-san-diego.png" class="avatar" alt="Logo San Diego"></a>
-                    <form id= "formRegister" class="form-login" action="/users/login" method="POST">
+                    <form id= "formLogin" class="form-login" action="/users/login" method="POST">
                         <h1>Iniciar sesión</h1>
-                        <ul class="errores"></ul>
+                        
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" placeholder="usuario@gmail.com">
                         <% if (locals.errors && errors.email) { %>
@@ -44,7 +45,7 @@
                 </div>
             </div>
         </main>
-    <script src="/js/registerLoginValidation.js"></script>
+    <script src="/js/login.js"></script>
     </body>
 
 </html>
