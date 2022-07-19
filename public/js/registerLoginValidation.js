@@ -1,5 +1,4 @@
 window.addEventListener('load', function(){
-    
     let register = document.querySelector("#formRegister");
 
     register.addEventListener("submit", function(e){
@@ -10,6 +9,7 @@ window.addEventListener('load', function(){
         let email = document.querySelector("#email");
         let password = document.querySelector("#password");
         let image = document.querySelector("#image");
+        
 
         
 
@@ -54,18 +54,17 @@ window.addEventListener('load', function(){
         };
 
         // --------- IMAGE ------------
-        if (image.value == "") {
-            errors.push("El campo imagen no puede estar vacío");
-            password.classList.remove("is-valid");
-            password.classList.add("is-invalid");
-        } else if (password.value.length < 8) {
-            errors.push("El campo contraseña debe tener al menos 8 caracteres");
-            password.classList.remove("is-valid");
-            password.classList.add("is-invalid");
-        } else {
-            password.classList.add("is-valid");
-            password.classList.remove("is-invalid");
-        }; 
+        
+        if (image.value.length == 0) {
+        errors.push ("El campo de imagen no puede estar vacío");
+        }
+
+        let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png', 'JPEG', 'JPG', 'GIF', 'PNG'];
+        let parts = image.value.split('.');
+        let extension = parts[parts.length-1];
+        if (!acceptedExtensions.includes(extension)){
+        errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+        }
 
 
         // Controlamos si hay errores 
