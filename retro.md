@@ -57,3 +57,15 @@
 4- Hacer menos: Creemos que, por el momento, todo lo realizado tiene sus frutos a la larga. Cada reunion de trabajo se utiliza para afrontar los diferentes puntos del sprint y hasta no lograrlo no finalizamos la misma.
 
 5- Dejar de hacer: Repetimos el error de dejar pasar la primera semana sin hacer nada y luego el tiempo no nos alcanzó.
+
+**Retro 7mo sprint**
+
+1- Comenzar a hacer: Modificar las clases ya realizadas en español. 
+
+2- Hacer más: Dedicar más tiempo a reuniones grupales para poder sortear los obstáculos que nos presenta el sprint.
+
+3- Continuar haciendo: En cuanto al trabajo cada uno se organiza sus días y horarios y avanza hasta conseguir lo propuesto.
+
+4- Hacer menos: Dejar para los últimos días los detalles que nos van quedando en el camino.
+
+5- Dejar de hacer: Creemos que en este sprint no tuvimos que dejar de hacer nada, de seguir cone sta organización, vamos a tener más aciertos que errores.
