@@ -50,6 +50,8 @@
         <div>
             <label for="description" class="form-label">Descripción del producto</label>
             <textarea type="text" id="description" name="description" class="form-input-description"><%= product.description %></textarea>
+            
+            <!-- Aca la validacion no pasa, por mas que el formulario se envie correctamente -->
             <% if(locals.errors && errors.description) { %>
                 <p style="color: red;text-align: center;">
                 <%= errors.description.msg %></p>

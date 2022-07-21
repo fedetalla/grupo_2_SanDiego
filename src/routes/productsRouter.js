@@ -27,6 +27,7 @@ const { body } = require('express-validator')
 const productsValidations = [
     body('name').notEmpty().withMessage('Tienes que escribir el nombre del producto')
     .isLength({min: 5}).withMessage('El nombre del producto debe tener al menos 5 caracteres'),
+    //La validacion de categoria da no funciona en edicion de producto
     body('category_id').notEmpty().withMessage('Tienes que seleccionar una categoría'),
     body('price').notEmpty().withMessage('Tienes que ponerle un precio al producto'),
     body('description').notEmpty().withMessage('Tienes que escribir una descripción')
