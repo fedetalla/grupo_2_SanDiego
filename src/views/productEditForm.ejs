@@ -35,7 +35,7 @@
         </div>
         <div>
             <label for="name" class="form-label">Categoría</label>
-            <select name="form-label" id="category" required  class="form-input">
+            <select name="category_id" id="category" required  class="form-input">
                 <% allCategories.forEach(category => { %>
                 <option value="<%=category.id %>" <% if(product.category_id == category.id) { %><%= 'selected' %><% }; %>><%= category.name %></option>
                 <% }); %>
@@ -80,7 +80,7 @@
   <!-- footer EJS -->
   <%- include('parcial/footer.ejs') %>
 
-  <script src="/js/productFrontValidations.js"></script>
+<!--   <script src="/js/productFrontValidations.js"></script> -->
 
 </body>
 </html>

@@ -37,7 +37,7 @@ const productsValidations = [
         let extensionsAccepted = [ '.png', '.jpeg','.jpg' , '.gif' ];
         
         if(!file){
-            throw new Error('Tienes que subir una imagen')
+            throw new Error('Tienes actualizar la imagen')
         }else{
         let fileExtension = path.extname(file.originalname)
         if(!extensionsAccepted.includes(fileExtension)){
