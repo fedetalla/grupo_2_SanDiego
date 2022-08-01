@@ -59,7 +59,7 @@ window.addEventListener('load', function(){
         errors.push ("El campo de imagen no puede estar vacío");
         }
 
-        let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png', 'JPEG', 'JPG', 'GIF', 'PNG'];
+        let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
         let parts = image.value.split('.');
         let extension = parts[parts.length-1];
         if (!acceptedExtensions.includes(extension)){
