@@ -37,14 +37,14 @@
             </div>
             <div>
               <label for="">Perfil de usuario</label>
-              <select class="register-input" name="category" id="categories">
+              <select class="register-input" name="category_id" id="categories">
                 <option value="" disabled selected>Selecciona tu tipo de perfil</option>
-                <option value="admin">Admin</option>
-                <option value="visitor">Visitante</option>
+                <option value="1">Admin</option>
+                <option value="2">Visitante</option>
               </select>
-              <% if(locals.errors && errors.category) { %>
+              <% if(locals.errors && errors.category_id) { %>
                 <p style="color: red;font-size: 16px ;text-align: center;"> 
-                <%= errors.category.msg %>
+                <%= errors.category_id.msg %>
                 </p>
                   <% } %>
             </div>
