@@ -59,7 +59,7 @@ router.get("/profile", authMiddleware, usersController.profile);
 
 // EDICIÓN DEL PERFIL
 router.get("/profile/edit", authMiddleware, usersController.editProfile);
-router.post("/profile/edit", authMiddleware, validations , usersController.processEdit);
+router.post("/profile/edit", authMiddleware, uploadFile.single('image'),  usersController.processEdit);
 
 // LOGOUT
 router.get('/logout/', usersController.logout);
