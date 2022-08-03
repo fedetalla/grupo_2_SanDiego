@@ -40,7 +40,7 @@ const usersController = {
                 db.User.create({
                     fullName: req.body.fullName,
                     email: req.body.email,
-                    category: req.body.category,
+                    category_id: req.body.category_id,
                     password: bcryptjs.hashSync(req.body.password, 10),
                     image: req.file ? req.file.filename : 'default-image.png'
                 })
