@@ -28,10 +28,10 @@ const usersController = {
     processRegister:(req, res) => {
         db.User.findOne({where: {email: req.body.email}})
         .then((userInDB)=>{
-            console.log(userInDB)
             if(userInDB == null){
                 const resultValidation = validationResult(req);
             if(resultValidation.errors.length > 0){
+                console.log(resultValidation.errors)
                 res.render('register', {
                     errors: resultValidation.mapped(),
                     oldData: req.body
