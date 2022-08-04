@@ -4,6 +4,7 @@ const bcryptjs = require('bcrypt');
 const {validationResult} = require ('express-validator');
 const db = require('../database/models');
 const { raw } = require('express');
+const { traceDeprecation } = require('process');
 
 
 const usersController = {
@@ -28,10 +29,10 @@ const usersController = {
     processRegister:(req, res) => {
         db.User.findOne({where: {email: req.body.email}})
         .then((userInDB)=>{
-            console.log(userInDB)
             if(userInDB == null){
                 const resultValidation = validationResult(req);
             if(resultValidation.errors.length > 0){
+                // console.log(resultValidation.errors)
                 res.render('register', {
                     errors: resultValidation.mapped(),
                     oldData: req.body
@@ -40,7 +41,7 @@ const usersController = {
                 db.User.create({
                     fullName: req.body.fullName,
                     email: req.body.email,
-                    category: req.body.category,
+                    category_id: req.body.category_id,
                     password: bcryptjs.hashSync(req.body.password, 10),
                     image: req.file ? req.file.filename : 'default-image.png'
                 })
@@ -108,18 +109,24 @@ const usersController = {
         })
     },
     processEdit: (req,res)=>{
-        db.User.findOne({where: {id: res.locals.isLogged.id}})
-        .then(user=>{
+        console.log(req.session.userLogged)
+        console.log(req.body)
         db.User.update({
             fullName: req.body.fullName,
             email: req.body.email,
             category: req.body.category,
-            image: req.file ? req.file.filename : user.image
+            image: req.file ? req.file.filename : req.session.userLogged.image
             },  
             {
-            where: {id: res.locals.isLogged.id}
+            where: {id: req.session.userLogged.id}
             })
-        })
+            .then(() =>{
+                return res.redirect('/users/profile')
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        // })
     },
     
     logout: (req, res) => {

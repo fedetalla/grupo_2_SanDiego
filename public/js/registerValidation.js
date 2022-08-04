@@ -55,16 +55,21 @@ window.addEventListener('load', function(){
 
         // --------- IMAGE ------------
         
-        if (image.value.length == 0) {
-        errors.push ("El campo de imagen no puede estar vacío");
+        if (image.value) {
+            let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
+            let parts = image.value.split('.');
+            let extension = parts[parts.length-1];
+            if (!acceptedExtensions.includes(extension)){
+            errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+            }
         }
 
-        let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
-        let parts = image.value.split('.');
-        let extension = parts[parts.length-1];
-        if (!acceptedExtensions.includes(extension)){
-        errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
-        }
+        // let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
+        // let parts = image.value.split('.');
+        // let extension = parts[parts.length-1];
+        // if (!acceptedExtensions.includes(extension)){
+        // errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+        // }
 
 
         // Controlamos si hay errores 
@@ -78,6 +83,7 @@ window.addEventListener('load', function(){
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
             };
         } else {
+           /*  alert("La validación fue exitosa") */
             register.submit();
         }
     })

@@ -6,8 +6,8 @@
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-
-    <form action="/users/profile/edit/" method="POST" enctype="multipart/form-data">
+    <%console.log(locals.userLogged)%>
+    <form action="/users/profile/edit" method="POST" enctype="multipart/form-data">
         <div class="product-form">
             <div>
 				<h2 class="product-form-title">Estás editando el perfil de: <%= locals.userLogged.fullName %> </h2>
@@ -24,19 +24,11 @@
             <label for="user-category" class="form-label">Categoría de usuario</label>
             <select name="user-category" id="" required  class="form-input">
                 <% categories.forEach(category => { %>
-                <option value="<%=category.dataValues.id %>" <% if(locals.userLogged.category == category.dataValues.name) { %><%= 'selected' %><% }; %>><%= category.dataValues.name %></option>
+                <option value="<%=category.dataValues.id %>" <% if(locals.userLogged.userCategory.name == category.dataValues.name) { %><%= 'selected' %><% }; %>><%= category.dataValues.name %></option>
                 <% }); %>
             </select>
         </div>  
 
-        <!-- <div>
-            <label for="password" class="form-label">Contraseña actual</label>
-            <input type="text" name="password" class="form-input">
-        </div>
-        <div>
-            <label for="password" class="form-label">Nueva contraseña</label>
-            <input type="text" name="password" class="form-input">
-        </div> -->
         <div>
             <div>
             <label for="user-image" class="form-label">Imagen de perfil</label>
