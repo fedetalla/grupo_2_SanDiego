@@ -26,11 +26,7 @@ const { body } = require('express-validator')
 const validations = [
     body('fullName').notEmpty().withMessage('Tienes que escribir un nombre')
     .isLength({min: 2}).withMessage('El nombre debe tener al menos 2 caracteres'),
-<<<<<<< HEAD
     // body('category').notEmpty().withMessage('Tienes que seleccionar una categoría'),
-=======
-    body('category_id').notEmpty().withMessage('Tienes que seleccionar una categoría'),
->>>>>>> 2c1faf7003555d70a21753666c3ff783b57e24d4
     body('email') .notEmpty().withMessage('Por favor, escribe un correo electrónico')
     .isEmail().withMessage('Tienes que escribir un correo electrónico válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña')
