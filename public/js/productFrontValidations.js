@@ -73,9 +73,9 @@ window.addEventListener("load", () => {
 
             // --------- IMAGE ------------
 
-        if (image.value.length == 0) {
-            errors.push ("El campo de imagen no puede estar vacío");
-            }
+        if (image.value) {
+            // errors.push ("El campo de imagen no puede estar vacío");
+            // }
     
             let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
             let parts = image.value.split('.');
@@ -83,6 +83,7 @@ window.addEventListener("load", () => {
             if (!acceptedExtensions.includes(extension)){
             errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
             }
+        }
         
         // Controlamos si hay errores 
         /* console.log(errors) */

@@ -109,8 +109,6 @@ const usersController = {
         })
     },
     processEdit: (req,res)=>{
-        console.log(req.session.userLogged)
-        console.log(req.body)
         db.User.update({
             fullName: req.body.fullName,
             email: req.body.email,
@@ -121,12 +119,19 @@ const usersController = {
             where: {id: req.session.userLogged.id}
             })
             .then(() =>{
-                return res.redirect('/users/profile')
+                db.User.findOne({
+                    where: {id: req.session.userLogged.id},
+                    include: ["userCategory"]})
+                    .then(userFinal => {
+                        req.session.userLogged = userFinal.dataValues
+                        return res.redirect('/users/profile')
+                    })
+
+                
             })
             .catch((error) => {
                 console.log(error)
             })
-        // })
     },
     
     logout: (req, res) => {
