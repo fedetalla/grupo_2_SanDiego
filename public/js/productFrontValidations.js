@@ -73,29 +73,26 @@ window.addEventListener("load", () => {
 
             // --------- IMAGE ------------
 
-        if (image.value.length == 0) {
-            errors.push ("El campo de imagen no puede estar vacío");
+            if (image.value) {
+                let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
+                let parts = image.value.split('.');
+                let extension = parts[parts.length-1];
+                if (!acceptedExtensions.includes(extension)){
+                errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+                }
             }
     
-            let acceptedExtensions = ['jpeg', 'jpg', 'gif', 'png'];
-            let parts = image.value.split('.');
-            let extension = parts[parts.length-1];
-            if (!acceptedExtensions.includes(extension)){
-            errors.push ("Las extensiones de imagen deben ser " + acceptedExtensions.join(", "));
+            
+            if (errors.length > 0) {
+                e.preventDefault();
+                let ulErrors = document.querySelector(".errores");
+                ulErrors.classList.add("alert-warning");
+                ulErrors.innerHTML = "";
+                for (let i = 0; i < errors.length; i++) {
+                    ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
+                };
+            } else {
+                register.submit();
             }
-        
-        // Controlamos si hay errores 
-        /* console.log(errors) */
-        if (errors.length > 0) {
-            e.preventDefault();
-            let ulErrors = document.querySelector(".errores");
-            ulErrors.classList.add("alert-warning");
-            ulErrors.innerHTML = "";
-            for (let i = 0; i < errors.length; i++) {
-                ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
-            };
-        } else {
-            form.submit();
-        }
     });
 })

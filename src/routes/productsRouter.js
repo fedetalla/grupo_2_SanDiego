@@ -35,12 +35,11 @@ const productsValidations = [
         let file = req.file;
         let extensionsAccepted = [ '.png', '.jpeg','.jpg' , '.gif' ];
         
-        if(!file){
-            throw new Error('Tienes actualizar la imagen')
-        }else{
+        if(file){
+            // throw new Error('Tienes que subir una imagen')
         let fileExtension = path.extname(file.originalname)
         if(!extensionsAccepted.includes(fileExtension)){
-            throw new Error('Las extensiones permitidas son: ".png", ".jpeg" , ".jpg" , ".gif" ');
+            throw new Error('Las extensiones permitidas son: ".png", ".jpg" , ".jpeg" , ".gif" ');
         }
     }
         return true
