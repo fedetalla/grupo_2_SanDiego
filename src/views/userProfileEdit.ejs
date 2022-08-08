@@ -6,7 +6,6 @@
     <!-- header EJS -->
     <%- include('parcial/header.ejs') %>
 
-    <%console.log(locals.userLogged)%>
     <form action="/users/profile/edit" method="POST" enctype="multipart/form-data">
         <div class="product-form">
             <div>
@@ -21,12 +20,14 @@
             <input type="mail" name="mail" class="form-input" value="<%= locals.userLogged.email %>">
         </div>
         <div>
+            
             <label for="user-category" class="form-label">Categoría de usuario</label>
-            <select name="user-category" id="" required  class="form-input">
+            <p class="form-input"><%= locals.userLogged.userCategory.name%></p>
+            <!-- <select name="user-category" id="" required  class="form-input">
                 <% categories.forEach(category => { %>
-                <option value="<%=category.dataValues.id %>" <% if(locals.userLogged.userCategory.name == category.dataValues.name) { %><%= 'selected' %><% }; %>><%= category.dataValues.name %></option>
+                <option value="<%=locals.userLogged.category_id%>" <% if(locals.userLogged.userCategory.name == category.dataValues.name) { %><%= 'selected' %><% }; %>><%= category.dataValues.name %></option>
                 <% }); %>
-            </select>
+            </select> -->
         </div>  
 
         <div>
@@ -36,7 +37,7 @@
             <div class="nf-tittle">
             <img src="/img/users/<%=locals.userLogged.image %>" class="imagenes-de-opcion" alt="user-image">
             </div>
-            <input type="file" name="user-image" value="<%= locals.userLogged.image %>">
+            <input type="file" style="width: 100%" name="user-image" value="<%= locals.userLogged.image %>">
         </div>
         <div class="button-edit-form">
             <button type="submit" class="button-save-product">Guardar cambios</button>
