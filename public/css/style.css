@@ -3,6 +3,9 @@
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+a:visited {
+    text-decoration: none !important;
+    }
 
 .d-flex {
     display: flex;
@@ -835,9 +838,10 @@ footer .list-politics div {
    LOGIN
 ******************************/
 .img-login {
+    height: auto;
     width: 100%;
     display: block;
-    opacity: 0.8;
+    opacity: 0.8;    
 }
 
 .video-login {
@@ -885,7 +889,8 @@ footer .list-politics div {
     padding: 0;
     font-weight: bold;
     display: block;
-width: fit-content;}
+    width: fit-content;
+}
 
 .login-box input {
     width: 100%;
@@ -1066,6 +1071,49 @@ textarea.form-input-description {
 /****************************
    MEDIA QUERY
 ******************************/
+@media (max-width: 768px) {
+    .header-list-mobile {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: var(--negro-nuevo);
+        color: var(--azul-nuevo);
+        z-index: 999;
+        border: 1px solid
+        var(--azul-nuevo);
+    }
+    .fa-solid {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 10px;
+        font-size: 1.5rem;
+        color: var(--azul-nuevo);
+    }
+    .fa-solid:active {
+        color: red;
+    }
+    .header-sublist, .header-products{
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-left: 10px;
+        margin-top: 10px;
+    } 
+    ul li {
+        list-style-type: none;
+        text-decoration: none;
+        margin: 10px;
+    }
+    a:-webkit-any-link {
+        /* text-decoration: none; */
+        color: var(--azul-nuevo);
+    }
+
+}
+
 @media (min-width: 480px) {
     .login-box {
         width: 400px;
