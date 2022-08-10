@@ -1,6 +1,6 @@
 ------------------------------------------------ erase everything ------------------------------------------------
 -- categories --
-DELETE FROM san_diego.categories;
+/*DELETE FROM san_diego.categories;*/
 ALTER TABLE san_diego.categories AUTO_INCREMENT=1;
 
 -- products --
@@ -48,7 +48,9 @@ INSERT INTO san_diego.products (id, name, price, description, category_id, image
 (13, "Skate O'neill", 20000, "Skate marca O'neill disponible en todas nuestras tiendas", 1, "Skateboard-Decks3.png"),
 (14, "Skate Hand Santa Cruz", 20000, "Skate marca Hand Santa Cruz disponible en todas nuestras tiendas", 1, "Skateboard-Decks4.png"),
 (15, "Skate Zero", 20000, "Skate marca Zero disponible en todas nuestras tiendas", 1, "Skateboard-Decks5.png"),
-(16, "Skate Fl!p", 20000, "Skate marca Fl!p disponible en todas nuestras tiendas", 1, "Skateboard-Decks6.png");
+(16, "Skate Fl!p", 20000, "Skate marca Fl!p disponible en todas nuestras tiendas", 1, "Skateboard-Decks6.png"),
+(17, "Kit Camboya",3500, "kit Camboya, origen USA, incluye 4 rulemanes, 4 ruedas, 2 track, 12 tornillos, disponible en todas nuestras tiendas", 2, "kit-Camboya.png"),
+(18, "Holder Babylon",1950, "Holder Baylon origen USA,  disponible en todas nuestras tiendas", 2, "holder-babylon.png");
 
 -- users --
 INSERT INTO san_diego.users (id, fullName, password, category_id, email, image) VALUES 
